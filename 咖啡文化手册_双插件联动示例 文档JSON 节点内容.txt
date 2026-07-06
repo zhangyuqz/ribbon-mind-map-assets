@@ -1,0 +1,701 @@
+{%- set BS = '%c' | format(92) -%}
+{
+ "meta": {
+  "title": "世界咖啡文化手册 World Coffee Culture Handbook",
+  "author": "咖啡文化社团"
+ },
+ "page": {
+  "size": "A4",
+  "margin_mm": [
+   37,
+   26,
+   35,
+   28
+  ]
+ },
+ "default_style": {
+  "font": "仿宋_GB2312",
+  "font_ascii": "Times New Roman",
+  "size": "三号",
+  "line_spacing": 28,
+  "line_spacing_rule": "exactly",
+  "indent_first": 2,
+  "align": "justify"
+ },
+ "heading_styles": {
+  "title": {
+   "font": "方正小标宋简体",
+   "size": "二号",
+   "align": "center",
+   "line_spacing": 32
+  },
+  "1": {
+   "font": "黑体",
+   "size": "三号"
+  },
+  "2": {
+   "font": "楷体_GB2312",
+   "size": "三号"
+  },
+  "3": {
+   "font": "仿宋_GB2312",
+   "size": "三号",
+   "bold": true
+  }
+ },
+ "footer": {
+  "style": {
+   "font": "宋体",
+   "size": "四号"
+  },
+  "page_number": {
+   "format": "— {n} —"
+  }
+ },
+ "watermark": {
+  "text": "教学专用 SAMPLE",
+  "size": 48,
+  "color": "D8D8D8"
+ },
+ "toc": {
+  "enabled": true,
+  "title": "目  录",
+  "levels": 2
+ },
+ "blocks": [
+  {
+   "type": "classification",
+   "level": "内部教学",
+   "period": "社团学习专用"
+  },
+  {
+   "type": "doc_number",
+   "text": "咖社字〔2026〕第 1 号"
+  },
+  {
+   "type": "heading",
+   "level": "title",
+   "text": "世界咖啡文化手册"
+  },
+  {
+   "type": "paragraph",
+   "style": {
+    "align": "center",
+    "indent_first": 0
+   },
+   "runs": [
+    {
+     "text": "World Coffee Culture Handbook",
+     "italic": true,
+     "size": "四号"
+    }
+   ]
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "一、咖啡的前世今生 Past & Present"
+  },
+  {
+   "type": "paragraph",
+   "runs": [
+    {
+     "text": "咖啡起源于埃塞俄比亚高原，如今已成为全球最受欢迎的饮品之一。主流栽培品种是"
+    },
+    {
+     "text": "阿拉比卡（Arabica）",
+     "bold": true,
+     "footnote": "Arabica：阿拉比卡种，约占全球咖啡产量的六成，风味细腻、酸质明亮，多种植于高海拔产区。"
+    },
+    {
+     "text": "与罗布斯塔（Robusta）。人们谈论一杯咖啡时，最常提到的是它的"
+    },
+    {
+     "text": "风味",
+     "highlight": "yellow"
+    },
+    {
+     "text": "、香气与口感；本手册将带你在 "
+    },
+    {
+     "text": "12",
+     "emphasis": true,
+     "bold": true
+    },
+    {
+     "text": " 页内速览咖啡世界的全貌。更多资料可访问 "
+    },
+    {
+     "link": "https://example.com/coffee",
+     "text": "国际咖啡资料站（示例链接）"
+    },
+    {
+     "text": "。"
+    }
+   ]
+  },
+  {
+   "type": "paragraph",
+   "runs": [
+    {
+     "text": "字符样式速览：波浪下划线",
+     "underline": "wave"
+    },
+    {
+     "text": "、双下划线",
+     "underline": "double"
+    },
+    {
+     "text": "、"
+    },
+    {
+     "text": "删除的旧配方",
+     "strike": true
+    },
+    {
+     "text": "、化学式 H"
+    },
+    {
+     "text": "2",
+     "subscript": true
+    },
+    {
+     "text": "O 与 CO"
+    },
+    {
+     "text": "2",
+     "subscript": true
+    },
+    {
+     "text": "、序数 10"
+    },
+    {
+     "text": "th",
+     "superscript": true
+    },
+    {
+     "text": " Anniversary、"
+    },
+    {
+     "text": "small caps style",
+     "small_caps": true
+    },
+    {
+     "text": " 与 "
+    },
+    {
+     "text": "loud style",
+     "all_caps": true
+    },
+    {
+     "text": "，以及一处"
+    },
+    {
+     "text": "彩色文字",
+     "color": "1F6FB2"
+    },
+    {
+     "text": "。"
+    }
+   ]
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "二、经典冲煮方式 Brewing Methods"
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "（一）手冲 Pour-over"
+  },
+  {
+   "type": "paragraph",
+   "runs": [
+    {
+     "text": "手冲讲究水粉比例与注水节奏。推荐粉水比 "
+    },
+    {
+     "latex": "1:15"
+    },
+    {
+     "text": "，即 20 g 咖啡粉对应 300 g 热水；萃取率的计算公式如下："
+    }
+   ]
+  },
+  {
+   "type": "equation",
+   "latex": "E = {{ BS }}{{ BS }}frac{m_{dissolved}}{m_{coffee}} {{ BS }}{{ BS }}times 100{{ BS }}{{ BS }}%"
+  },
+  {
+   "type": "ordered_list",
+   "child_format": "(1)",
+   "items": [
+    {
+     "text": "准备阶段：称豆、磨粉、烧水。",
+     "children": [
+      "称取 20 g 咖啡豆，中细研磨",
+      "水温控制在 90–93℃"
+     ]
+    },
+    {
+     "text": "冲煮阶段：闷蒸与分段注水。",
+     "children": [
+      "先注入约 40 g 热水闷蒸 30 秒",
+      "分三段画圈注水至 300 g"
+     ]
+    },
+    "品鉴阶段：闻香、小口品尝、感受余韵。"
+   ]
+  },
+  {
+   "type": "textbox",
+   "border": true,
+   "width_mm": 130,
+   "blocks": [
+    {
+     "type": "paragraph",
+     "style": {
+      "align": "center"
+     },
+     "runs": [
+      {
+       "text": "小贴士 Tip：闷蒸水量约为粉量的 2 倍，能让咖啡粉充分排气。",
+       "bold": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "（二）冲煮器具对比 Comparison"
+  },
+  {
+   "type": "table",
+   "caption": "常见冲煮方式参数对比",
+   "header_rows": 2,
+   "col_widths": [
+    18,
+    22,
+    18,
+    18,
+    24
+   ],
+   "rows": [
+    [
+     {
+      "text": "冲煮方式",
+      "rowspan": 2,
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "关键参数 Parameters",
+      "colspan": 3,
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "风味特点",
+      "rowspan": 2,
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     {
+      "text": "研磨度",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "水温",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "时间",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     {
+      "text": "手冲 Pour-over",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "中细",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "90–93℃",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "2.5 分钟",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "干净明亮，层次分明",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     {
+      "text": "法压壶 French Press",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "粗",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "93–96℃",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "4 分钟",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "醇厚饱满，油脂丰富",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     {
+      "text": "意式浓缩 Espresso",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "极细",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "92℃/9 bar",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "25–30 秒",
+      "style": {
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "浓烈厚重，有克丽玛",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     }
+    ]
+   ]
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "三、产地与风味 Origins & Flavors"
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "（一）主要产区 Major Origins"
+  },
+  {
+   "type": "table",
+   "caption": "代表性产区一览",
+   "header_rows": 1,
+   "col_widths": [
+    24,
+    18,
+    58
+   ],
+   "rows": [
+    [
+     {
+      "text": "产区 Origin",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "海拔（米）",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "典型风味 Typical Flavors",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": "五号",
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     "埃塞俄比亚 Ethiopia",
+     "1800–2200",
+     "花香、柑橘、茶感"
+    ],
+    [
+     "哥伦比亚 Colombia",
+     "1200–1800",
+     "焦糖、坚果、均衡"
+    ],
+    [
+     "巴西 Brazil",
+     "800–1200",
+     "巧克力、低酸、厚实"
+    ],
+    [
+     "越南 Vietnam",
+     "500–800",
+     "浓烈、常用于拼配"
+    ]
+   ]
+  },
+  {
+   "type": "chart",
+   "chart_type": "bar",
+   "title": "主要产地咖啡年产量（示例数据）",
+   "categories": [
+    "巴西",
+    "越南",
+    "哥伦比亚",
+    "埃塞俄比亚"
+   ],
+   "series": [
+    {
+     "name": "产量（万吨）",
+     "values": [
+      390,
+      180,
+      84,
+      47
+     ]
+    }
+   ],
+   "width_mm": 120,
+   "caption": "主要产地咖啡年产量对比"
+  },
+  {
+   "type": "chart",
+   "chart_type": "pie",
+   "title": "一杯手冲的风味构成（示例）",
+   "categories": [
+    "果香",
+    "花香",
+    "坚果与可可",
+    "焦糖甜感"
+   ],
+   "series": [
+    {
+     "name": "占比",
+     "values": [
+      35,
+      15,
+      28,
+      22
+     ]
+    }
+   ],
+   "width_mm": 110,
+   "caption": "风味构成占比"
+  },
+  {
+   "type": "heading",
+   "level": 2,
+   "text": "（二）烘焙曲线 Roasting Curve"
+  },
+  {
+   "type": "chart",
+   "chart_type": "line",
+   "title": "浅烘与深烘的炉温曲线（示例）",
+   "categories": [
+    "0 分",
+    "3 分",
+    "6 分",
+    "9 分",
+    "12 分"
+   ],
+   "series": [
+    {
+     "name": "浅烘 Light",
+     "values": [
+      160,
+      175,
+      188,
+      198,
+      205
+     ]
+    },
+    {
+     "name": "深烘 Dark",
+     "values": [
+      160,
+      182,
+      200,
+      215,
+      228
+     ]
+    }
+   ],
+   "width_mm": 130,
+   "caption": "烘焙温度曲线对比"
+  },
+  {
+   "type": "heading",
+   "level": 3,
+   "text": "1. 品鉴四要素"
+  },
+  {
+   "type": "bullet_list",
+   "items": [
+    "香气 Aroma",
+    "酸度 Acidity",
+    "醇厚度 Body",
+    "余韵 Aftertaste"
+   ]
+  },
+  {
+   "type": "page_break"
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "四、冲煮流程与风味全景（思维导图）"
+  },
+  {
+   "type": "paragraph",
+   "text": "下面两张思维导图由「思维导图生成器（左右结构 · 稳定出图版）」插件生成后接入本插件的图片插槽：第一张为中文黑体字体模式，第二张为西文优先字体模式。"
+  },
+  {
+   "type": "image",
+   "src": "slot1",
+   "width_mm": 150,
+   "align": "center",
+   "caption": "手冲咖啡冲煮流程思维导图（中文）"
+  },
+  {
+   "type": "image",
+   "src": "slot2",
+   "width_mm": 150,
+   "align": "center",
+   "caption": "Coffee Flavor Wheel 咖啡风味轮（English）"
+  },
+  {
+   "type": "section_break"
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "附录 Appendix"
+  },
+  {
+   "type": "paragraph",
+   "text": "本附录随正文另起一节，页眉页脚与水印自动延续。"
+  },
+  {
+   "type": "attachment_note",
+   "items": [
+    "咖啡豆产区分布示意图（另附）",
+    "冲煮参数速查卡（另附）"
+   ]
+  },
+  {
+   "type": "note",
+   "text": "本手册为插件功能演示文档，数据均为教学示例 For demonstration only"
+  }
+ ]
+}

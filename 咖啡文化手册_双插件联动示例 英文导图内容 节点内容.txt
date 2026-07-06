@@ -1,0 +1,16 @@
+# Coffee Flavor Wheel
+## Fruity
+### Berry
+### Citrus
+## Floral
+### Jasmine
+### Rose
+## Sweet
+### Caramel
+### Honey
+## Nutty & Cocoa
+### Almond
+### Dark Chocolate
+## Roasted
+### Smoky
+### Toast

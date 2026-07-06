@@ -1,0 +1,677 @@
+{%- set BS = '%c' | format(92) -%}
+{
+ "meta": {
+  "title": "A Beginner's Guide to Stargazing",
+  "author": "Community Astronomy Club"
+ },
+ "page": {
+  "size": "A4",
+  "margin_mm": [
+   25,
+   25,
+   25,
+   25
+  ]
+ },
+ "default_style": {
+  "font": "Times New Roman",
+  "font_ascii": "Times New Roman",
+  "size": 12,
+  "space_after": 6,
+  "indent_first": 0,
+  "align": "justify"
+ },
+ "heading_styles": {
+  "title": {
+   "size": 24,
+   "bold": true,
+   "align": "center"
+  },
+  "1": {
+   "size": 16,
+   "bold": true,
+   "space_before": 12
+  },
+  "2": {
+   "size": 14,
+   "bold": true,
+   "italic": true,
+   "space_before": 8
+  },
+  "3": {
+   "size": 12,
+   "bold": true
+  }
+ },
+ "footer": {
+  "style": {
+   "font_ascii": "Times New Roman",
+   "size": 10
+  },
+  "page_number": {
+   "format": "- {n} -"
+  }
+ },
+ "watermark": {
+  "text": "SAMPLE COPY",
+  "size": 48,
+  "color": "DADADA"
+ },
+ "toc": {
+  "enabled": true,
+  "title": "Contents",
+  "levels": 2
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "level": "title",
+   "text": "A Beginner's Guide to Stargazing"
+  },
+  {
+   "type": "paragraph",
+   "style": {
+    "align": "center"
+   },
+   "runs": [
+    {
+     "text": "From your backyard to the Milky Way",
+     "italic": true
+    }
+   ]
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "1. Why Stargaze?"
+  },
+  {
+   "type": "paragraph",
+   "runs": [
+    {
+     "text": "Stargazing needs no licence and almost no gear. On any clear night you can find "
+    },
+    {
+     "text": "planets",
+     "bold": true
+    },
+    {
+     "text": ", trace constellations, and watch the "
+    },
+    {
+     "text": "phases of the Moon",
+     "highlight": "yellow"
+    },
+    {
+     "text": ". The apparent brightness of an object is described by its "
+    },
+    {
+     "text": "magnitude",
+     "bold": true,
+     "footnote": "Magnitude: a logarithmic brightness scale. Smaller numbers mean brighter objects; the faintest naked-eye stars are about magnitude 6."
+    },
+    {
+     "text": ", and a pair of binoculars already reveals thousands of objects invisible to the naked eye. A community list of monthly highlights is maintained at "
+    },
+    {
+     "link": "https://example.com/sky-calendar",
+     "text": "the example sky calendar"
+    },
+    {
+     "text": "."
+    }
+   ]
+  },
+  {
+   "type": "paragraph",
+   "runs": [
+    {
+     "text": "Text styles used in this handbook: "
+    },
+    {
+     "text": "wavy underline",
+     "underline": "wave"
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "double underline",
+     "underline": "double"
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "outdated advice",
+     "strike": true
+    },
+    {
+     "text": ", H"
+    },
+    {
+     "text": "2",
+     "subscript": true
+    },
+    {
+     "text": "O ice on Mars, the 10"
+    },
+    {
+     "text": "th",
+     "superscript": true
+    },
+    {
+     "text": " brightest star, "
+    },
+    {
+     "text": "small caps notes",
+     "small_caps": true
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "warning style",
+     "all_caps": true
+    },
+    {
+     "text": ", and "
+    },
+    {
+     "text": "colored remarks",
+     "color": "1F6FB2"
+    },
+    {
+     "text": "."
+    }
+   ]
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "2. Understanding Brightness"
+  },
+  {
+   "type": "paragraph",
+   "runs": [
+    {
+     "text": "Two stars that differ by five magnitudes differ in brightness by a factor of exactly "
+    },
+    {
+     "latex": "100"
+    },
+    {
+     "text": ". The general relation between magnitude and flux is:"
+    }
+   ]
+  },
+  {
+   "type": "equation",
+   "latex": "m_1 - m_2 = -2.5 {{ BS }}{{ BS }}log_{10} {{ BS }}{{ BS }}left( {{ BS }}{{ BS }}frac{F_1}{F_2} {{ BS }}{{ BS }}right)"
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "3. Choosing Your Equipment"
+  },
+  {
+   "type": "table",
+   "caption": "Common telescope types at a glance",
+   "header_rows": 2,
+   "col_widths": [
+    20,
+    14,
+    14,
+    14,
+    38
+   ],
+   "rows": [
+    [
+     {
+      "text": "Type",
+      "rowspan": 2,
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Specifications",
+      "colspan": 3,
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Best For",
+      "rowspan": 2,
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     {
+      "text": "Aperture",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Focal ratio",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Weight",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     {
+      "text": "Refractor",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "60–120 mm",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "f/8–f/12",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Light",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "The Moon, planets, double stars",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     {
+      "text": "Reflector",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "114–250 mm",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "f/4–f/8",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Medium",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Nebulae, galaxies, star clusters",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     {
+      "text": "Catadioptric",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "90–235 mm",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "f/10",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Medium",
+      "style": {
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "All-round use, astrophotography",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     }
+    ]
+   ],
+   "caption_label": "Table "
+  },
+  {
+   "type": "textbox",
+   "border": true,
+   "width_mm": 140,
+   "blocks": [
+    {
+     "type": "paragraph",
+     "style": {
+      "align": "center"
+     },
+     "runs": [
+      {
+       "text": "Tip: give your eyes at least 20 minutes in the dark before observing faint objects.",
+       "bold": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "4. What to Observe Through the Year"
+  },
+  {
+   "type": "table",
+   "caption": "Seasonal highlights for northern observers",
+   "header_rows": 1,
+   "col_widths": [
+    16,
+    54,
+    30
+   ],
+   "rows": [
+    [
+     {
+      "text": "Season",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Highlights",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     },
+     {
+      "text": "Best viewing time",
+      "style": {
+       "bold": true,
+       "align": "center",
+       "size": 10,
+       "indent_first": 0
+      }
+     }
+    ],
+    [
+     "Spring",
+     "Galaxies in Leo and Virgo",
+     "22:00–01:00"
+    ],
+    [
+     "Summer",
+     "The Milky Way core, Scorpius",
+     "23:00–02:00"
+    ],
+    [
+     "Autumn",
+     "Andromeda Galaxy, Pegasus",
+     "21:00–00:00"
+    ],
+    [
+     "Winter",
+     "Orion Nebula, Pleiades",
+     "20:00–23:00"
+    ]
+   ],
+   "caption_label": "Table "
+  },
+  {
+   "type": "chart",
+   "chart_type": "bar",
+   "title": "Average clear nights per season (sample data)",
+   "categories": [
+    "Spring",
+    "Summer",
+    "Autumn",
+    "Winter"
+   ],
+   "series": [
+    {
+     "name": "Clear nights",
+     "values": [
+      14,
+      18,
+      16,
+      11
+     ]
+    }
+   ],
+   "width_mm": 120,
+   "caption": "Average clear nights per season",
+   "caption_label": "Figure "
+  },
+  {
+   "type": "chart",
+   "chart_type": "pie",
+   "title": "A typical two-hour observation session",
+   "categories": [
+    "Setting up",
+    "Observing",
+    "Taking notes",
+    "Packing up"
+   ],
+   "series": [
+    {
+     "name": "Share",
+     "values": [
+      20,
+      60,
+      12,
+      8
+     ]
+    }
+   ],
+   "width_mm": 110,
+   "caption": "How observation time is spent",
+   "caption_label": "Figure "
+  },
+  {
+   "type": "chart",
+   "chart_type": "line",
+   "title": "End of astronomical twilight (sample city)",
+   "categories": [
+    "Mar",
+    "May",
+    "Jul",
+    "Sep",
+    "Nov"
+   ],
+   "series": [
+    {
+     "name": "Summer half",
+     "values": [
+      19.8,
+      21.3,
+      22.1,
+      20.2,
+      18.7
+     ]
+    },
+    {
+     "name": "With daylight saving",
+     "values": [
+      20.8,
+      22.3,
+      23.1,
+      21.2,
+      19.7
+     ]
+    }
+   ],
+   "width_mm": 130,
+   "caption": "When true darkness begins",
+   "caption_label": "Figure "
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "5. A Simple Observation Routine"
+  },
+  {
+   "type": "ordered_list",
+   "child_format": "a",
+   "items": [
+    {
+     "text": "Plan before dark.",
+     "children": [
+      "Check the weather and the Moon phase",
+      "Pick three targets from a sky map"
+     ]
+    },
+    {
+     "text": "Set up and cool down.",
+     "children": [
+      "Let the telescope reach outdoor temperature",
+      "Align the finder on a bright star"
+     ]
+    },
+    "Observe from bright to faint, and sketch what you see."
+   ]
+  },
+  {
+   "type": "bullet_list",
+   "items": [
+    "Red flashlight",
+    "Star chart or app",
+    "Notebook and pencil",
+    "Warm clothing"
+   ]
+  },
+  {
+   "type": "page_break"
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "6. Two Mind Maps for Quick Reference"
+  },
+  {
+   "type": "paragraph",
+   "text": "The two mind maps below were generated by the Mind Map Generator plugin and passed into this plugin through image slots slot1 and slot2."
+  },
+  {
+   "type": "image",
+   "src": "slot1",
+   "width_mm": 150,
+   "align": "center",
+   "caption": "Night sky objects at a glance",
+   "caption_label": "Figure "
+  },
+  {
+   "type": "image",
+   "src": "slot2",
+   "width_mm": 150,
+   "align": "center",
+   "caption": "Telescope types compared",
+   "caption_label": "Figure "
+  },
+  {
+   "type": "section_break"
+  },
+  {
+   "type": "heading",
+   "level": 1,
+   "text": "Appendix: Further Reading"
+  },
+  {
+   "type": "paragraph",
+   "text": "This appendix starts a new section; the watermark and page numbers continue automatically."
+  },
+  {
+   "type": "bullet_list",
+   "items": [
+    "Turn Left at Orion — a classic starter guide",
+    "NASA Night Sky Network — free monthly maps",
+    "Local astronomy club open nights"
+   ]
+  }
+ ]
+}

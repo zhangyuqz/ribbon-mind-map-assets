@@ -1,0 +1,17 @@
+# Night Sky Objects
+## Stars
+### Single Stars
+### Double Stars
+### Variable Stars
+## Planets
+### Inner Planets
+#### Mercury, Venus, Mars
+### Outer Planets
+#### Jupiter, Saturn
+## Deep Sky Objects
+### Star Clusters
+### Nebulae
+### Galaxies
+## Transient Events
+### Meteor Showers
+### Comets

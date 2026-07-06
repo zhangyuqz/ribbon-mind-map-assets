@@ -1,0 +1,13 @@
+# Telescope Types
+## Refractor
+### Simple and durable
+### Great for planets
+## Reflector
+### Large aperture per dollar
+### Great for deep sky
+## Catadioptric
+### Compact all-rounder
+### Computerized mounts
+## Binoculars
+### Best first instrument
+### Wide field of view

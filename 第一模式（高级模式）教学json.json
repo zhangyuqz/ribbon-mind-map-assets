@@ -1,0 +1,675 @@
+{
+  "meta": {
+    "title": "纸艺立体书制作全功能教学手册",
+    "author": "青芽手作课堂"
+  },
+  "page": {
+    "size": "A4",
+    "margin_mm": [
+      37,
+      26,
+      35,
+      28
+    ]
+  },
+  "default_style": {
+    "font": "仿宋_GB2312",
+    "font_ascii": "Times New Roman",
+    "size": "三号",
+    "line_spacing": 28,
+    "line_spacing_rule": "exactly",
+    "indent_first": 2,
+    "align": "justify"
+  },
+  "heading_styles": {
+    "title": {
+      "font": "方正小标宋简体",
+      "size": "二号",
+      "align": "center",
+      "line_spacing": 32,
+      "line_spacing_rule": "exactly"
+    },
+    "1": {
+      "font": "黑体",
+      "size": "三号"
+    },
+    "2": {
+      "font": "楷体_GB2312",
+      "size": "三号",
+      "bold": false
+    },
+    "3": {
+      "font": "仿宋_GB2312",
+      "size": "三号"
+    },
+    "4": {
+      "font": "仿宋_GB2312",
+      "size": "三号"
+    },
+    "5": {
+      "font": "仿宋_GB2312",
+      "size": "三号"
+    },
+    "6": {
+      "font": "仿宋_GB2312",
+      "size": "三号"
+    }
+  },
+  "footer": {
+    "style": {
+      "font": "宋体",
+      "size": "四号"
+    },
+    "page_number": {
+      "format": "— {n} —"
+    }
+  },
+  "watermark": {
+    "text": "纸艺课堂教学",
+    "color": "E2E2E2"
+  },
+  "toc": {
+    "enabled": true,
+    "title": "目  录",
+    "levels": 3
+  },
+  "blocks": [
+    {
+      "type": "telegram_header",
+      "org": "青芽手作课堂\n课程研发组",
+      "doc_class": "课程任务单",
+      "ref_no": "青芽课〔2026〕3号",
+      "signer": "林纸艺",
+      "level": "普通",
+      "time": "2026-07-20 09:00",
+      "time_label": "制发时间",
+      "unit": "纸艺教研室",
+      "unit_label": "编制单位",
+      "cc": "各课程助教",
+      "title": "纸艺立体书制作全功能教学手册\n课程实施任务单",
+      "body_in_table": false
+    },
+    {
+      "type": "classification",
+      "level": "课堂教学资料"
+    },
+    {
+      "type": "doc_number",
+      "text": "青芽课〔2026〕3号"
+    },
+    {
+      "type": "heading",
+      "level": "title",
+      "text": "纸艺立体书制作全功能教学手册"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "一、课程导入"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "课程导语：本教程面向"
+        },
+        {
+          "text": "零基础学习者",
+          "bold": true
+        },
+        {
+          "text": "，通过裁切、压痕、折叠和粘贴，完成一本可以"
+        },
+        {
+          "text": "打开即成景",
+          "italic": true
+        },
+        {
+          "text": "的纸艺立体书。"
+        }
+      ],
+      "style": {
+        "indent_first": 0,
+        "space_before": 3,
+        "space_after": 3,
+        "keep_together": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "学习重点：所有折线先用"
+        },
+        {
+          "text": "压痕笔轻划定位",
+          "color": "C00000",
+          "bold": true
+        },
+        {
+          "text": "。课程原定"
+        },
+        {
+          "text": "2 课时",
+          "strike": true
+        },
+        {
+          "text": "，现调整为"
+        },
+        {
+          "text": "3 课时",
+          "underline": true
+        },
+        {
+          "text": "；其中"
+        },
+        {
+          "text": "平行折与 V 形折",
+          "highlight": "yellow"
+        },
+        {
+          "text": "是结构稳定的关键",
+          "emphasis": true
+        },
+        {
+          "text": "，请先用废纸试折",
+          "footnote": "试折纸建议使用与成品纸厚度相近的边角料，以便准确判断回弹量。"
+        },
+        {
+          "text": "。"
+        }
+      ],
+      "style": {
+        "indent_first": 0,
+        "space_before": 3,
+        "space_after": 3,
+        "keep_together": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "阅读提示：动手前请先查看"
+        },
+        {
+          "text": "《刀具安全与桌面保护》",
+          "font": "黑体",
+          "font_ascii": "Arial",
+          "size": "小三",
+          "color": "C00000",
+          "char_scale": 90
+        },
+        {
+          "text": "一节"
+        },
+        {
+          "text": "*",
+          "superscript": true
+        },
+        {
+          "text": "，未成年人应在成人陪同下使用美工刀。"
+        }
+      ],
+      "style": {
+        "indent_first": 0,
+        "space_before": 3,
+        "space_after": 3,
+        "keep_together": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "（一）学习目标"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1. 设计步骤（演示子项编号 (1)(2)(3)）"
+    },
+    {
+      "type": "ordered_list",
+      "child_format": "(1)",
+      "items": [
+        "确定故事主题，先画出封面、场景和人物的缩略草图",
+        {
+          "text": "拆分页面层次",
+          "children": [
+            "把远景、中景和前景分别画在三张描图纸上",
+            "为每个活动部件预留粘贴翼和开合空间"
+          ]
+        },
+        "制作一页白模，确认开合顺畅后再转绘到彩色卡纸"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2. 结构练习（演示子项编号 ①②③）"
+    },
+    {
+      "type": "ordered_list",
+      "child_format": "①",
+      "items": [
+        "平行折：让主体随书页打开向前弹出",
+        {
+          "text": "V 形折：让主体形成有方向感的立体角度",
+          "children": [
+            "先确定 V 形中心线与书脊垂直",
+            "再让两侧粘贴翼保持相同宽度"
+          ]
+        },
+        "转轴结构：用纸铆钉让角色手臂或指针旋转"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "3. 工具安全（演示子项编号 a.b.c.）"
+    },
+    {
+      "type": "ordered_list",
+      "child_format": "a",
+      "items": [
+        "裁切时垫好切割垫，刀刃始终朝身体外侧移动",
+        {
+          "text": "使用金属直尺辅助切割",
+          "children": [
+            "手指压在直尺凹槽内，不跨过裁切边",
+            "一次轻划定位，再分次加深，不用蛮力"
+          ]
+        },
+        "停用刀具时立即收回刀片，并把碎纸清入回收盒"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "（二）材料与工具"
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "200—250 g/㎡ 彩色卡纸与 120 g/㎡ 内页纸",
+        {
+          "text": "基础工具",
+          "children": [
+            "切割垫、金属直尺、美工刀和剪刀",
+            "压痕笔、铅笔、橡皮和白胶"
+          ]
+        },
+        "可选装饰：彩笔、贴纸、丝带和透明描图纸"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "二、材料配备与进度"
+    },
+    {
+      "type": "table",
+      "caption": "一册六页立体书材料与进度表",
+      "header_rows": 2,
+      "rows": [
+        [
+          {
+            "text": "（成品尺寸：A5 横向，建议先完成一页白模）",
+            "colspan": 4,
+            "style": {
+              "bold": true,
+              "align": "center",
+              "shading": "DDEBF7"
+            }
+          }
+        ],
+        [
+          {
+            "text": "阶段",
+            "style": {
+              "bold": true,
+              "align": "center"
+            }
+          },
+          {
+            "text": "材料",
+            "style": {
+              "bold": true,
+              "align": "center"
+            }
+          },
+          {
+            "text": "参考用量",
+            "style": {
+              "bold": true,
+              "align": "center"
+            }
+          },
+          {
+            "text": "教学目的",
+            "style": {
+              "bold": true,
+              "align": "center"
+            }
+          }
+        ],
+        [
+          {
+            "text": "结构练习",
+            "rowspan": 3,
+            "style": {
+              "align": "center"
+            }
+          },
+          "白色练习纸",
+          "A4 纸 3 张",
+          "验证平行折、V 形折和转轴"
+        ],
+        [
+          "描图纸",
+          "A4 纸 2 张",
+          "分层转绘与定位"
+        ],
+        [
+          "可移胶带",
+          "1 卷",
+          "临时固定白模"
+        ],
+        [
+          {
+            "text": "成品制作",
+            "rowspan": 2,
+            "style": {
+              "align": "center"
+            }
+          },
+          "彩色卡纸",
+          "A4 纸 8 张",
+          "制作内页、场景与活动件"
+        ],
+        [
+          "中性白胶",
+          "约 20 mL",
+          "粘贴翼点胶，避免纸张起皱"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "三、结构路线图"
+    },
+    {
+      "type": "paragraph",
+      "text": "下图用一张图片展示从主题构思到装订验收的完整路线；在 Dify 中只需把图片变量连接到 IMAGE_SLOT_1。"
+    },
+    {
+      "type": "image",
+      "src": "slot1",
+      "width_mm": 120,
+      "align": "center",
+      "caption": "纸艺立体书制作流程思维导图"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "四、课堂记录与复盘"
+    },
+    {
+      "type": "chart",
+      "chart_type": "bar",
+      "title": "三轮白模的结构通过数",
+      "categories": [
+        "第一轮",
+        "第二轮",
+        "第三轮"
+      ],
+      "series": [
+        {
+          "name": "通过结构",
+          "values": [
+            3,
+            5,
+            7
+          ]
+        }
+      ],
+      "caption": "白模迭代后通过开合测试的结构数量",
+      "width_mm": 120
+    },
+    {
+      "type": "chart",
+      "chart_type": "line",
+      "title": "三课时完成度变化",
+      "categories": [
+        "第1课时",
+        "第2课时",
+        "第3课时"
+      ],
+      "series": [
+        {
+          "name": "结构完成度",
+          "values": [
+            25,
+            65,
+            100
+          ]
+        },
+        {
+          "name": "装饰完成度",
+          "values": [
+            10,
+            40,
+            90
+          ]
+        }
+      ],
+      "caption": "结构制作与装饰制作的课程进度",
+      "width_mm": 120
+    },
+    {
+      "type": "chart",
+      "chart_type": "pie",
+      "title": "课堂时间分配",
+      "categories": [
+        "设计与白模",
+        "成品制作",
+        "装订与复盘"
+      ],
+      "series": [
+        {
+          "name": "占比",
+          "values": [
+            35,
+            45,
+            20
+          ]
+        }
+      ],
+      "caption": "三类教学活动的建议时间占比",
+      "width_mm": 110
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "五、尺寸计算与排版"
+    },
+    {
+      "type": "equation",
+      "latex": "\\text{粘贴翼宽度} = \\frac{\\text{弹起高度}}{4} + 2\\text{ mm}"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "初学者可取弹起高度 "
+        },
+        {
+          "latex": "h = 40\\text{ mm}"
+        },
+        {
+          "text": "；第 "
+        },
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": "i",
+          "subscript": true
+        },
+        {
+          "text": " 个活动件与书脊至少保持 8 mm 间距。延伸阅读可打开 "
+        },
+        {
+          "link": "https://www.example.com/paper-craft",
+          "text": "纸艺结构练习页"
+        },
+        {
+          "text": "。本课程英文代号 "
+        },
+        {
+          "text": "pop-up lab",
+          "small_caps": true
+        },
+        {
+          "text": "、验收状态 "
+        },
+        {
+          "text": "ready",
+          "all_caps": true
+        },
+        {
+          "text": "。"
+        }
+      ]
+    },
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "六、装订与验收"
+    },
+    {
+      "type": "textbox",
+      "border": true,
+      "width_mm": 150,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "操作提示：先从中间跨页向两侧逐页装订；每粘好一页，都要完全合拢并静置一分钟，再继续下一页。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": {
+        "shading": "FFF2CC",
+        "border": true,
+        "align": "center",
+        "space_before": 6,
+        "space_after": 6
+      },
+      "runs": [
+        {
+          "text": "安全第一：裁切时使用切割垫，刀刃始终朝外，停用即收刀",
+          "bold": true,
+          "color": "C00000"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": {
+        "indent_left": 2,
+        "indent_right": 2,
+        "keep_with_next": true
+      },
+      "text": "验收前先慢速开合三次，观察活动件是否碰撞、粘贴翼是否翘起，并在发现问题时用铅笔标记位置。"
+    },
+    {
+      "type": "paragraph",
+      "style": {
+        "keep_together": true
+      },
+      "text": "合格作品应做到书页能自然摊开、合拢时无明显阻力、结构不超出书页边缘、胶痕不过量、标题与图像层次清晰。"
+    },
+    {
+      "type": "section_break"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "七、成果说明与附件"
+    },
+    {
+      "type": "paragraph",
+      "text": "本手册既是纸艺立体书的课堂教程，也是 DOCX 生成器高级模式的完整教学示例；修改文字、数据与图片变量即可快速制作自己的课程文档。"
+    },
+    {
+      "type": "note",
+      "text": "建议保留一页白模和一份尺寸记录，便于下次复刻或改版。"
+    },
+    {
+      "type": "attachment_note",
+      "items": [
+        "纸艺立体结构练习图",
+        "材料领用与余料记录表",
+        "作品开合验收清单"
+      ]
+    },
+    {
+      "type": "signoff",
+      "org": "青芽手作课堂课程研发组",
+      "date": "2026年7月20日"
+    },
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "attachment_label",
+      "number": 1
+    },
+    {
+      "type": "heading",
+      "level": "title",
+      "text": "纸艺立体结构练习图使用说明"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "一、练习安排"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "（一）先做白模"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1. 平行折练习"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "（1）确定折线"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "① 标记中心"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "a. 检查开合"
+    },
+    {
+      "type": "paragraph",
+      "text": "沿中心线反复轻折两次，贴合前先把页面完全打开和合拢，确认弹起结构不会越过裁切边。"
+    }
+  ]
+}

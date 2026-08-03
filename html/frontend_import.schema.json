@@ -1,0 +1,391 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pagespec.local/schema/frontend-project-0.0.1.json",
+  "title": "PageSpec Front-End Virtual Project 0.0.1",
+  "description": "Canonical ASCII JSON for one bounded virtual front-end project. Instance data carries no redundant format or version field. Legacy code_units remain a runtime-only compatibility input.",
+  "type": "object",
+  "required": [
+    "files"
+  ],
+  "properties": {
+    "entry": {
+      "$ref": "#/$defs/path"
+    },
+    "ids": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^#[A-Za-z][A-Za-z0-9._/-]{0,127}$"
+      },
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 512,
+        "items": {
+          "$ref": "#/$defs/library_id"
+        }
+      }
+    },
+    "libraries": {
+      "type": "array",
+      "maxItems": 512,
+      "items": {
+        "$ref": "#/$defs/library_id"
+      }
+    },
+    "at": {
+      "type": "array",
+      "maxItems": 1024,
+      "items": {
+        "$ref": "#/$defs/placement"
+      }
+    },
+    "build": {
+      "type": "string",
+      "enum": [
+        "browser",
+        "browser-ready",
+        "html",
+        "pagespec"
+      ]
+    },
+    "files": {
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 4096,
+      "propertyNames": {
+        "$ref": "#/$defs/path"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/file_node"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "build"
+        ],
+        "properties": {
+          "build": {
+            "const": "pagespec"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "ids"
+              ]
+            },
+            {
+              "required": [
+                "libraries"
+              ]
+            },
+            {
+              "required": [
+                "at"
+              ]
+            }
+          ]
+        },
+        "properties": {
+          "files": {
+            "type": "object",
+            "maxProperties": 1,
+            "additionalProperties": {
+              "$ref": "#/$defs/pagespec_file_node"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^(?!/)(?![A-Za-z][A-Za-z0-9+.-]*:)(?!\\.{1,2}(?:/|$))(?!.*\\/\\.{1,2}(?:/|$))(?!.*\\\\)(?!.*[?#\\u0000-\\u001F]).+$"
+    },
+    "symlink_target": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^(?!/)(?![A-Za-z][A-Za-z0-9+.-]*:)(?!.*\\\\)(?!.*[?#\\u0000-\\u001F]).+$"
+    },
+    "library_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "loader": {
+      "type": "string",
+      "enum": [
+        "text",
+        "css",
+        "js",
+        "jsx",
+        "ts",
+        "tsx",
+        "json",
+        "html",
+        "svg",
+        "binary",
+        "dataurl"
+      ]
+    },
+    "text_loader": {
+      "type": "string",
+      "enum": [
+        "text",
+        "css",
+        "js",
+        "jsx",
+        "ts",
+        "tsx",
+        "json",
+        "html",
+        "svg"
+      ]
+    },
+    "text_value": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "maxItems": 200000,
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "file_node": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/text_value"
+        },
+        {
+          "type": "object",
+          "required": [
+            "text"
+          ],
+          "properties": {
+            "text": {
+              "$ref": "#/$defs/text_value"
+            },
+            "loader": {
+              "$ref": "#/$defs/text_loader"
+            },
+            "mime": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "json"
+          ],
+          "properties": {
+            "json": {
+              "description": "A strict typed JSON value serialized as UTF-8 with object insertion order and array order preserved. This value never enters near-JSON repair."
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "code_ref"
+          ],
+          "properties": {
+            "code_ref": {
+              "type": "string",
+              "pattern": "^code(?:[1-9]|1[0-9]|20)$"
+            },
+            "loader": {
+              "$ref": "#/$defs/text_loader"
+            },
+            "mime": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "slot"
+          ],
+          "properties": {
+            "slot": {
+              "type": "string",
+              "pattern": "^slot(?:[1-9]|1[0-9]|20)$"
+            },
+            "mime": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "base64"
+          ],
+          "properties": {
+            "base64": {
+              "type": "string"
+            },
+            "loader": {
+              "$ref": "#/$defs/loader"
+            },
+            "mime": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "symlink"
+          ],
+          "properties": {
+            "symlink": {
+              "$ref": "#/$defs/symlink_target"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "directory"
+          ],
+          "properties": {
+            "directory": {
+              "const": true
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "pagespec_file_node": {
+      "type": "object",
+      "required": [
+        "json"
+      ],
+      "properties": {
+        "json": {
+          "type": "object",
+          "required": [
+            "blocks"
+          ],
+          "properties": {
+            "version": {
+              "const": 1
+            },
+            "doc": {
+              "type": "object"
+            },
+            "blocks": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 800
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "placement": {
+      "type": "object",
+      "required": [
+        "id",
+        "output",
+        "marker"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/library_id"
+        },
+        "output": {
+          "type": "string",
+          "enum": [
+            "style",
+            "script",
+            "style-source",
+            "script-source",
+            "style-build",
+            "script-build"
+          ]
+        },
+        "file": {
+          "$ref": "#/$defs/path"
+        },
+        "realm": {
+          "$ref": "#/$defs/document_realm"
+        },
+        "marker": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]{0,127}$"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "output": {
+                "enum": [
+                  "style-source",
+                  "script-source",
+                  "style-build",
+                  "script-build"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "file"
+            ],
+            "properties": {
+              "realm": {
+                "const": "document"
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "document_realm": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 1033,
+      "pattern": "^document(?:$|:(?!/)(?![A-Za-z][A-Za-z0-9+.-]*:)(?!\\.{1,2}(?:/|$))(?!.*\\/\\.{1,2}(?:/|$))(?!.*\\\\)(?!.*[?#\\u0000-\\u001F]).+$)"
+    }
+  }
+}

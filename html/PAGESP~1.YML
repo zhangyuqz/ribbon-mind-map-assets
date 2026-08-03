@@ -1,0 +1,329 @@
+app:
+  description: 固定非敏感主题教学：上传一张展品图片，用严格 JSON 编排 code1、slot1 及 15 组互补离线前端库，生成可筛选、拖拽、统计和可视化的书房展陈。
+  icon: 🖼️
+  icon_background: '#FCE7F3'
+  mode: advanced-chat
+  name: PageSpec 0.0.1 教学示例：桌面手办与个人书房数字展陈
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: package
+  value:
+    plugin_unique_identifier: zhangyu/html_offline_exporter:0.0.1@fdfe7cc84872593d947c2902031039d6360872328c9e98b6babee5117ad36f7f
+kind: app
+version: 0.3.1
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: true
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 1
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 1
+      image:
+        enabled: true
+        number_limits: 1
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 1
+    opening_statement: 上传一张桌面手办或书房展品图片，再发送任意消息生成固定主题离线教学页。
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - 生成桌面手办与书房数字展陈
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 2036261000001-source-2036261000101-target
+      selected: false
+      source: '2036261000001'
+      sourceHandle: source
+      target: '2036261000101'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 2036261000001-source-2036261000102-target
+      selected: false
+      source: '2036261000001'
+      sourceHandle: source
+      target: '2036261000102'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 2036261000101-source-2036261000201-target
+      selected: false
+      source: '2036261000101'
+      sourceHandle: source
+      target: '2036261000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 2036261000102-source-2036261000201-target
+      selected: false
+      source: '2036261000102'
+      sourceHandle: source
+      target: '2036261000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 2036261000201-source-2036261000999-target
+      selected: false
+      source: '2036261000201'
+      sourceHandle: source
+      target: '2036261000999'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: 上传一张桌面手办或书房展品图片；工作流使用 slot1 内联图片，使用 code1 运行固定主题交互。
+        selected: false
+        title: 开始：上传展品图片
+        type: start
+        variables:
+        - allowed_file_extensions:
+          - .JPG
+          - .JPEG
+          - .PNG
+          - .GIF
+          - .WEBP
+          allowed_file_types:
+          - image
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          label: 展品图片（将作为第一图片插槽 slot1）
+          max_length: 48
+          options: []
+          required: true
+          type: file
+          variable: exhibit_image
+      height: 118
+      id: '2036261000001'
+      position:
+        x: 40
+        y: 190
+      positionAbsolute:
+        x: 40
+        y: 190
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: 模板节点经 Dify 1.7.1 专用字面量保护后输出严格、唯一键、有限数 project/files JSON；files 中仅用 code_ref 与 slot 引用不透明输入。
+        selected: false
+        template: '{"entry":"index.html","libraries":["chart.js","chartjs-plugin-datalabels","dayjs","d3","simple-statistics","papaparse","chroma-js","tabulator-tables","marked","dompurify","roughjs","sortablejs","countup.js","tippy.js","qr-code-styling"],"files":{"index.html":{"text":"<!doctype html>\\n<html lang=\\"zh-CN\\">\\n<head>\\n  <meta charset=\\"utf-8\\">\\n  <meta name=\\"viewport\\" content=\\"width=device-width,initial-scale=1\\">\\n  <title>桌面手办与个人书房数字展陈</title>\\n  <link rel=\\"stylesheet\\" href=\\"styles/exhibit.css\\">\\n</head>\\n<body>\\n  <a class=\\"skip\\" href=\\"#main\\">跳到主内容</a>\\n  <header class=\\"hero\\">\\n    <div class=\\"hero-copy\\">\\n      <p class=\\"eyebrow\\">PAGESPEC 0.0.1 · 断网教学示例</p>\\n      <h1>桌面手办与个人书房数字展陈</h1>\\n      <p>一个固定、非敏感主题的单文件离线展页。上传的第一张图片来自 <code>slot1</code>，全部交互逻辑来自 <code>code1</code>。</p>\\n      <div class=\\"hero-actions\\">\\n        <button id=\\"filter-vintage\\" type=\\"button\\">只看经典与纪念品</button>\\n        <button id=\\"reset-filter\\" class=\\"secondary\\" type=\\"button\\">恢复全部</button>\\n        <button id=\\"help-tip\\" class=\\"secondary\\" type=\\"button\\">如何交互？</button>\\n      </div>\\n      <p id=\\"live-status\\" class=\\"status\\" role=\\"status\\" aria-live=\\"polite\\">正在初始化离线展陈……</p>\\n    </div>\\n    <figure class=\\"portrait-card\\">\\n      <img id=\\"exhibit-photo\\" src=\\"assets/exhibit-photo\\" alt=\\"用户上传的桌面手办或书房展品图片\\">\\n      <figcaption>图片插槽 <strong>slot1</strong> 已内联到本地文档</figcaption>\\n    </figure>\\n  </header>\\n\\n  <main id=\\"main\\" class=\\"layout\\">\\n    <section class=\\"panel metrics\\" aria-labelledby=\\"metrics-title\\">\\n      <div class=\\"section-heading\\">\\n        <div><p class=\\"kicker\\">收藏概览</p><h2 id=\\"metrics-title\\">本地数据摘要</h2></div>\\n        <p id=\\"updated-at\\" class=\\"muted\\"></p>\\n      </div>\\n      <div class=\\"metric-grid\\">\\n        <article><span id=\\"metric-items\\" class=\\"metric-value\\">0</span><span>件展品</span></article>\\n        <article><span id=\\"metric-score\\" class=\\"metric-value\\">0</span><span>平均展陈完整度</span></article>\\n        <article><span id=\\"metric-median\\" class=\\"metric-value\\">0</span><span>中位收藏年限</span></article>\\n      </div>\\n    </section>\\n\\n    <section class=\\"panel chart-panel\\" aria-labelledby=\\"chart-title\\">\\n      <div class=\\"section-heading\\">\\n        <div><p class=\\"kicker\\">主题分布</p><h2 id=\\"chart-title\\">展品完整度与收藏年限</h2></div>\\n        <span class=\\"badge\\">Chart.js + Datalabels</span>\\n      </div>\\n      <div class=\\"chart-wrap\\"><canvas id=\\"collection-chart\\" aria-label=\\"展品完整度柱状图\\"></canvas></div>\\n      <div id=\\"d3-strip\\" class=\\"d3-strip\\" aria-label=\\"D3 迷你完整度条形图\\"></div>\\n    </section>\\n\\n    <section class=\\"panel table-panel\\" aria-labelledby=\\"table-title\\">\\n      <div class=\\"section-heading\\">\\n        <div><p class=\\"kicker\\">可筛选台账</p><h2 id=\\"table-title\\">离线收藏目录</h2></div>\\n        <span class=\\"badge\\">Papa Parse + Tabulator</span>\\n      </div>\\n      <div id=\\"collection-table\\"></div>\\n    </section>\\n\\n    <section class=\\"panel notes-panel\\" aria-labelledby=\\"notes-title\\">\\n      <div class=\\"section-heading\\">\\n        <div><p class=\\"kicker\\">安全文本</p><h2 id=\\"notes-title\\">展陈说明</h2></div>\\n        <span class=\\"badge\\">Marked + DOMPurify</span>\\n      </div>\\n      <div id=\\"curator-notes\\" class=\\"prose\\"></div>\\n    </section>\\n\\n    <section class=\\"panel order-panel\\" aria-labelledby=\\"order-title\\">\\n      <div class=\\"section-heading\\">\\n        <div><p class=\\"kicker\\">拖拽策展</p><h2 id=\\"order-title\\">参观顺序</h2></div>\\n        <span class=\\"badge\\">SortableJS</span>\\n      </div>\\n      <ol id=\\"visit-order\\" class=\\"visit-order\\">\\n        <li data-zone=\\"手办区\\" tabindex=\\"0\\"><span class=\\"grip\\">☷</span>手办区：角色与造型</li>\\n        <li data-zone=\\"编程书架\\" tabindex=\\"0\\"><span class=\\"grip\\">☷</span>编程书架：算法与系统</li>\\n        <li data-zone=\\"设计书架\\" tabindex=\\"0\\"><span class=\\"grip\\">☷</span>设计书架：版式与色彩</li>\\n        <li data-zone=\\"纪念品区\\" tabindex=\\"0\\"><span class=\\"grip\\">☷</span>纪念品区：时间与故事</li>\\n      </ol>\\n      <p id=\\"order-result\\" class=\\"status\\">当前顺序：手办区 → 编程书架 → 设计书架 → 纪念品区</p>\\n    </section>\\n\\n    <section class=\\"panel qr-panel\\" aria-labelledby=\\"qr-title\\">\\n      <div><p class=\\"kicker\\">离线标识</p><h2 id=\\"qr-title\\">展陈编号二维码</h2><p>二维码只编码本地示例标识，不访问网络。</p></div>\\n      <div id=\\"exhibit-qr\\" class=\\"qr\\"></div>\\n    </section>\\n\\n    <section class=\\"panel sketch-panel\\" aria-labelledby=\\"sketch-title\\">\\n      <div class=\\"section-heading\\"><div><p class=\\"kicker\\">手绘气质</p><h2 id=\\"sketch-title\\">书房布局草图</h2></div><span class=\\"badge\\">Rough.js</span></div>\\n      <canvas id=\\"room-sketch\\" width=\\"960\\" height=\\"240\\" aria-label=\\"桌面与书架的手绘布局草图\\"></canvas>\\n    </section>\\n  </main>\\n\\n  <footer>固定教学主题 · 完全断网可读 · 数据与文案均为合成示例</footer>\\n  <script src=\\"scripts/app.js\\"></script>\\n</body>\\n</html>","loader":"html","mime":"text/html"},"styles/exhibit.css":{"text":"*{box-sizing:border-box}html{color-scheme:dark;scroll-behavior:smooth}body{margin:0;background:#0d111b;color:#edf2ff;font:15px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,\\"Segoe UI\\",sans-serif;background-image:radial-gradient(circle at 12% 8%,#31396466 0,transparent 30rem),radial-gradient(circle at 92% 18%,#743d5b55 0,transparent 28rem)}button{font:inherit}.skip{position:fixed;left:1rem;top:-4rem;z-index:20;background:#fff;color:#111;padding:.65rem 1rem;border-radius:.7rem}.skip:focus{top:1rem}.hero{max-width:1180px;margin:auto;padding:64px 28px 34px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:34px;align-items:center}.eyebrow,.kicker{margin:0 0 .4rem;text-transform:uppercase;letter-spacing:.14em;color:#f5b8d0;font-weight:800;font-size:.75rem}.hero h1{font-family:Georgia,\\"Noto Serif SC\\",serif;font-size:clamp(2.25rem,5vw,4.8rem);line-height:1.04;margin:.2rem 0 1rem;max-width:13ch}.hero p{max-width:64ch;color:#c6cde2}.portrait-card{margin:0;padding:14px;background:linear-gradient(145deg,#ffffff18,#ffffff05);border:1px solid #ffffff22;border-radius:26px;box-shadow:0 28px 75px #0007;transform:rotate(1.2deg)}.portrait-card img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;background:#20283a}.portrait-card figcaption{padding:12px 4px 3px;color:#c6cde2;font-size:.85rem}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 12px}button{border:1px solid #f5b8d0;background:#f5b8d0;color:#24121a;border-radius:999px;padding:10px 16px;font-weight:800;cursor:pointer;transition:transform .18s,box-shadow .18s}button:hover,button:focus-visible{transform:translateY(-2px);box-shadow:0 8px 28px #f5b8d033;outline:2px solid #fff;outline-offset:2px}button.secondary{background:#151b2a;color:#edf2ff;border-color:#606b86}.layout{max-width:1180px;margin:auto;padding:0 28px 58px;display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.panel{grid-column:span 12;background:#141a29dd;border:1px solid #ffffff19;border-radius:22px;padding:24px;box-shadow:0 18px 55px #0004;overflow:hidden}.metrics{grid-column:span 12}.chart-panel,.table-panel{grid-column:span 12}.notes-panel,.order-panel{grid-column:span 6}.qr-panel{grid-column:span 4;display:flex;align-items:center;justify-content:space-between;gap:20px}.sketch-panel{grid-column:span 8}.section-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}.section-heading h2,.qr-panel h2{margin:.1rem 0;font-family:Georgia,\\"Noto Serif SC\\",serif;font-size:1.55rem}.muted{color:#8f99b4}.badge{font-size:.72rem;font-weight:800;color:#a9f1dc;background:#15342f;border:1px solid #2c7061;border-radius:999px;padding:5px 9px;white-space:nowrap}.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric-grid article{display:flex;flex-direction:column;border-left:3px solid #f5b8d0;background:#0c1220;padding:18px;border-radius:12px}.metric-value{font:700 2.4rem/1 Georgia,serif;color:#fff;margin-bottom:8px}.chart-wrap{position:relative;height:330px}.d3-strip{margin-top:16px;min-height:74px;background:#0d1320;border-radius:14px;padding:12px}.tabulator{border:0!important;background:transparent!important}.prose{color:#cbd3e8}.prose h3{color:#fff}.prose code{color:#a9f1dc}.visit-order{list-style:none;padding:0;margin:0;display:grid;gap:9px}.visit-order li{background:#0d1320;border:1px solid #313a52;border-radius:12px;padding:12px 14px;cursor:grab}.visit-order li:active{cursor:grabbing}.grip{display:inline-block;margin-right:10px;color:#f5b8d0}.status{border-left:3px solid #a9f1dc;background:#0c1220;border-radius:10px;padding:10px 13px;color:#cbd3e8}.qr{background:#fff;border-radius:14px;padding:10px;min-width:150px;min-height:150px;display:grid;place-items:center}.qr svg,.qr canvas{max-width:130px!important;max-height:130px!important}.sketch-panel canvas{width:100%;height:auto;background:#f8f1e4;border-radius:14px}footer{padding:26px;text-align:center;color:#8791aa;border-top:1px solid #ffffff12}@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:40px}.portrait-card{max-width:420px}.notes-panel,.order-panel,.qr-panel,.sketch-panel{grid-column:span 12}.metric-grid{grid-template-columns:1fr}.qr-panel{align-items:flex-start}.section-heading{flex-direction:column}.layout,.hero{padding-left:16px;padding-right:16px}.panel{padding:18px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}","loader":"css","mime":"text/css"},"scripts/app.js":{"code_ref":"code1","loader":"js","mime":"text/javascript"},"assets/exhibit-photo":{"slot":"slot1"}}}'
+        title: 模板生成严格 project/files JSON
+        type: template-transform
+        variables: []
+      height: 54
+      id: '2036261000101'
+      position:
+        x: 340
+        y: 80
+      positionAbsolute:
+        x: 340
+        y: 80
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: 模板节点经 Dify 1.7.1 专用字面量保护后独立输出不透明 JavaScript；它不被嵌入控制 JSON，而由 files[scripts/app.js].code_ref=code1 引用。
+        selected: false
+        template: "\\'use strict\\';\n\nwindow.addEventListener(\\'DOMContentLoaded\\', function () {\n  var required = [\\'Chart\\', \\'ChartDataLabels\\', \\'dayjs\\', \\'d3\\', \\'ss\\', \\'Papa\\', \\'chroma\\', \\'Tabulator\\', \\'marked\\', \\'DOMPurify\\', \\'rough\\', \\'Sortable\\', \\'countUp\\', \\'tippy\\', \\'QRCodeStyling\\'];\n  var missing = required.filter(function (name) { return typeof window[name] === \\'undefined\\'; });\n  var status = document.getElementById(\\'live-status\\');\n  if (missing.length) {\n    status.textContent = \\'初始化失败：缺少离线库 \\' + missing.join(\\', \\');\n    status.dataset.state = \\'error\\';\n    throw new Error(status.textContent);\n  }\n\n  var csv = [\n    \\'id,name,category,year,completeness,years_owned,note\\',\n    \\'EX-01,巫女风格桌面手办,角色手办,2021,96,5,光照与取景完整\\',\n    \\'EX-02,结构化计算机经典读本,经典藏书,1999,88,17,书脊有岁月痕迹\\',\n    \\'EX-03,编程语言理论手册,技术藏书,2016,92,9,索引与批注齐全\\',\n    \\'EX-04,平面设计配色笔记,设计藏书,2023,84,3,收录六组展陈色板\\',\n    \\'EX-05,木制桌面抽屉收纳盒,桌面器物,2020,90,6,收纳数据线与书签\\',\n    \\'EX-06,首次独立展示纪念卡,纪念品,2018,98,8,记录书房布置节点\\'\n  ].join(\\'\\\\n\\');\n  var rows = Papa.parse(csv, {header: true, dynamicTyping: true, skipEmptyLines: true}).data;\n  var activeRows = rows.slice();\n  var colors = chroma.scale([\\'#78d7c5\\', \\'#f4b6d2\\', \\'#ffca73\\']).mode(\\'lab\\').colors(rows.length);\n\n  document.getElementById(\\'updated-at\\').textContent = \\'示例生成日期：\\' + dayjs(\\'2026-08-03\\').format(\\'YYYY 年 MM 月 DD 日\\');\n  new countUp.CountUp(\\'metric-items\\', rows.length, {duration: 0.9, useEasing: true}).start();\n  new countUp.CountUp(\\'metric-score\\', ss.mean(rows.map(function (row) { return row.completeness; })), {decimalPlaces: 1, suffix: \\'%\\', duration: 1.1}).start();\n  new countUp.CountUp(\\'metric-median\\', ss.median(rows.map(function (row) { return row.years_owned; })), {suffix: \\' 年\\', duration: 1.2}).start();\n\n  Chart.register(ChartDataLabels);\n  var chart = new Chart(document.getElementById(\\'collection-chart\\'), {\n    type: \\'bar\\',\n    data: {\n      labels: rows.map(function (row) { return row.name; }),\n      datasets: [{\n        label: \\'展陈完整度\\',\n        data: rows.map(function (row) { return row.completeness; }),\n        backgroundColor: colors,\n        borderRadius: 8\n      }]\n    },\n    options: {\n      responsive: true,\n      maintainAspectRatio: false,\n      scales: {\n        y: {beginAtZero: true, max: 100, grid: {color: \\'#ffffff16\\'}, ticks: {color: \\'#c6cde2\\'}},\n        x: {grid: {display: false}, ticks: {color: \\'#c6cde2\\', maxRotation: 0, callback: function (value) { var label = this.getLabelForValue(value); return label.length > 8 ? label.slice(0, 8) + \\'…\\' : label; }}}\n      },\n      plugins: {\n        legend: {labels: {color: \\'#edf2ff\\'}},\n        datalabels: {anchor: \\'end\\', align: \\'top\\', color: \\'#ffffff\\', formatter: function (value) { return value + \\'%\\'; }}\n      }\n    }\n  });\n\n  var table = new Tabulator(\\'#collection-table\\', {\n    data: rows,\n    layout: \\'fitColumns\\',\n    responsiveLayout: \\'collapse\\',\n    pagination: false,\n    columns: [\n      {title: \\'编号\\', field: \\'id\\', width: 90},\n      {title: \\'展品\\', field: \\'name\\', minWidth: 180},\n      {title: \\'分类\\', field: \\'category\\', width: 120, headerFilter: \\'input\\'},\n      {title: \\'收录年\\', field: \\'year\\', width: 100, sorter: \\'number\\'},\n      {title: \\'完整度\\', field: \\'completeness\\', width: 110, sorter: \\'number\\', formatter: function (cell) { return cell.getValue() + \\'%\\'; }},\n      {title: \\'说明\\', field: \\'note\\', minWidth: 190}\n    ]\n  });\n\n  function drawD3(data) {\n    var host = d3.select(\\'#d3-strip\\');\n    host.selectAll(\\'*\\').remove();\n    var width = Math.max(560, document.getElementById(\\'d3-strip\\').clientWidth - 24);\n    var height = 52;\n    var scale = d3.scaleLinear().domain([0, 100]).range([0, width - 165]);\n    var svg = host.append(\\'svg\\').attr(\\'viewBox\\', \\'0 0 \\' + width + \\' \\' + (height * data.length)).attr(\\'role\\', \\'img\\');\n    var row = svg.selectAll(\\'g\\').data(data).join(\\'g\\').attr(\\'transform\\', function (item, index) { return \\'translate(0,\\' + (index * height) + \\')\\'; });\n    row.append(\\'text\\').attr(\\'x\\', 0).attr(\\'y\\', 26).attr(\\'fill\\', \\'#c6cde2\\').text(function (item) { return item.id + \\' \\' + item.category; });\n    row.append(\\'rect\\').attr(\\'x\\', 150).attr(\\'y\\', 9).attr(\\'height\\', 24).attr(\\'rx\\', 7).attr(\\'width\\', function (item) { return scale(item.completeness); }).attr(\\'fill\\', function (item, index) { return colors[index % colors.length]; });\n    row.append(\\'text\\').attr(\\'x\\', function (item) { return 158 + scale(item.completeness); }).attr(\\'y\\', 27).attr(\\'fill\\', \\'#ffffff\\').text(function (item) { return item.completeness + \\'%\\'; });\n  }\n\n  function updateData(nextRows, message) {\n    activeRows = nextRows.slice();\n    table.setData(activeRows);\n    chart.data.labels = activeRows.map(function (row) { return row.name; });\n    chart.data.datasets[0].data = activeRows.map(function (row) { return row.completeness; });\n    chart.data.datasets[0].backgroundColor = activeRows.map(function (_, index) { return colors[index % colors.length]; });\n    chart.update();\n    drawD3(activeRows);\n    status.textContent = message + \\'；当前显示 \\' + activeRows.length + \\' 件展品。\\';\n  }\n\n  document.getElementById(\\'filter-vintage\\').addEventListener(\\'click\\', function () {\n    updateData(rows.filter(function (row) { return row.category === \\'经典藏书\\' || row.category === \\'纪念品\\'; }), \\'已应用“经典与纪念品”筛选\\');\n  });\n  document.getElementById(\\'reset-filter\\').addEventListener(\\'click\\', function () {\n    updateData(rows, \\'已恢复全部展品\\');\n  });\n\n  var markdown = [\n    \\'### 策展原则\\',\n    \\'\\',\n    \\'- 以上传图片作为视觉焦点，不发送到网络。\\',\n    \\'- 展品台账是固定合成数据，可在表格表头直接筛选。\\',\n    \\'- 拖动“参观顺序”会立即更新当前路线。\\',\n    \\'\\',\n    \\'`spec` 只负责编排；`code1` 保持不透明；`slot1` 在输出中变成本地 data 资源。\\'\n  ].join(\\'\\\\n\\');\n  document.getElementById(\\'curator-notes\\').innerHTML = DOMPurify.sanitize(marked.parse(markdown));\n\n  function updateOrder() {\n    var names = Array.from(document.querySelectorAll(\\'#visit-order li\\')).map(function (item) { return item.dataset.zone; });\n    document.getElementById(\\'order-result\\').textContent = \\'当前顺序：\\' + names.join(\\' → \\');\n  }\n  Sortable.create(document.getElementById(\\'visit-order\\'), {animation: 180, ghostClass: \\'drag-ghost\\', onEnd: updateOrder});\n\n  tippy(\\'#help-tip\\', {content: \\'试试筛选台账、拖动参观顺序，并查看图表同步变化。\\', placement: \\'bottom\\'});\n  new QRCodeStyling({width: 130, height: 130, type: \\'svg\\', data: \\'pagespec-offline://desktop-library/exhibit-2026\\', dotsOptions: {color: \\'#21162c\\', type: \\'rounded\\'}, cornersSquareOptions: {color: \\'#7d365a\\', type: \\'extra-rounded\\'}, backgroundOptions: {color: \\'#ffffff\\'}}).append(document.getElementById(\\'exhibit-qr\\'));\n\n  var roughCanvas = rough.canvas(document.getElementById(\\'room-sketch\\'));\n  roughCanvas.rectangle(38, 55, 280, 125, {stroke: \\'#7d365a\\', strokeWidth: 4, fill: \\'#f5b8d0\\', fillStyle: \\'hachure\\'});\n  roughCanvas.rectangle(390, 25, 220, 170, {stroke: \\'#2f7568\\', strokeWidth: 4, fill: \\'#a9f1dc\\', fillStyle: \\'cross-hatch\\'});\n  roughCanvas.circle(760, 108, 150, {stroke: \\'#b97821\\', strokeWidth: 4, fill: \\'#ffca73\\', fillStyle: \\'zigzag\\'});\n  roughCanvas.line(318, 116, 390, 108, {stroke: \\'#dfe5f5\\', strokeWidth: 3});\n  roughCanvas.line(610, 108, 685, 108, {stroke: \\'#dfe5f5\\', strokeWidth: 3});\n\n  drawD3(rows);\n  status.textContent = \\'已读取 \\' + rows.length + \\' 件合成展品；图片、图表、表格、拖拽与二维码均已离线就绪。\\';\n  document.documentElement.dataset.pagespecTeachingReady = \\'true\\';\n});\n\n"
+        title: 模板生成第一代码插槽 code1
+        type: template-transform
+        variables: []
+      height: 54
+      id: '2036261000102'
+      position:
+        x: 340
+        y: 300
+      positionAbsolute:
+        x: 340
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: spec、code1 与 slot1 保持三条独立输入；输出一个自包含、断网可用的教学 HTML BLOB。
+        params: {}
+        provider_id: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_name: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_type: builtin
+        selected: false
+        title: 生成桌面手办与书房数字展陈
+        tool_configurations:
+          spec:
+            type: mixed
+            value: '{{#2036261000101.output#}}'
+          code1:
+            type: mixed
+            value: '{{#2036261000102.output#}}'
+          slot1:
+            type: variable
+            value:
+            - '2036261000001'
+            - exhibit_image
+          slot2:
+            type: constant
+            value: null
+          slot3:
+            type: constant
+            value: null
+          slot4:
+            type: constant
+            value: null
+          slot5:
+            type: constant
+            value: null
+          slot6:
+            type: constant
+            value: null
+          slot7:
+            type: constant
+            value: null
+          slot8:
+            type: constant
+            value: null
+          slot9:
+            type: constant
+            value: null
+          slot10:
+            type: constant
+            value: null
+          slot11:
+            type: constant
+            value: null
+          slot12:
+            type: constant
+            value: null
+          slot13:
+            type: constant
+            value: null
+          slot14:
+            type: constant
+            value: null
+          slot15:
+            type: constant
+            value: null
+          slot16:
+            type: constant
+            value: null
+          slot17:
+            type: constant
+            value: null
+          slot18:
+            type: constant
+            value: null
+          slot19:
+            type: constant
+            value: null
+          slot20:
+            type: constant
+            value: null
+          filename:
+            type: mixed
+            value: PageSpec_0.0.1_教学示例_桌面手办与个人书房数字展陈.html
+        tool_description: 使用严格 project/files JSON、code1 和 slot1 生成自包含离线 HTML
+        tool_label: 用 JSON 生成离线 HTML
+        tool_name: render_page
+        tool_node_version: '2'
+        tool_parameters: {}
+        type: tool
+      height: 82
+      id: '2036261000201'
+      position:
+        x: 650
+        y: 190
+      positionAbsolute:
+        x: 650
+        y: 190
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '桌面手办与个人书房数字展陈（固定教学主题）
+
+          {{#2036261000201.files#}}'
+        desc: 末端只引用工具返回的文件 BLOB，不在节点间传递 HTML 文本。
+        selected: false
+        title: 返回教学示例文件
+        type: answer
+        variables: []
+      height: 160
+      id: '2036261000999'
+      position:
+        x: 960
+        y: 190
+      positionAbsolute:
+        x: 960
+        y: 190
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.8

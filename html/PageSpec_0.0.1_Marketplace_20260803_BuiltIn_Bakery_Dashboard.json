@@ -1,0 +1,367 @@
+{
+  "build": "pagespec",
+  "files": {
+    "report.pagespec.json": {
+      "json": {
+        "version": 1,
+        "doc": {
+          "title": "暖麦烘焙坊经营看板",
+          "filename": "暖麦烘焙坊经营看板.html",
+          "lang": "zh-CN",
+          "theme": "light",
+          "accent": "#D97706",
+          "toc": true,
+          "interaction_number_start": 1,
+          "interaction_guide": "local",
+          "header": {
+            "title": "暖麦烘焙坊经营看板",
+            "subtitle": "固定演示数据 · 完全离线 · 可直接编辑",
+            "badges": [
+              "2026年8月",
+              "经营教学示例",
+              "无外部网络依赖"
+            ]
+          },
+          "footer": "本页数据均为虚构教学数据，可直接替换后重新生成。"
+        },
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "开始使用",
+            "text": "这是插件内置的完整 JSON 示例。直接运行即可生成经营看板；也可以修改门店名称、指标、图表和商品明细。商品表支持搜索与排序，图表支持图例切换和悬停查看。",
+            "style": "info"
+          },
+          {
+            "type": "heading",
+            "text": "今日经营概览",
+            "level": 2
+          },
+          {
+            "type": "stat_row",
+            "items": [
+              {
+                "label": "销售额",
+                "value": "12,860",
+                "unit": "元",
+                "delta": "+12.4%"
+              },
+              {
+                "label": "订单量",
+                "value": "186",
+                "unit": "单",
+                "delta": "+9.1%"
+              },
+              {
+                "label": "平均客单价",
+                "value": "69.1",
+                "unit": "元",
+                "delta": "+3.0%"
+              },
+              {
+                "label": "退单率",
+                "value": "0.8",
+                "unit": "%",
+                "delta": "-0.3%"
+              }
+            ]
+          },
+          {
+            "type": "columns",
+            "ratio": [
+              3,
+              2
+            ],
+            "blocks": [
+              [
+                {
+                  "type": "chart",
+                  "kind": "line",
+                  "title": "近七日销售趋势",
+                  "categories": [
+                    "7月28日",
+                    "7月29日",
+                    "7月30日",
+                    "7月31日",
+                    "8月1日",
+                    "8月2日",
+                    "8月3日"
+                  ],
+                  "series": [
+                    {
+                      "name": "销售额（元）",
+                      "data": [
+                        9320,
+                        10180,
+                        9760,
+                        11040,
+                        11860,
+                        12120,
+                        12860
+                      ]
+                    },
+                    {
+                      "name": "目标（元）",
+                      "data": [
+                        10000,
+                        10000,
+                        10000,
+                        11000,
+                        11000,
+                        12000,
+                        12000
+                      ]
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "type": "chart",
+                  "kind": "donut",
+                  "title": "销售渠道占比",
+                  "categories": [
+                    "到店",
+                    "自提",
+                    "同城配送",
+                    "团购"
+                  ],
+                  "series": [
+                    {
+                      "name": "销售额（元）",
+                      "data": [
+                        5780,
+                        2860,
+                        2940,
+                        1280
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "商品经营明细",
+            "level": 2
+          },
+          {
+            "type": "callout",
+            "title": "交互提示",
+            "text": "使用表格搜索框按商品、品类或状态筛选；点击列标题可切换排序。筛选和排序只在浏览器本地执行，不会上传数据。",
+            "style": "success"
+          },
+          {
+            "type": "table",
+            "columns": [
+              {
+                "label": "商品",
+                "key": "product",
+                "align": "left"
+              },
+              {
+                "label": "品类",
+                "key": "category",
+                "align": "center"
+              },
+              {
+                "label": "销量",
+                "key": "quantity",
+                "align": "right"
+              },
+              {
+                "label": "销售额（元）",
+                "key": "revenue",
+                "align": "right"
+              },
+              {
+                "label": "毛利率",
+                "key": "margin",
+                "align": "right"
+              },
+              {
+                "label": "状态",
+                "key": "status",
+                "align": "center"
+              }
+            ],
+            "rows": [
+              {
+                "product": "黄油可颂",
+                "category": "酥点",
+                "quantity": 68,
+                "revenue": 1632,
+                "margin": "62%",
+                "status": "畅销"
+              },
+              {
+                "product": "伯爵茶吐司",
+                "category": "吐司",
+                "quantity": 42,
+                "revenue": 1596,
+                "margin": "58%",
+                "status": "稳定"
+              },
+              {
+                "product": "海盐奶油卷",
+                "category": "甜面包",
+                "quantity": 57,
+                "revenue": 1368,
+                "margin": "60%",
+                "status": "畅销"
+              },
+              {
+                "product": "树莓慕斯",
+                "category": "冷藏甜点",
+                "quantity": 29,
+                "revenue": 1450,
+                "margin": "55%",
+                "status": "需补货"
+              },
+              {
+                "product": "黑巧曲奇",
+                "category": "常温点心",
+                "quantity": 35,
+                "revenue": 875,
+                "margin": "66%",
+                "status": "稳定"
+              },
+              {
+                "product": "季节水果塔",
+                "category": "塔派",
+                "quantity": 24,
+                "revenue": 1200,
+                "margin": "49%",
+                "status": "关注损耗"
+              }
+            ],
+            "features": [
+              "search",
+              "sort"
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "分项观察",
+            "level": 2
+          },
+          {
+            "type": "tabs",
+            "items": [
+              {
+                "label": "品类结构",
+                "blocks": [
+                  {
+                    "type": "chart",
+                    "kind": "bar",
+                    "title": "各品类销售额",
+                    "categories": [
+                      "酥点",
+                      "吐司",
+                      "甜面包",
+                      "冷藏甜点",
+                      "常温点心",
+                      "塔派"
+                    ],
+                    "series": [
+                      {
+                        "name": "销售额（元）",
+                        "data": [
+                          2840,
+                          2480,
+                          2360,
+                          2180,
+                          1540,
+                          1460
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "时段客流",
+                "blocks": [
+                  {
+                    "type": "chart",
+                    "kind": "area",
+                    "title": "营业时段订单量",
+                    "categories": [
+                      "08:00",
+                      "10:00",
+                      "12:00",
+                      "14:00",
+                      "16:00",
+                      "18:00",
+                      "20:00"
+                    ],
+                    "series": [
+                      {
+                        "name": "订单量（单）",
+                        "data": [
+                          18,
+                          31,
+                          42,
+                          24,
+                          29,
+                          35,
+                          7
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "行动建议",
+                "blocks": [
+                  {
+                    "type": "kv",
+                    "columns": 2,
+                    "items": [
+                      {
+                        "label": "补货优先级",
+                        "value": "树莓慕斯原料优先补货"
+                      },
+                      {
+                        "label": "损耗控制",
+                        "value": "季节水果塔按时段缩小批次"
+                      },
+                      {
+                        "label": "陈列优化",
+                        "value": "午后将海盐奶油卷移至主陈列位"
+                      },
+                      {
+                        "label": "渠道计划",
+                        "value": "自提渠道增加早餐组合"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "collapse",
+            "items": [
+              {
+                "label": "如何修改这个内置示例",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": [
+                      "修改 doc.title、doc.header 和 doc.footer 可以替换页面标题与说明。",
+                      "修改 stat_row.items 可以替换经营指标。",
+                      "修改 chart 的 categories 与 series.data 可以替换图表数据。",
+                      "修改 table 的 columns 与 rows 可以替换明细；保留 search 和 sort 即可继续使用本地搜索与排序。"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

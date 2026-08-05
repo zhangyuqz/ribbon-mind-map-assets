@@ -12,6 +12,10 @@ dependencies:
   type: marketplace
   value:
     marketplace_plugin_unique_identifier: zhangyu/si_wei_dao_tu_sheng_cheng_qi:0.0.19@2b734a05d3cf0c9958223db5120b55a9f59993d79a0182d7b856fd6fb5955fa6
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: zhangyu/docx_generator:0.0.5@bf1736741db4aaac198510cf4a81c693c7db84dfbcc05c86aef95d0bb3b2c59f
 kind: app
 version: 0.3.1
 workflow:
@@ -1622,8 +1626,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           input_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX 文档
@@ -2679,8 +2683,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           input_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX 文档
@@ -3732,8 +3736,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           input_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX 文档
@@ -4790,8 +4794,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           input_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX 文档
@@ -5847,8 +5851,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           input_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX 文档
@@ -6843,8 +6847,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           simple_input_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX（简易公文 JSON）
@@ -7712,8 +7716,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           simple_input_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX（简易公文 JSON）
@@ -8700,8 +8704,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           simple_telegram_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX（简易电报/传真 JSON）
@@ -9567,8 +9571,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           simple_telegram_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX（简易电报/传真 JSON）
@@ -10276,8 +10280,8 @@ workflow:
           images_slot_8: ''
           images_slot_9: ''
           simple_redhead_json: ''
-        provider_id: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
-        provider_name: 99ce3337-3ab3-4fbc-8fd9-47b4c9f12271/docx_generator/docx_generator
+        provider_id: zhangyu/docx_generator/docx_generator
+        provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
         title: 生成 DOCX（简易红头公文）

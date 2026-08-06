@@ -1,0 +1,236 @@
+app:
+  description: 校园课程与社团项目协作规划图固定合成数据 PageSpec 教学页。显式 version=1，使用真实换行并清理跨主题敏感语汇；完全离线。
+  icon: 🎒
+  icon_background: '#F8FAFC'
+  mode: advanced-chat
+  name: PageSpec 0.0.2 教学示例：校园课程与社团项目协作规划图（无 code 版） · R4 NoCode 冻结版
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: package
+  value:
+    plugin_unique_identifier: zhangyu/html_offline_exporter:0.0.2@9df826a97ba346388ca0592c7e4178c6264ae35482c957739e730ad9c6c383d5
+kind: app
+version: 0.3.1
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      enabled: false
+    opening_statement: 发送任意消息，生成“校园课程与社团项目协作规划图”固定合成数据离线教学页。
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - 生成校园课程与社团项目协作规划图离线教学页
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 1000000001-source-1000000101-target
+      selected: false
+      source: '1000000001'
+      sourceHandle: source
+      target: '1000000101'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 1000000101-source-1000000201-target
+      selected: false
+      source: '1000000101'
+      sourceHandle: source
+      target: '1000000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1000000201-source-1000000999-target
+      selected: false
+      source: '1000000201'
+      sourceHandle: source
+      target: '1000000999'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: 发送任意消息即可生成 校园课程与社团项目协作规划图 固定合成数据离线教学页。
+        selected: false
+        title: 开始
+        type: start
+        variables: []
+      height: 110
+      id: '1000000001'
+      position:
+        x: 40
+        y: 240
+      positionAbsolute:
+        x: 40
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 250
+    - data:
+        desc: 模板节点输出严格、唯一键、有限数 PageSpec 项目；不使用代码或图片插槽。
+        selected: false
+        template: '{"build":"pagespec","files":{"report.pagespec.json":{"json":{"blocks":[{"type":"callout","style":"info","title":"校园课程与社团项目协作规划图 · 交互教学","text":"本页使用固定合成样本。请按页面下方的“交互”提示逐项操作，核对筛选、拖拽、缩放、布局、导出或叙事状态是否发生可见变化。"},{"features":["schedule_analysis","interactive"],"items":[{"desc":"ITEM-ID-SYN-001 关联检索编号。","end":"2026-07-16","id":"T1","progress":100,"start":"2026-07-15","time":"2026-07-15 09:05","title":"物件首次出现"},{"dependencies":"T1","desc":"检索编号交互协作编号，持续 180 秒。","end":"2026-07-17","id":"T2","progress":100,"start":"2026-07-16","time":"2026-07-15 09:18","title":"首次互动"},{"dependencies":"T2","desc":"ACC-SYN-A100 从 198.51.100.23 进入。","end":"2026-07-18","id":"T3","progress":100,"start":"2026-07-17","time":"2026-07-15 10:02","title":"项目进入"},{"dependencies":"T3","desc":"两笔合计 126,800 元进入项目 A。","end":"2026-07-19","id":"T4","progress":100,"start":"2026-07-18","time":"2026-07-15 10:16","title":"合成收录"},{"dependencies":"T4","desc":"正向分配 112,300 元，后续调整 8,000 元。","end":"2026-07-20","id":"T5","progress":100,"start":"2026-07-19","time":"2026-07-15 11:08","title":"资源分流"},{"dependencies":"T5","desc":"ITEM-ID-SYN-001 到达合成点 D。","end":"2026-07-21","id":"T6","progress":100,"start":"2026-07-20","time":"2026-07-15 12:20","title":"进度结束"}],"mode":"gantt","type":"timeline"},{"edges":[{"from":"CLUE","label":"12 项记录","to":"VERIFY"},{"from":"VERIFY","label":"一致性通过","to":"REPORT"}],"height":340,"layout":"dagre","nodes":[{"group":"input","id":"CLUE","label":"合成观察记录"},{"group":"process","id":"VERIFY","label":"交叉核对"},{"group":"output","id":"REPORT","label":"离线报告"}],"type":"graph"},{"edges":[{"from":"ROOT","label":"23 次","to":"COMM"},{"from":"ROOT","label":"5 条","to":"FUND"},{"from":"ROOT","label":"2 条","to":"NET"}],"height":360,"mode":"mindmap","nodes":[{"group":"root","id":"ROOT","label":"校园课程与社团项目协作规划图"},{"group":"branch","id":"COMM","label":"互动记录"},{"group":"branch","id":"FUND","label":"资源记录"},{"group":"branch","id":"NET","label":"连接记录"}],"type":"graph"},{"code":"flowchart TD\n  A[合成观察记录] --> B[实体归并]\n  B --> C[互动核对]\n  B --> D[资源核对]\n  C --> E[质量复核]\n  D --> E\n  E --> F[离线报告]","type":"mermaid"},{"events":[{"date":"2026-07-15","title":"合成记录入库"},{"date":"2026-07-16","title":"实体与资源复核"},{"date":"2026-07-17","title":"离线报告验收"}],"initial_date":"2026-07-15","type":"calendar"},{"analytics":true,"edges":[{"confidence":1,"count":20,"direction":"directed","duration":3600,"evidence":"REC-INTERACTION-01,REC-INTERACTION-02","first_time":"2026-07-15 09:18","label":"双向互动","last_time":"2026-07-15 11:46","relation_type":"call","source":"ITEM-Q","target":"ITEM-R"},{"confidence":1,"count":3,"direction":"directed","duration":540,"evidence":"REC-INTERACTION-03","first_time":"2026-07-15 10:05","label":"单向互动","last_time":"2026-07-15 10:52","relation_type":"call","source":"ITEM-Q","target":"ITEM-A"},{"confidence":1,"direction":"directed","evidence":"REC-OBJECT-01","label":"使用物件","relation_type":"uses","source":"ITEM-Q","target":"DEVICE-1"},{"confidence":1,"count":4,"direction":"directed","evidence":"REC-LINK-01","label":"进入来源","relation_type":"login","source":"DEVICE-1","target":"IP-1"},{"confidence":1,"count":7,"direction":"directed","evidence":"REC-LINK-02","label":"解析访问","relation_type":"dns","source":"IP-1","target":"DOMAIN-1"},{"confidence":1,"direction":"directed","evidence":"REC-RESOURCE-01","label":"绑定项目","relation_type":"binds","source":"ITEM-Q","target":"PROJECT-A"},{"amount":66500,"confidence":1,"direction":"directed","evidence":"REC-RESOURCE-03,REC-RESOURCE-05","label":"净资源调配","relation_type":"transfer","source":"PROJECT-A","target":"PROJECT-B"},{"amount":37800,"confidence":1,"direction":"directed","evidence":"REC-RESOURCE-04","label":"转入储存项","relation_type":"transfer","source":"PROJECT-A","target":"STORAGE-C"}],"features":["layout_switcher","context_menu","expand_collapse","large_graph","edge_edit"],"height":520,"layout":"fcose","nodes":[{"count":23,"entity_type":"phone","evidence":"REC-INTERACTION-01,REC-INTERACTION-02,REC-INTERACTION-03","group":"communication","id":"ITEM-Q","label":"检索编号 13800000000","risk_level":"high"},{"count":20,"entity_type":"phone","evidence":"REC-INTERACTION-01,REC-INTERACTION-02","group":"communication","id":"ITEM-R","label":"协作编号 13900000000","risk_level":"medium"},{"count":3,"entity_type":"phone","evidence":"REC-INTERACTION-03","group":"communication","id":"ITEM-A","label":"关联编号 13700000000","risk_level":"low"},{"entity_type":"device","evidence":"REC-OBJECT-01","group":"device","id":"DEVICE-1","label":"ITEM-ID-SYN-001","risk_level":"high"},{"entity_type":"ip","evidence":"REC-LINK-01","group":"network","id":"IP-1","label":"198.51.100.23","risk_level":"medium"},{"entity_type":"domain","evidence":"REC-LINK-02","group":"network","id":"DOMAIN-1","label":"sample-node.example.invalid","risk_level":"medium"},{"amount":126800,"entity_type":"account","evidence":"REC-RESOURCE-01,REC-RESOURCE-02","group":"funds","id":"PROJECT-A","label":"ACC-SYN-A100","risk_level":"high"},{"amount":66500,"entity_type":"account","evidence":"REC-RESOURCE-03,REC-RESOURCE-05","group":"funds","id":"PROJECT-B","label":"ACC-SYN-B200","risk_level":"medium"},{"amount":37800,"entity_type":"wallet","evidence":"REC-RESOURCE-04","group":"funds","id":"STORAGE-C","label":"STORAGE-SYN-C300","risk_level":"medium"}],"title":"合成实体关系图","type":"relationship_graph"},{"edges":[{"count":1,"evidence":"REC-RESOURCE-01","flow_type":"funds","label":"收录 1","source":"SOURCE-X","target":"PROJECT-A","time":"2026-07-15 10:16","unit":"元","value":68000},{"count":1,"evidence":"REC-RESOURCE-02","flow_type":"funds","label":"收录 2","source":"SOURCE-Y","target":"PROJECT-A","time":"2026-07-15 10:19","unit":"元","value":58800},{"count":1,"evidence":"REC-RESOURCE-03","flow_type":"funds","label":"正向资源调配","source":"PROJECT-A","target":"PROJECT-B","time":"2026-07-15 10:41","unit":"元","value":74500},{"count":1,"evidence":"REC-RESOURCE-04","flow_type":"funds","label":"储存项分配","source":"PROJECT-A","target":"STORAGE-C","time":"2026-07-15 10:47","unit":"元","value":37800},{"count":1,"evidence":"REC-RESOURCE-05","flow_type":"funds","label":"原路径调整","source":"PROJECT-A","target":"PROJECT-B","time":"2026-07-15 11:08","unit":"元","value":-8000}],"features":["sankey_drag"],"height":500,"layout":"force","mode":"funds","nodes":[{"entity_type":"source","group":"incoming","id":"SOURCE-X","label":"合成来源 X"},{"entity_type":"source","group":"incoming","id":"SOURCE-Y","label":"合成来源 Y"},{"entity_type":"account","group":"core","id":"PROJECT-A","label":"ACC-SYN-A100"},{"entity_type":"account","group":"outgoing","id":"PROJECT-B","label":"ACC-SYN-B200"},{"entity_type":"wallet","group":"outgoing","id":"STORAGE-C","label":"STORAGE-SYN-C300"}],"title":"合成资源流向与调整","type":"flow_graph"},{"analytics":true,"edges":[{"count":14,"direction":"directed","label":"互动","relation_type":"communication","source":"N1","target":"N2"},{"count":6,"direction":"directed","label":"关联","relation_type":"correlation","source":"N2","target":"N3"},{"count":3,"direction":"directed","label":"时序","relation_type":"sequence","source":"N3","target":"N4"}],"features":["g6_compound","dag_view","org_chart","graph_exchange"],"height":420,"layout":"fcose","nodes":[{"entity_type":"lead","group":"分析入口","id":"N1","label":"合成校园课程与社团项目协作规划图观察记录","risk_level":"medium"},{"entity_type":"communications","group":"行为汇总","id":"N2","label":"通信聚合","risk_level":"high"},{"entity_type":"account","group":"行为汇总","id":"N3","label":"资源复核","risk_level":"high"},{"entity_type":"location","group":"时空复核","id":"N4","label":"进度核对","risk_level":"medium"}],"title":"合成校园课程与社团项目协作规划图复合知识图谱与组织路径","type":"relationship_graph"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3}],"height":400,"mode":"workflow","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"合成校园课程与社团项目协作规划图观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成校园课程与社团项目协作规划图可拖拽协作安排工作流","type":"interactive_scene"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3}],"height":360,"mode":"bpmn","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"合成校园课程与社团项目协作规划图观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成校园课程与社团项目协作规划图 BPMN 协作安排流程","type":"interactive_scene"},{"height":360,"mode":"mindmap","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"合成校园课程与社团项目协作规划图观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成校园课程与社团项目协作规划图可编辑思维导图","type":"interactive_scene"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":400,"mode":"x6_topology","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"合成校园课程与社团项目协作规划图观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成校园课程与社团项目协作规划图 X6 可交互拓扑图","type":"interactive_scene"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":360,"mode":"timing_diagram","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"合成校园课程与社团项目协作规划图观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成校园课程与社团项目协作规划图 WaveDrom 通讯时序波形","type":"interactive_scene"},{"type":"collapse","items":[{"label":"本卷内置库有意义覆盖台账（34 个）","open":false,"blocks":[{"type":"text","text":"本卷可见模块按需调用：bpmn-js、chrono-node、cronstrue、cytoscape、cytoscape-cise、cytoscape-cola、cytoscape-context-menus、cytoscape-edgehandles、cytoscape-expand-collapse、cytoscape-fcose、cytoscape-navigator、cytoscape-undo-redo、d3-dag、d3-org-chart、d3-sankey、dagre、dayjs、echarts、frappe-gantt、fullcalendar、g6、graphology、graphology-io、graphology-layout-forceatlas2、humanize-duration、mermaid、mind-elixir、react、react-flow、rrule、sigma、vis-timeline、wavedrom、x6"}]}]}],"doc":{"accent":"#7c3aed","filename":"PageSpec_0.0.2_Teaching_04_campus_collaboration_r4.html","footer":"校园课程与社团项目协作规划图 · 固定合成数据 · PageSpec 0.0.2 教学示例 · 仅用于浏览器离线功能演示。","header":{"badges":["固定合成数据","教学示例 4/8","完全离线","本地交互"],"subtitle":"本页主题：校园课程与社团项目协作规划图。固定合成数据，仅用于离线教学；可见组件和交互均在浏览器本地完成，不请求网络。","title":"校园课程与社团项目协作规划图 · 离线教学示例 · 第 4/8 能力分区"},"lang":"zh-CN","theme":"dark","title":"校园课程与社团项目协作规划图 · 离线教学示例 · 第 4/8 能力分区","toc":true,"interaction_guide":"local","interaction_number_start":19},"version":1}}}}'
+        title: 生成 校园协作 PageSpec JSON R4
+        type: template-transform
+        variables: []
+      height: 140
+      id: '1000000101'
+      position:
+        x: 370
+        y: 240
+      positionAbsolute:
+        x: 370
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 330
+    - data:
+        desc: 严格离线渲染；返回一个 HTML BLOB 和一条简短说明。
+        params: {}
+        provider_id: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_name: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_type: builtin
+        selected: false
+        title: 生成 校园协作 离线 HTML R4
+        tool_configurations:
+          spec:
+            type: mixed
+            value: '{{#1000000101.output#}}'
+          slot1:
+            type: constant
+            value: null
+          slot2:
+            type: constant
+            value: null
+          slot3:
+            type: constant
+            value: null
+          slot4:
+            type: constant
+            value: null
+          slot5:
+            type: constant
+            value: null
+          slot6:
+            type: constant
+            value: null
+          slot7:
+            type: constant
+            value: null
+          slot8:
+            type: constant
+            value: null
+          slot9:
+            type: constant
+            value: null
+          slot10:
+            type: constant
+            value: null
+          slot11:
+            type: constant
+            value: null
+          slot12:
+            type: constant
+            value: null
+          slot13:
+            type: constant
+            value: null
+          slot14:
+            type: constant
+            value: null
+          slot15:
+            type: constant
+            value: null
+          slot16:
+            type: constant
+            value: null
+          slot17:
+            type: constant
+            value: null
+          slot18:
+            type: constant
+            value: null
+          slot19:
+            type: constant
+            value: null
+          slot20:
+            type: constant
+            value: null
+          filename:
+            type: mixed
+            value: PageSpec_0.0.2_Teaching_04_campus_collaboration_r4.html
+        tool_description: 将严格 PageSpec 或 project/files 项目渲染为自包含离线 HTML。
+        tool_label: 生成离线 HTML
+        tool_name: render_page
+        tool_node_version: '2'
+        tool_parameters: {}
+        type: tool
+      height: 112
+      id: '1000000201'
+      position:
+        x: 720
+        y: 240
+      positionAbsolute:
+        x: 720
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 260
+    - data:
+        answer: '已生成《校园课程与社团项目协作规划图》离线 HTML。文件只在本地浏览器执行，共覆盖本主题分区的 34 个内置库。
+
+          {{#1000000201.files#}}'
+        desc: 仅返回最终 HTML BLOB；不会把 HTML 作为节点间长文本传输。
+        selected: false
+        title: 返回教学 HTML
+        type: answer
+        variables: []
+      height: 130
+      id: '1000000999'
+      position:
+        x: 1050
+        y: 240
+      positionAbsolute:
+        x: 1050
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 280
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.8

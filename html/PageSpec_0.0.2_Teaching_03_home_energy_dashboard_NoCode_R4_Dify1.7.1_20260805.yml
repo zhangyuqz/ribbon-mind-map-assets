@@ -1,0 +1,236 @@
+app:
+  description: 家庭节能与室内舒适度联动看板固定合成数据 PageSpec 教学页。显式 version=1，使用真实换行并清理跨主题敏感语汇；完全离线。
+  icon: 🏡
+  icon_background: '#F8FAFC'
+  mode: advanced-chat
+  name: PageSpec 0.0.2 教学示例：家庭节能与室内舒适度联动看板（无 code 版） · R4 NoCode 冻结版
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: package
+  value:
+    plugin_unique_identifier: zhangyu/html_offline_exporter:0.0.2@9df826a97ba346388ca0592c7e4178c6264ae35482c957739e730ad9c6c383d5
+kind: app
+version: 0.3.1
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      enabled: false
+    opening_statement: 发送任意消息，生成“家庭节能与室内舒适度联动看板”固定合成数据离线教学页。
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - 生成家庭节能与室内舒适度联动看板离线教学页
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 1000000001-source-1000000101-target
+      selected: false
+      source: '1000000001'
+      sourceHandle: source
+      target: '1000000101'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 1000000101-source-1000000201-target
+      selected: false
+      source: '1000000101'
+      sourceHandle: source
+      target: '1000000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1000000201-source-1000000999-target
+      selected: false
+      source: '1000000201'
+      sourceHandle: source
+      target: '1000000999'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: 发送任意消息即可生成 家庭节能与室内舒适度联动看板 固定合成数据离线教学页。
+        selected: false
+        title: 开始
+        type: start
+        variables: []
+      height: 110
+      id: '1000000001'
+      position:
+        x: 40
+        y: 240
+      positionAbsolute:
+        x: 40
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 250
+    - data:
+        desc: 模板节点输出严格、唯一键、有限数 PageSpec 项目；不使用代码或图片插槽。
+        selected: false
+        template: '{"build":"pagespec","files":{"report.pagespec.json":{"json":{"blocks":[{"type":"callout","style":"info","title":"家庭节能与室内舒适度联动看板 · 交互教学","text":"本页使用固定合成样本。请按页面下方的“交互”提示逐项操作，核对筛选、拖拽、缩放、布局、导出或叙事状态是否发生可见变化。"},{"type":"situation_dashboard","title":"同单位合成资源结构（单位：元）","height":360,"show_summary":true,"items":[{"label":"来源X收录","value":68000,"unit":"元","risk_level":"high"},{"label":"来源Y收录","value":58800,"unit":"元","risk_level":"high"},{"label":"正向分配","value":112300,"unit":"元","risk_level":"high"},{"label":"期末净留存","value":22500,"unit":"元","risk_level":"medium"}],"features":["distribution","vega","vega_lite"]},{"type":"situation_dashboard","title":"同尺度完整度与质量评分（0—100分）","height":360,"show_summary":true,"items":[{"label":"质量评分","value":82.5,"unit":"分","risk_level":"high"},{"label":"实体一致性","value":100,"unit":"分","risk_level":"low"},{"label":"资源勾稽","value":100,"unit":"分","risk_level":"low"},{"label":"进度时序","value":100,"unit":"分","risk_level":"low"},{"label":"记录编号覆盖","value":100,"unit":"分","risk_level":"low"}],"features":["draggable","color_scale"]},{"type":"collapse","items":[{"label":"本主题内置库有意义覆盖台账","open":false,"blocks":[{"type":"text","text":"本主题可见模块按需调用：@antv/s2、@observablehq/plot、chroma-js、crossfilter2、crypto-js、d3、dayjs、dc、decimal.js、echarts、gridstack、ipaddr.js、jwt-decode、katex、klinecharts、libphonenumber-js、lightweight-charts、mathjs、pinyin-pro、simple-statistics、tabulator-tables、tldts、ua-parser-js、uplot、validator、vega、wordcloud、zxcvbn、chart.js、chartjs-plugin-zoom、chartjs-plugin-datalabels、hammerjs、vega-lite"}]}]}],"doc":{"accent":"#059669","filename":"PageSpec_0.0.2_Teaching_03_home_energy_dashboard_r4.html","footer":"家庭节能与室内舒适度联动看板 · 固定合成数据 · PageSpec 0.0.2 教学示例 · 仅用于浏览器离线功能演示。","header":{"badges":["固定合成数据","教学示例 3/8","完全离线","本地交互"],"subtitle":"本页主题：家庭节能与室内舒适度联动看板。固定合成数据，仅用于离线教学；可见组件和交互均在浏览器本地完成，不请求网络。","title":"家庭节能与室内舒适度联动看板 · 离线教学示例 · 第 3/8 能力分区"},"lang":"zh-CN","theme":"dark","title":"家庭节能与室内舒适度联动看板 · 离线教学示例 · 第 3/8 能力分区","toc":true,"interaction_guide":"local","interaction_number_start":13},"version":1}}}}'
+        title: 生成 家庭节能 PageSpec JSON R4
+        type: template-transform
+        variables: []
+      height: 140
+      id: '1000000101'
+      position:
+        x: 370
+        y: 240
+      positionAbsolute:
+        x: 370
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 330
+    - data:
+        desc: 严格离线渲染；返回一个 HTML BLOB 和一条简短说明。
+        params: {}
+        provider_id: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_name: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_type: builtin
+        selected: false
+        title: 生成 家庭节能 离线 HTML R4
+        tool_configurations:
+          spec:
+            type: mixed
+            value: '{{#1000000101.output#}}'
+          slot1:
+            type: constant
+            value: null
+          slot2:
+            type: constant
+            value: null
+          slot3:
+            type: constant
+            value: null
+          slot4:
+            type: constant
+            value: null
+          slot5:
+            type: constant
+            value: null
+          slot6:
+            type: constant
+            value: null
+          slot7:
+            type: constant
+            value: null
+          slot8:
+            type: constant
+            value: null
+          slot9:
+            type: constant
+            value: null
+          slot10:
+            type: constant
+            value: null
+          slot11:
+            type: constant
+            value: null
+          slot12:
+            type: constant
+            value: null
+          slot13:
+            type: constant
+            value: null
+          slot14:
+            type: constant
+            value: null
+          slot15:
+            type: constant
+            value: null
+          slot16:
+            type: constant
+            value: null
+          slot17:
+            type: constant
+            value: null
+          slot18:
+            type: constant
+            value: null
+          slot19:
+            type: constant
+            value: null
+          slot20:
+            type: constant
+            value: null
+          filename:
+            type: mixed
+            value: PageSpec_0.0.2_Teaching_03_home_energy_dashboard_r4.html
+        tool_description: 将严格 PageSpec 或 project/files 项目渲染为自包含离线 HTML。
+        tool_label: 生成离线 HTML
+        tool_name: render_page
+        tool_node_version: '2'
+        tool_parameters: {}
+        type: tool
+      height: 112
+      id: '1000000201'
+      position:
+        x: 720
+        y: 240
+      positionAbsolute:
+        x: 720
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 260
+    - data:
+        answer: '已生成《家庭节能与室内舒适度联动看板》离线 HTML。文件只在本地浏览器执行，共覆盖本主题分区的 8 个内置库。
+
+          {{#1000000201.files#}}'
+        desc: 仅返回最终 HTML BLOB；不会把 HTML 作为节点间长文本传输。
+        selected: false
+        title: 返回教学 HTML
+        type: answer
+        variables: []
+      height: 130
+      id: '1000000999'
+      position:
+        x: 1050
+        y: 240
+      positionAbsolute:
+        x: 1050
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 280
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.8

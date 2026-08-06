@@ -1,0 +1,289 @@
+app:
+  description: 公共图书馆借阅与客流时序实验室固定合成数据教学页。Code1 版逐库调用公开 API，显示真实方法、固定输入、可见结果及失败摘要；完全离线。
+  icon: 📚
+  icon_background: '#F8FAFC'
+  mode: advanced-chat
+  name: PageSpec 0.0.2 教学示例：公共图书馆借阅与客流时序实验室（code1 版） · R4 独立 Code1 版
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: package
+  value:
+    plugin_unique_identifier: zhangyu/html_offline_exporter:0.0.2@9df826a97ba346388ca0592c7e4178c6264ae35482c957739e730ad9c6c383d5
+kind: app
+version: 0.3.1
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      enabled: false
+    opening_statement: 发送任意消息，生成“公共图书馆借阅与客流时序实验室”Code1 R4 真调用离线教学页。
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - 生成公共图书馆借阅与客流时序实验室离线教学页
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 2000000001-source-2000000101-target
+      selected: false
+      source: '2000000001'
+      sourceHandle: source
+      target: '2000000101'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 2000000001-source-2000000102-target
+      selected: false
+      source: '2000000001'
+      sourceHandle: source
+      target: '2000000102'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 2000000101-source-2000000201-target
+      selected: false
+      source: '2000000101'
+      sourceHandle: source
+      target: '2000000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 2000000102-source-2000000201-target
+      selected: false
+      source: '2000000102'
+      sourceHandle: source
+      target: '2000000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 2000000201-source-2000000999-target
+      selected: false
+      source: '2000000201'
+      sourceHandle: source
+      target: '2000000999'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: 发送任意消息即可生成 公共图书馆借阅与客流时序实验室 固定合成数据离线教学页。
+        selected: false
+        title: 开始
+        type: start
+        variables: []
+      height: 110
+      id: '2000000001'
+      position:
+        x: 40
+        y: 240
+      positionAbsolute:
+        x: 40
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 250
+    - data:
+        desc: 模板节点输出严格 project/files JSON；files 中只用 code_ref 引用 code1，代码保持不透明文本。
+        selected: false
+        template: '{% raw %}
+
+          {"entry":"index.html","build":"browser-ready","libraries":["chart.js","chartjs-plugin-datalabels","chartjs-plugin-zoom","crossfilter2","d3","dc","echarts","hammerjs","simple-statistics","uplot"],"files":{"index.html":{"text":"<!doctype html>\\n<html lang=\\"zh-CN\\"><head>\\n<meta charset=\\"utf-8\\"><meta name=\\"viewport\\" content=\\"width=device-width,initial-scale=1\\">\\n<meta http-equiv=\\"Content-Security-Policy\\" content=\\"default-src ''none''; script-src ''unsafe-inline'' data:; style-src ''unsafe-inline'' data:; img-src data: blob:; font-src data:; connect-src ''none''; worker-src ''none''; child-src ''none''; frame-src ''none''; object-src ''none''; base-uri ''none''; form-action ''none''\\">\\n<title>公共图书馆借阅与客流时序实验室 · Code1 R4 离线教学</title>\\n<!-- pagespec:caller-style -->\\n<style>\\nhtml,body{width:100%!important;max-width:none!important;min-height:100%!important;margin:0!important;padding:0!important;background:#0b1120!important}\\n*,*::before,*::after{box-sizing:border-box}body{color:#edf2ff!important;font:15px/1.6 system-ui,-apple-system,\\"PingFang SC\\",\\"Microsoft YaHei\\",sans-serif!important}\\n#teaching-shell{width:100%;max-width:1180px;margin:0 auto;padding:28px 18px 60px}#teaching-shell header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:22px}\\n#teaching-shell h1{margin:.1rem 0;font-size:clamp(1.8rem,4vw,3rem);font-style:normal}#teaching-shell h2{margin:0 0 10px;font-style:normal}#teaching-shell p{color:#bdc8df;max-width:none}\\n.panel{background:#141d31;border:1px solid #2f4266;border-radius:18px;padding:20px;margin:16px 0;box-shadow:0 15px 40px #0004}.badge{display:inline-block;border:1px solid #2563eb;border-radius:999px;padding:5px 10px;color:#fff;white-space:nowrap}\\n.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric{background:#0c1527;border-radius:12px;padding:14px}.metric strong{display:block;font-size:1.65rem;color:#fff}\\n#demo-host{min-height:250px;display:grid;place-items:center;align-content:center;gap:12px;overflow:auto;background:#0b1426;border-radius:12px;padding:16px;isolation:isolate}#demo-host>svg,#demo-host>canvas{max-width:100%;height:auto}\\n.demo-evidence{width:min(100%,760px);display:grid;gap:12px}.demo-title{font-size:1.05rem;font-weight:800;color:#fff}.demo-result{padding:12px;border-radius:10px;background:#101d34;border-left:4px solid #2563eb;white-space:pre-wrap;word-break:break-word}\\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.card{background:#0d172a;border:1px solid #273a5b;border-radius:14px;padding:14px;transition:.2s}.card.active{border-color:#2563eb;box-shadow:0 0 0 2px #2563eb55}.card.failed{border-color:#ef4444}\\n.card-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.card h3{font-size:1rem;margin:0;word-break:break-word}.card-head span{font-size:.75rem;color:#91a2c2}.card p{font-size:.84rem;min-height:46px;margin:8px 0}\\nbutton{border:1px solid #2563eb;background:#2563eb;color:#fff;border-radius:9px;padding:7px 11px;cursor:pointer;font-weight:700}button:hover,button:focus-visible{filter:brightness(1.15);outline:2px solid #fff;outline-offset:2px}.card-status{font-size:.8rem;color:#a9f1dc;margin-left:8px}\\n#status{border-left:3px solid #2563eb;padding:10px 12px;background:#0b1426;border-radius:8px}.footer{color:#8392ad;text-align:center;margin-top:22px}\\n@media(max-width:640px){#teaching-shell header{display:block}.metrics{grid-template-columns:1fr}.cards{grid-template-columns:1fr}#demo-host{min-height:220px;padding:10px}}\\n</style></head><body><main id=\\"teaching-shell\\">\\n<header><div><span class=\\"badge\\">PAGESPEC 0.0.2 · Code1 R4 · 完全离线</span><h1>公共图书馆借阅与客流时序实验室</h1><p>固定合成主题；每个按钮都会调用对应库的公开 API，并把方法、固定输入和可核验结果显示在主题演示区。</p></div><span class=\\"badge\\">10 个本主题库</span></header>\\n<section class=\\"panel metrics\\"><div class=\\"metric\\"><strong>10</strong>逻辑库</div><div class=\\"metric\\"><strong>0</strong>外部依赖</div><div class=\\"metric\\"><strong>Code1</strong>本地增强脚本</div></section>\\n<section class=\\"panel\\"><h2>主题演示区</h2><div id=\\"demo-host\\" aria-label=\\"主题演示结果\\"></div><p id=\\"status\\" role=\\"status\\" aria-live=\\"polite\\">正在运行首个真实演示……</p></section>\\n<section class=\\"panel\\"><h2>内置库能力清单</h2><p>绿色状态表示公开 API 调用和可见后置条件均通过；失败会保留错误摘要，不会伪报成功。</p><div class=\\"cards\\"><article class=\\"card\\" data-library=\\"chart.js\\" data-binding=\\"Chart\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>chart.js</h3><span>4.5.1</span></div><p>使用 chart.js 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"chartjs-plugin-datalabels\\" data-binding=\\"ChartDataLabels\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>chartjs-plugin-datalabels</h3><span>2.2.0</span></div><p>使用 chartjs-plugin-datalabels 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"chartjs-plugin-zoom\\" data-binding=\\"ChartZoom\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>chartjs-plugin-zoom</h3><span>2.2.0</span></div><p>使用 chartjs-plugin-zoom 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"crossfilter2\\" data-binding=\\"crossfilter\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>crossfilter2</h3><span>1.5.4</span></div><p>使用 crossfilter2 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"d3\\" data-binding=\\"d3\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>d3</h3><span>7.9.0</span></div><p>使用 d3 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"dc\\" data-binding=\\"dc\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>dc</h3><span>4.2.7</span></div><p>使用 dc 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"echarts\\" data-binding=\\"echarts\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>echarts</h3><span>6.1.0</span></div><p>使用 echarts 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"hammerjs\\" data-binding=\\"Hammer\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>hammerjs</h3><span>2.0.8</span></div><p>使用 hammerjs 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"simple-statistics\\" data-binding=\\"ss\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>simple-statistics</h3><span>7.9.3</span></div><p>使用 simple-statistics 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"uplot\\" data-binding=\\"uPlot\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>uplot</h3><span>1.6.32</span></div><p>使用 uplot 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article></div></section>\\n<p class=\\"footer\\">公共图书馆借阅与客流时序实验室 · 固定合成数据 · R4 教学修订版</p></main>\\n<script id=\\"theme-data\\" type=\\"application/json\\">{\\"theme\\":\\"公共图书馆借阅与客流时序实验室\\",\\"records\\":[{\\"label\\":\\"文学借阅\\",\\"value\\":42},{\\"label\\":\\"少儿阅读\\",\\"value\\":31},{\\"label\\":\\"数字资源\\",\\"value\\":27}],\\"revision\\":\\"R4\\"}</script>\\n\\n<!-- pagespec:caller-script --><script src=\\"scripts/app.js\\"></script></body></html>","loader":"html","mime":"text/html"},"scripts/app.js":{"code_ref":"code1","loader":"js","mime":"text/javascript"}}}
+
+          {% endraw %}'
+        title: 生成 图书馆时序 project/files JSON R4
+        type: template-transform
+        variables: []
+      height: 140
+      id: '2000000101'
+      position:
+        x: 350
+        y: 150
+      positionAbsolute:
+        x: 350
+        y: 150
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 330
+    - data:
+        desc: 模板节点输出不透明 JavaScript；插件仅在收件人打开 HTML 时于本地浏览器执行。
+        selected: false
+        template: "{% raw %}(function () {\n  \"use strict\";\n\n  // These independent sentinels prove both escape preservation and selection of the correct theme payload.\n  const __PAGESPEC_R4_TRANSPORT_SENTINEL__ = \"LF=\\\\n|CRLF=\\\\r\\\\n|SLASH=\\\\\\\\|SQUOTE=\\'|DQUOTE=\\\\\"|JINJA={{literal}}\";\n  const pagespecR4Theme02Canonical = \"PAGESPEC_R4_THEME_02_CANONICAL\";\n\n  // Theme 02 owns all ten dashboard adapters and has no runtime dependency on another teaching script.\n  var libraryItems = [\n    { library: \"chart.js\", binding: \"Chart\" },\n    { library: \"chartjs-plugin-datalabels\", binding: \"ChartDataLabels\" },\n    { library: \"chartjs-plugin-zoom\", binding: \"ChartZoom\" },\n    { library: \"crossfilter2\", binding: \"crossfilter\" },\n    { library: \"d3\", binding: \"d3\" },\n    { library: \"dc\", binding: \"dc\" },\n    { library: \"echarts\", binding: \"echarts\" },\n    { library: \"hammerjs\", binding: \"Hammer\" },\n    { library: \"simple-statistics\", binding: \"ss\" },\n    { library: \"uplot\", binding: \"uPlot\" }\n  ];\n  var libraryAccent = \"#22c55e\";\n  var libraryData = JSON.parse(document.getElementById(\"theme-data\").textContent);\n  var libraryHost = document.getElementById(\"demo-host\");\n  var libraryStatus = document.getElementById(\"status\");\n  var libraryDispose = null;\n\n  // Resolve only the binding declared by this workflow; source text is never evaluated.\n  function libraryResolve(path) {\n    return String(path || \"\").split(\".\").filter(Boolean).reduce(function (value, key) {\n      return value == null ? undefined : value[key];\n    }, window);\n  }\n\n  // Bound arbitrary API output before displaying it in the fixed teaching shell.\n  function librarySummarize(value) {\n    try {\n      if (value == null) return String(value);\n      if (typeof value === \"string\") return value.slice(0, 260);\n      if (typeof value === \"number\" || typeof value === \"boolean\") return String(value);\n      if (Array.isArray(value)) return JSON.stringify(value.slice(0, 10));\n      return JSON.stringify(value).slice(0, 260);\n    } catch (error) {\n      return Object.prototype.toString.call(value);\n    }\n  }\n\n  // Render a public-library circulation plot when the selected adapter has no native canvas or SVG output.\n  function libraryAddFallbackPlot() {\n    if (libraryHost.querySelector(\"canvas,svg,.dc-chart,.uplot\")) return;\n    var svg = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\");\n    svg.setAttribute(\"viewBox\", \"0 0 720 180\");\n    svg.setAttribute(\"aria-label\", \"公共图书馆借阅时序固定数据图\");\n    var points = libraryData.records.map(function (row, index) {\n      return String(60 + index * 220) + \",\" + String(150 - Math.max(20, Number(row.value) * 2));\n    }).join(\" \");\n    var line = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polyline\");\n    line.setAttribute(\"points\", points);\n    line.setAttribute(\"fill\", \"none\");\n    line.setAttribute(\"stroke\", libraryAccent);\n    line.setAttribute(\"stroke-width\", \"7\");\n    line.setAttribute(\"stroke-linecap\", \"round\");\n    line.setAttribute(\"stroke-linejoin\", \"round\");\n    svg.appendChild(line);\n    libraryHost.appendChild(svg);\n  }\n\n  // Publish visible evidence and stable data attributes for the real-Dify BLOB audit.\n  function libraryCommit(name, method, value) {\n    libraryAddFallbackPlot();\n    var result = document.createElement(\"div\");\n    result.className = \"demo-result\";\n    result.textContent = name + \" · 真实公开 API：\" + method + \" · 固定借阅数据：\" + libraryData.records.map(function (row) {\n      return row.label + \"=\" + row.value;\n    }).join(\"、\") + \" · 结果：\" + librarySummarize(value);\n    libraryHost.appendChild(result);\n    libraryHost.dataset.demoLibrary = name;\n    libraryHost.dataset.demoApi = method;\n    libraryHost.dataset.demoTheme = \"public-library-lab\";\n  }\n\n  // Invoke one dedicated adapter for each of the ten theme-owned dashboard libraries.\n  async function libraryInvoke(name, api) {\n    switch (name) {\n      case \"chart.js\": {\n        var chartCanvas = document.createElement(\"canvas\");\n        chartCanvas.width = 640;\n        chartCanvas.height = 230;\n        libraryHost.appendChild(chartCanvas);\n        var chart = new api(chartCanvas.getContext(\"2d\"), {\n          type: \"line\",\n          data: {\n            labels: libraryData.records.map(function (row) { return row.label; }),\n            datasets: [{ label: \"借阅量\", data: libraryData.records.map(function (row) { return row.value; }), borderColor: libraryAccent, backgroundColor: \"rgba(34,197,94,.22)\" }]\n          },\n          options: { animation: false, responsive: false }\n        });\n        libraryDispose = function () { chart.destroy(); };\n        return { method: \"Chart.constructor.update\", value: { datasets: chart.data.datasets.length, points: chart.data.datasets[0].data.length } };\n      }\n      case \"chartjs-plugin-datalabels\":\n      case \"chartjs-plugin-zoom\": {\n        var ChartConstructor = window.Chart;\n        ChartConstructor.register(api);\n        var registered = ChartConstructor.registry.plugins.get(api.id) === api;\n        ChartConstructor.unregister(api);\n        return { method: \"Chart.register.registry.unregister\", value: { plugin: api.id, registered: registered } };\n      }\n      case \"crossfilter2\": {\n        var crossfilter = api(libraryData.records);\n        var dimension = crossfilter.dimension(function (row) { return row.label; });\n        var groups = dimension.group().reduceSum(function (row) { return Number(row.value); }).all();\n        dimension.dispose();\n        return { method: \"crossfilter.dimension.group.reduceSum\", value: { size: crossfilter.size(), groups: groups } };\n      }\n      case \"d3\": {\n        var d3Svg = api.create(\"svg\").attr(\"viewBox\", \"0 0 640 220\").attr(\"aria-label\", \"D3 借阅量柱图\");\n        var scale = api.scaleLinear().domain([0, api.max(libraryData.records, function (row) { return Number(row.value); })]).range([0, 480]);\n        d3Svg.selectAll(\"rect\").data(libraryData.records).join(\"rect\").attr(\"x\", 80).attr(\"y\", function (row, index) { return 25 + index * 58; }).attr(\"height\", 36).attr(\"width\", function (row) { return scale(Number(row.value)); }).attr(\"fill\", libraryAccent);\n        libraryHost.appendChild(d3Svg.node());\n        return { method: \"d3.scaleLinear.selectAll.join\", value: { mean: api.mean(libraryData.records, function (row) { return Number(row.value); }), marks: d3Svg.selectAll(\"rect\").size() } };\n      }\n      case \"dc\": {\n        // DC 4.2 no longer exposes dc.units.ordinal; use the package\\'s proven numeric-domain contract.\n        var dcRows = libraryData.records.map(function (row, index) { return { index: index, label: row.label, value: Number(row.value) }; });\n        var dcCrossfilter = window.crossfilter(dcRows);\n        var dcDimension = dcCrossfilter.dimension(function (row) { return row.index; });\n        var dcGroup = dcDimension.group().reduceSum(function (row) { return Math.abs(row.value); });\n        var dcRoot = document.createElement(\"div\");\n        libraryHost.appendChild(dcRoot);\n        var dcChartGroup = \"pagespec-r4-public-library\";\n        var dcChart = api.barChart(dcRoot, dcChartGroup).width(620).height(220).margins({ top: 12, right: 18, bottom: 38, left: 56 }).dimension(dcDimension).group(dcGroup).x(window.d3.scaleLinear().domain([-0.5, Math.max(0.5, dcRows.length - 0.5)])).elasticY(true).brushOn(true).renderHorizontalGridLines(true).transitionDuration(0);\n        api.renderAll(dcChartGroup);\n        await new Promise(function (resolve) { requestAnimationFrame(function () { requestAnimationFrame(resolve); }); });\n        if (!dcRoot.querySelector(\"svg\") || dcRoot.querySelectorAll(\".bar\").length < dcRows.length) throw new Error(\"DC.js 未生成完整借阅柱图\");\n        libraryDispose = function () {\n          try { dcChart.filterAll(); } catch (filterError) { void filterError; }\n          try { if (api.chartRegistry && typeof api.chartRegistry.clear === \"function\") api.chartRegistry.clear(dcChartGroup); } catch (registryError) { void registryError; }\n          dcDimension.dispose();\n        };\n        return { method: \"dc.barChart.renderAll\", value: { groups: dcGroup.all().length, bars: dcRoot.querySelectorAll(\".bar\").length, rows: dcRows.length } };\n      }\n      case \"echarts\": {\n        var echartsRoot = document.createElement(\"div\");\n        echartsRoot.style.cssText = \"width:640px;height:230px\";\n        libraryHost.appendChild(echartsRoot);\n        var echartsChart = api.init(echartsRoot);\n        echartsChart.setOption({\n          animation: false,\n          tooltip: { trigger: \"axis\" },\n          xAxis: { type: \"category\", data: libraryData.records.map(function (row) { return row.label; }) },\n          yAxis: { type: \"value\" },\n          series: [{ type: \"line\", smooth: true, data: libraryData.records.map(function (row) { return row.value; }), lineStyle: { color: libraryAccent } }]\n        });\n        libraryDispose = function () { echartsChart.dispose(); };\n        return { method: \"echarts.init.setOption.getOption\", value: { series: echartsChart.getOption().series.length } };\n      }\n      case \"hammerjs\": {\n        var gestureRoot = document.createElement(\"div\");\n        gestureRoot.textContent = \"可手势平移的借阅时序面板\";\n        gestureRoot.style.cssText = \"padding:54px;border:2px solid #22c55e;border-radius:14px\";\n        libraryHost.appendChild(gestureRoot);\n        var manager = new api.Manager(gestureRoot);\n        var pan = new api.Pan({ direction: api.DIRECTION_ALL, threshold: 0 });\n        manager.add(pan);\n        var panEvents = 0;\n        manager.on(\"pan\", function () { panEvents += 1; gestureRoot.dataset.panEvents = String(panEvents); });\n        libraryDispose = function () { manager.destroy(); };\n        return { method: \"Hammer.Manager.add.on\", value: { recognizers: manager.recognizers.length, event: \"pan\" } };\n      }\n      case \"simple-statistics\": {\n        var values = libraryData.records.map(function (row) { return Number(row.value); });\n        return { method: \"simpleStatistics.mean.standardDeviation\", value: { mean: api.mean(values), standardDeviation: api.standardDeviation(values) } };\n      }\n      case \"uplot\": {\n        var uplotRoot = document.createElement(\"div\");\n        libraryHost.appendChild(uplotRoot);\n        var uplot = new api({ width: 640, height: 230, series: [{}, { label: \"借阅量\", stroke: libraryAccent }], scales: { x: { time: false } } }, [[1, 2, 3], libraryData.records.map(function (row) { return Number(row.value); })], uplotRoot);\n        libraryDispose = function () { uplot.destroy(); };\n        return { method: \"uPlot.constructor.setScale\", value: { points: uplot.data[1].length, width: uplot.width } };\n      }\n      default:\n        throw new Error(\"主题 02 未声明适配器：\" + name);\n    }\n  }\n\n  // Execute one card and require both a real API proof and visible topic output.\n  async function libraryRun(card, item) {\n    if (libraryDispose) {\n      try { libraryDispose(); } catch (disposeError) { void disposeError; }\n      libraryDispose = null;\n    }\n    libraryHost.replaceChildren();\n    libraryHost.removeAttribute(\"data-demo-library\");\n    document.querySelectorAll(\".card\").forEach(function (node) { node.classList.remove(\"active\", \"failed\"); });\n    card.classList.add(\"active\");\n    var cardStatus = card.querySelector(\".card-status\");\n    card.dataset.demoStatus = \"running\";\n    cardStatus.textContent = \"运行中\";\n    try {\n      var api = libraryResolve(item.binding);\n      if (api == null) throw new Error(\"未找到公开绑定 \" + item.binding);\n      var proof = await libraryInvoke(item.library, api);\n      if (!proof || !proof.method) throw new Error(\"适配器未返回 API 证据\");\n      libraryCommit(item.library, proof.method, proof.value);\n      if (!libraryHost.firstElementChild || libraryHost.dataset.demoLibrary !== item.library) throw new Error(\"可见后置条件未通过\");\n      card.dataset.demoStatus = \"passed\";\n      cardStatus.textContent = \"真实调用通过\";\n      libraryStatus.textContent = item.library + \"：\" + proof.method + \" 已执行；借阅时序结果已更新。\";\n      return proof;\n    } catch (error) {\n      card.classList.add(\"failed\");\n      card.dataset.demoStatus = \"failed\";\n      cardStatus.textContent = \"调用失败\";\n      libraryHost.replaceChildren();\n      var failure = document.createElement(\"div\");\n      failure.className = \"demo-result\";\n      failure.textContent = item.library + \" 演示失败：\" + String(error && error.message || error);\n      libraryHost.appendChild(failure);\n      libraryStatus.textContent = item.library + \" 未通过；已保留错误摘要，未伪报成功。\";\n      throw error;\n    }\n  }\n\n  // Reuse the existing R4 buttons while keeping all layout and styling untouched.\n  document.querySelectorAll(\".card\").forEach(function (card, index) {\n    card.querySelector(\".probe\").addEventListener(\"click\", function () { libraryRun(card, libraryItems[index]).catch(function () { return undefined; }); });\n  });\n  var libraryFirst = document.querySelector(\".card\");\n  if (libraryFirst) libraryRun(libraryFirst, libraryItems[0]).catch(function () { return undefined; });\n\n  // Expose a theme-local audit hook only for real-BLOB verification of this workflow.\n  window.__pagespecPublicLibraryR4 = {\n    items: libraryItems,\n    runLibrary: function (name) {\n      var cards = Array.prototype.slice.call(document.querySelectorAll(\".card\"));\n      var index = libraryItems.findIndex(function (item) { return item.library === name; });\n      if (index < 0 || !cards[index]) return Promise.reject(new Error(\"unknown public-library library\"));\n      return libraryRun(cards[index], libraryItems[index]);\n    }\n  };\n}());\n{% endraw %}"
+        title: 生成 图书馆时序 code1 R4 真调用
+        type: template-transform
+        variables: []
+      height: 140
+      id: '2000000102'
+      position:
+        x: 350
+        y: 390
+      positionAbsolute:
+        x: 350
+        y: 390
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 330
+    - data:
+        desc: 严格离线渲染；返回一个 HTML BLOB 和一条简短说明。
+        params: {}
+        provider_id: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_name: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_type: builtin
+        selected: false
+        title: 生成 图书馆时序 code1 离线 HTML R4
+        tool_configurations:
+          spec:
+            type: mixed
+            value: '{{#2000000101.output#}}'
+          code1:
+            type: mixed
+            value: '{{#2000000102.output#}}'
+          slot1:
+            type: constant
+            value: null
+          slot2:
+            type: constant
+            value: null
+          slot3:
+            type: constant
+            value: null
+          slot4:
+            type: constant
+            value: null
+          slot5:
+            type: constant
+            value: null
+          slot6:
+            type: constant
+            value: null
+          slot7:
+            type: constant
+            value: null
+          slot8:
+            type: constant
+            value: null
+          slot9:
+            type: constant
+            value: null
+          slot10:
+            type: constant
+            value: null
+          slot11:
+            type: constant
+            value: null
+          slot12:
+            type: constant
+            value: null
+          slot13:
+            type: constant
+            value: null
+          slot14:
+            type: constant
+            value: null
+          slot15:
+            type: constant
+            value: null
+          slot16:
+            type: constant
+            value: null
+          slot17:
+            type: constant
+            value: null
+          slot18:
+            type: constant
+            value: null
+          slot19:
+            type: constant
+            value: null
+          slot20:
+            type: constant
+            value: null
+          filename:
+            type: mixed
+            value: PageSpec_0.0.2_Teaching_02_public_library_lab_code1_r4.html
+        tool_description: 将严格 PageSpec 或 project/files 项目渲染为自包含离线 HTML。
+        tool_label: 生成离线 HTML
+        tool_name: render_page
+        tool_node_version: '2'
+        tool_parameters: {}
+        type: tool
+      height: 112
+      id: '2000000201'
+      position:
+        x: 720
+        y: 240
+      positionAbsolute:
+        x: 720
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 260
+    - data:
+        answer: '已生成《公共图书馆借阅与客流时序实验室》离线 HTML。文件只在本地浏览器执行，共覆盖本主题分区的 10 个内置库。
+
+          {{#2000000201.files#}}'
+        desc: 仅返回最终 HTML BLOB；不会把 HTML 作为节点间长文本传输。
+        selected: false
+        title: 返回教学 HTML
+        type: answer
+        variables: []
+      height: 130
+      id: '2000000999'
+      position:
+        x: 1050
+        y: 240
+      positionAbsolute:
+        x: 1050
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 280
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.8

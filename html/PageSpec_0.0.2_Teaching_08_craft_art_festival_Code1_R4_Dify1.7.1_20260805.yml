@@ -1,0 +1,289 @@
+app:
+  description: 手作艺术节数字展览与视觉叙事固定合成数据教学页。Code1 版逐库调用公开 API，显示真实方法、固定输入、可见结果及失败摘要；完全离线。
+  icon: 🎨
+  icon_background: '#F8FAFC'
+  mode: advanced-chat
+  name: PageSpec 0.0.2 教学示例：手作艺术节数字展览与视觉叙事（code1 版） · R4 独立 Code1 版
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: package
+  value:
+    plugin_unique_identifier: zhangyu/html_offline_exporter:0.0.2@9df826a97ba346388ca0592c7e4178c6264ae35482c957739e730ad9c6c383d5
+kind: app
+version: 0.3.1
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      enabled: false
+    opening_statement: 发送任意消息，生成“手作艺术节数字展览与视觉叙事”Code1 R4 真调用离线教学页。
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - 生成手作艺术节数字展览与视觉叙事离线教学页
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 2000000001-source-2000000101-target
+      selected: false
+      source: '2000000001'
+      sourceHandle: source
+      target: '2000000101'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 2000000001-source-2000000102-target
+      selected: false
+      source: '2000000001'
+      sourceHandle: source
+      target: '2000000102'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 2000000101-source-2000000201-target
+      selected: false
+      source: '2000000101'
+      sourceHandle: source
+      target: '2000000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 2000000102-source-2000000201-target
+      selected: false
+      source: '2000000102'
+      sourceHandle: source
+      target: '2000000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 2000000201-source-2000000999-target
+      selected: false
+      source: '2000000201'
+      sourceHandle: source
+      target: '2000000999'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: 发送任意消息即可生成 手作艺术节数字展览与视觉叙事 固定合成数据离线教学页。
+        selected: false
+        title: 开始
+        type: start
+        variables: []
+      height: 110
+      id: '2000000001'
+      position:
+        x: 40
+        y: 240
+      positionAbsolute:
+        x: 40
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 250
+    - data:
+        desc: 模板节点输出严格 project/files JSON；files 中只用 code_ref 引用 code1，代码保持不透明文本。
+        selected: false
+        template: '{% raw %}
+
+          {"entry":"index.html","build":"browser-ready","libraries":["@formkit/auto-animate","@svgdotjs/svg.js","animate.css","annotorious","augmented-ui","canvas-confetti","colorthief","cropperjs","css-doodle","driver.js","exifr","fabric","granim","gsap","jsbarcode","countup.js","konva","moveable","nes.css","open-props","paper","pico","qr-code-styling","quill","reveal.js","rough-notation","roughjs","scrollama","selecto","swiper","terminal.css","tippy.js","tufte-css","viewerjs","zxing"],"files":{"index.html":{"text":"<!doctype html>\\n<html lang=\\"zh-CN\\"><head>\\n<meta charset=\\"utf-8\\"><meta name=\\"viewport\\" content=\\"width=device-width,initial-scale=1\\">\\n<meta http-equiv=\\"Content-Security-Policy\\" content=\\"default-src ''none''; script-src ''unsafe-inline'' data:; style-src ''unsafe-inline'' data:; img-src data: blob:; font-src data:; connect-src ''none''; worker-src ''none''; child-src ''none''; frame-src ''none''; object-src ''none''; base-uri ''none''; form-action ''none''\\">\\n<title>手作艺术节数字展览与视觉叙事 · Code1 R4 离线教学</title>\\n<!-- pagespec:caller-style -->\\n<style>\\nhtml,body{width:100%!important;max-width:none!important;min-height:100%!important;margin:0!important;padding:0!important;background:#0b1120!important}\\n*,*::before,*::after{box-sizing:border-box}body{color:#edf2ff!important;font:15px/1.6 system-ui,-apple-system,\\"PingFang SC\\",\\"Microsoft YaHei\\",sans-serif!important}\\n#teaching-shell{width:100%;max-width:1180px;margin:0 auto;padding:28px 18px 60px}#teaching-shell header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:22px}\\n#teaching-shell h1{margin:.1rem 0;font-size:clamp(1.8rem,4vw,3rem);font-style:normal}#teaching-shell h2{margin:0 0 10px;font-style:normal}#teaching-shell p{color:#bdc8df;max-width:none}\\n.panel{background:#141d31;border:1px solid #2f4266;border-radius:18px;padding:20px;margin:16px 0;box-shadow:0 15px 40px #0004}.badge{display:inline-block;border:1px solid #db2777;border-radius:999px;padding:5px 10px;color:#fff;white-space:nowrap}\\n.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric{background:#0c1527;border-radius:12px;padding:14px}.metric strong{display:block;font-size:1.65rem;color:#fff}\\n#demo-host{min-height:250px;display:grid;place-items:center;align-content:center;gap:12px;overflow:auto;background:#0b1426;border-radius:12px;padding:16px;isolation:isolate}#demo-host>svg,#demo-host>canvas{max-width:100%;height:auto}\\n.demo-evidence{width:min(100%,760px);display:grid;gap:12px}.demo-title{font-size:1.05rem;font-weight:800;color:#fff}.demo-result{padding:12px;border-radius:10px;background:#101d34;border-left:4px solid #db2777;white-space:pre-wrap;word-break:break-word}\\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.card{background:#0d172a;border:1px solid #273a5b;border-radius:14px;padding:14px;transition:.2s}.card.active{border-color:#db2777;box-shadow:0 0 0 2px #db277755}.card.failed{border-color:#ef4444}\\n.card-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.card h3{font-size:1rem;margin:0;word-break:break-word}.card-head span{font-size:.75rem;color:#91a2c2}.card p{font-size:.84rem;min-height:46px;margin:8px 0}\\nbutton{border:1px solid #db2777;background:#db2777;color:#fff;border-radius:9px;padding:7px 11px;cursor:pointer;font-weight:700}button:hover,button:focus-visible{filter:brightness(1.15);outline:2px solid #fff;outline-offset:2px}.card-status{font-size:.8rem;color:#a9f1dc;margin-left:8px}\\n#status{border-left:3px solid #db2777;padding:10px 12px;background:#0b1426;border-radius:8px}.footer{color:#8392ad;text-align:center;margin-top:22px}\\n@media(max-width:640px){#teaching-shell header{display:block}.metrics{grid-template-columns:1fr}.cards{grid-template-columns:minmax(0,1fr)}.card{min-width:0}.card-status,.card p,.card h3{overflow-wrap:anywhere;word-break:break-word}#demo-host{min-height:220px;padding:10px}}\\n</style></head><body><main id=\\"teaching-shell\\">\\n<header><div><span class=\\"badge\\">PAGESPEC 0.0.2 · Code1 R4 · 完全离线</span><h1>手作艺术节数字展览与视觉叙事</h1><p>固定合成主题；每个按钮都会调用对应库的公开 API，并把方法、固定输入和可核验结果显示在主题演示区。</p></div><span class=\\"badge\\">35 个本主题库</span></header>\\n<section class=\\"panel metrics\\"><div class=\\"metric\\"><strong>35</strong>逻辑库</div><div class=\\"metric\\"><strong>0</strong>外部依赖</div><div class=\\"metric\\"><strong>Code1</strong>本地增强脚本</div></section>\\n<section class=\\"panel\\"><h2>主题演示区</h2><div id=\\"demo-host\\" aria-label=\\"主题演示结果\\"></div><p id=\\"status\\" role=\\"status\\" aria-live=\\"polite\\">正在运行首个真实演示……</p></section>\\n<section class=\\"panel\\"><h2>内置库能力清单</h2><p>绿色状态表示公开 API 调用和可见后置条件均通过；失败会保留错误摘要，不会伪报成功。</p><div class=\\"cards\\"><article class=\\"card\\" data-library=\\"@formkit/auto-animate\\" data-binding=\\"PageSpecAutoAnimate.autoAnimate\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>@formkit/auto-animate</h3><span>0.10.0</span></div><p>使用 @formkit/auto-animate 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"@svgdotjs/svg.js\\" data-binding=\\"SVG\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>@svgdotjs/svg.js</h3><span>3.2.7</span></div><p>使用 @svgdotjs/svg.js 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"animate.css\\" data-binding=\\"\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>animate.css</h3><span>4.1.1</span></div><p>使用 animate.css 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"annotorious\\" data-binding=\\"Annotorious\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>annotorious</h3><span>3.8.8</span></div><p>使用 annotorious 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"augmented-ui\\" data-binding=\\"\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>augmented-ui</h3><span>2.0.0</span></div><p>使用 augmented-ui 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"canvas-confetti\\" data-binding=\\"confetti\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>canvas-confetti</h3><span>1.9.4</span></div><p>使用 canvas-confetti 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"colorthief\\" data-binding=\\"ColorThiefSync\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>colorthief</h3><span>3.4.0</span></div><p>使用 colorthief 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"cropperjs\\" data-binding=\\"Cropper\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>cropperjs</h3><span>2.1.1</span></div><p>使用 cropperjs 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"css-doodle\\" data-binding=\\"customElements.get(&#x27;css-doodle&#x27;)\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>css-doodle</h3><span>0.51.0</span></div><p>使用 css-doodle 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"driver.js\\" data-binding=\\"driver.js.driver\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>driver.js</h3><span>1.8.0</span></div><p>使用 driver.js 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"exifr\\" data-binding=\\"exifr\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>exifr</h3><span>7.1.3</span></div><p>使用 exifr 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"fabric\\" data-binding=\\"fabric\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>fabric</h3><span>7.4.0</span></div><p>使用 fabric 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"granim\\" data-binding=\\"Granim\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>granim</h3><span>2.0.0</span></div><p>使用 granim 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"gsap\\" data-binding=\\"PageSpecGSAP\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>gsap</h3><span>3.15.0</span></div><p>使用 gsap 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"jsbarcode\\" data-binding=\\"JsBarcode\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>jsbarcode</h3><span>3.12.3</span></div><p>使用 jsbarcode 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"countup.js\\" data-binding=\\"countUp.CountUp\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>countup.js</h3><span>2.10.1</span></div><p>使用 countup.js 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"konva\\" data-binding=\\"Konva\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>konva</h3><span>10.3.0</span></div><p>使用 konva 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"moveable\\" data-binding=\\"PageSpecDOMEditors.Moveable\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>moveable</h3><span>0.53.0</span></div><p>使用 moveable 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"nes.css\\" data-binding=\\"\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>nes.css</h3><span>2.3.0</span></div><p>使用 nes.css 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"open-props\\" data-binding=\\"\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>open-props</h3><span>1.7.23</span></div><p>使用 open-props 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"paper\\" data-binding=\\"paper\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>paper</h3><span>0.12.18</span></div><p>使用 paper 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"pico\\" data-binding=\\"\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>pico</h3><span>2.1.1</span></div><p>使用 pico 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"qr-code-styling\\" data-binding=\\"QRCodeStyling\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>qr-code-styling</h3><span>1.9.2</span></div><p>使用 qr-code-styling 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"quill\\" data-binding=\\"Quill\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>quill</h3><span>2.0.3</span></div><p>使用 quill 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"reveal.js\\" data-binding=\\"Reveal\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>reveal.js</h3><span>6.0.1</span></div><p>使用 reveal.js 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"rough-notation\\" data-binding=\\"RoughNotation\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>rough-notation</h3><span>0.5.1</span></div><p>使用 rough-notation 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"roughjs\\" data-binding=\\"rough\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>roughjs</h3><span>4.6.6</span></div><p>使用 roughjs 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"scrollama\\" data-binding=\\"scrollama\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>scrollama</h3><span>3.2.0</span></div><p>使用 scrollama 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"selecto\\" data-binding=\\"PageSpecDOMEditors.Selecto\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>selecto</h3><span>1.26.3</span></div><p>使用 selecto 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"swiper\\" data-binding=\\"Swiper\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>swiper</h3><span>14.0.6</span></div><p>使用 swiper 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"terminal.css\\" data-binding=\\"\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>terminal.css</h3><span>0.7.5</span></div><p>使用 terminal.css 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"tippy.js\\" data-binding=\\"tippy\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>tippy.js</h3><span>6.3.7</span></div><p>使用 tippy.js 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"tufte-css\\" data-binding=\\"\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>tufte-css</h3><span>1.9.0</span></div><p>使用 tufte-css 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"viewerjs\\" data-binding=\\"Viewer\\" data-style=\\"true\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>viewerjs</h3><span>1.11.8</span></div><p>使用 viewerjs 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article><article class=\\"card\\" data-library=\\"zxing\\" data-binding=\\"ZXingBrowser\\" data-style=\\"false\\" data-demo-status=\\"pending\\"><div class=\\"card-head\\"><h3>zxing</h3><span>0.2.1</span></div><p>使用 zxing 的离线公开 API处理固定主题数据，并显示可核验结果。</p><button type=\\"button\\" class=\\"probe\\">运行本库演示</button><span class=\\"card-status\\" role=\\"status\\">待运行</span></article></div></section>\\n<p class=\\"footer\\">手作艺术节数字展览与视觉叙事 · 固定合成数据 · R4 教学修订版</p></main>\\n<script id=\\"theme-data\\" type=\\"application/json\\">{\\"theme\\":\\"手作艺术节数字展览与视觉叙事\\",\\"records\\":[{\\"label\\":\\"陶艺展位\\",\\"value\\":30},{\\"label\\":\\"织物作品\\",\\"value\\":23},{\\"label\\":\\"木作体验\\",\\"value\\":35}],\\"revision\\":\\"R4\\"}</script>\\n\\n<!-- pagespec:caller-script --><script src=\\"scripts/app.js\\"></script></body></html>","loader":"html","mime":"text/html"},"scripts/app.js":{"code_ref":"code1","loader":"js","mime":"text/javascript"}}}
+
+          {% endraw %}'
+        title: 生成 艺术节展览 project/files JSON R4
+        type: template-transform
+        variables: []
+      height: 140
+      id: '2000000101'
+      position:
+        x: 350
+        y: 150
+      positionAbsolute:
+        x: 350
+        y: 150
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 330
+    - data:
+        desc: 模板节点输出不透明 JavaScript；插件仅在收件人打开 HTML 时于本地浏览器执行。
+        selected: false
+        template: "{% raw %}\\'use strict\\';\n\n/* PAGESPEC_R4_THEME_08_CANONICAL */\n(function theme08CraftFestivalCode1() {\n  const __PAGESPEC_R4_TRANSPORT_SENTINEL__ = \"LF=\\\\n|CRLF=\\\\r\\\\n|SLASH=\\\\\\\\|SQUOTE=\\'|DQUOTE=\\\\\"|JINJA={{literal}}\";\n  var THEME08_LIBRARIES = [\\'@formkit/auto-animate\\', \\'@svgdotjs/svg.js\\', \\'animate.css\\', \\'annotorious\\', \\'augmented-ui\\', \\'canvas-confetti\\', \\'colorthief\\', \\'cropperjs\\', \\'css-doodle\\', \\'driver.js\\', \\'exifr\\', \\'fabric\\', \\'granim\\', \\'gsap\\', \\'jsbarcode\\', \\'countup.js\\', \\'konva\\', \\'moveable\\', \\'nes.css\\', \\'open-props\\', \\'paper\\', \\'pico\\', \\'qr-code-styling\\', \\'quill\\', \\'reveal.js\\', \\'rough-notation\\', \\'roughjs\\', \\'scrollama\\', \\'selecto\\', \\'swiper\\', \\'terminal.css\\', \\'tippy.js\\', \\'tufte-css\\', \\'viewerjs\\', \\'zxing\\'];\n  var theme08Host = document.getElementById(\\'demo-host\\');\n  var theme08Status = document.getElementById(\\'status\\');\n  var theme08Data = JSON.parse(document.getElementById(\\'theme-data\\').textContent);\n  var theme08Cleanup = null;\n  var theme08State = { theme: 8, total: THEME08_LIBRARIES.length, executed: 0, passed: 0, failed: 0, lastLibrary: null, transport: __PAGESPEC_R4_TRANSPORT_SENTINEL__ };\n\n  // Resolve CSS contracts, custom elements, and ordinary dotted global bindings without dynamic evaluation.\n  function theme08ResolveBinding(library, path) {\n    if (!path) return document.documentElement;\n    if (library === \\'css-doodle\\') return window.customElements.get(\\'css-doodle\\');\n    return path.split(\\'.\\').reduce(function theme08ResolvePart(value, key) {\n      return value == null ? null : value[key];\n    }, window);\n  }\n\n  // Create a deterministic in-memory SVG image usable by annotation, crop, and viewer libraries.\n  function theme08CreateArtworkImage() {\n    var image = document.createElement(\\'img\\');\n    image.alt = \\'手作艺术节陶艺作品\\';\n    image.width = 320;\n    image.height = 180;\n    image.src = \\'data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"180\"%3E%3Crect width=\"320\" height=\"180\" fill=\"%230b1120\"/%3E%3Ccircle cx=\"95\" cy=\"90\" r=\"58\" fill=\"%23db2777\"/%3E%3Cpath d=\"M170 130 Q235 20 295 130\" fill=\"none\" stroke=\"%235eead4\" stroke-width=\"18\"/%3E%3C/svg%3E\\';\n    return image;\n  }\n\n  // Add an explicit, machine-readable API result below the real visual output created by each library.\n  function theme08RenderEvidence(library, result) {\n    var evidence = document.createElement(\\'section\\');\n    var title = document.createElement(\\'h3\\');\n    var pre = document.createElement(\\'pre\\');\n    title.textContent = \\'手作艺术节视觉演示 · \\' + library;\n    pre.textContent = JSON.stringify(result, null, 2);\n    pre.style.cssText = \\'white-space:pre-wrap;word-break:break-word;margin:10px 0 0;padding:12px;border-radius:10px;background:#160817;color:#fce7f3\\';\n    evidence.appendChild(title);\n    evidence.appendChild(pre);\n    theme08Host.appendChild(evidence);\n  }\n\n  // Execute a CSS library\\'s documented class/variable contract on a visible thematic component.\n  function theme08CssContract(library) {\n    var component = document.createElement(library === \\'pico\\' ? \\'button\\' : \\'article\\');\n    component.textContent = library + \\' 手作展签\\';\n    if (library === \\'animate.css\\') component.className = \\'animate__animated animate__pulse\\';\n    if (library === \\'augmented-ui\\') component.setAttribute(\\'data-augmented-ui\\', \\'tl-clip br-clip border\\');\n    if (library === \\'nes.css\\') component.className = \\'nes-container is-rounded with-title\\';\n    if (library === \\'open-props\\') component.style.cssText = \\'padding:var(--size-3);border-radius:var(--radius-3);box-shadow:var(--shadow-2)\\';\n    if (library === \\'pico\\') component.className = \\'contrast\\';\n    if (library === \\'terminal.css\\') component.className = \\'terminal-card\\';\n    if (library === \\'tufte-css\\') component.className = \\'sans\\';\n    theme08Host.appendChild(component);\n    var computed = getComputedStyle(component);\n    return { method: library + \\' documented CSS contract\\', display: computed.display, padding: computed.padding, animationName: computed.animationName, borderRadius: computed.borderRadius, fontFamily: computed.fontFamily };\n  }\n\n  // Every case invokes a dedicated public API or, for CSS-only packages, its public class/variable contract.\n  async function theme08CallLibrary(library, api) {\n    switch (library) {\n      case \\'@formkit/auto-animate\\': {\n        var autoControl = api(theme08Host, { duration: 0 });\n        var autoItem = document.createElement(\\'div\\');\n        autoItem.textContent = \\'自动布局的新展品\\';\n        theme08Host.appendChild(autoItem);\n        autoControl.disable();\n        autoControl.enable();\n        return { method: \\'autoAnimate enable/disable\\', children: theme08Host.children.length };\n      }\n      case \\'@svgdotjs/svg.js\\': {\n        var drawing = api().addTo(theme08Host).size(320, 180);\n        drawing.rect(180, 90).move(24, 30).radius(18).fill(\\'#db2777\\');\n        drawing.circle(64).move(220, 44).fill(\\'#5eead4\\');\n        return { method: \\'SVG.addTo/rect/circle\\', elements: drawing.node.querySelectorAll(\\'rect,circle\\').length, width: drawing.width() };\n      }\n      case \\'animate.css\\':\n      case \\'augmented-ui\\':\n      case \\'nes.css\\':\n      case \\'open-props\\':\n      case \\'pico\\':\n      case \\'terminal.css\\':\n      case \\'tufte-css\\':\n        return theme08CssContract(library);\n      case \\'annotorious\\': {\n        var annotationImage = theme08CreateArtworkImage();\n        theme08Host.appendChild(annotationImage);\n        await annotationImage.decode();\n        var annotator = api.createImageAnnotator(annotationImage, { drawingEnabled: true, adapter: api.W3CImageFormat(), style: { fill: \\'#db2777\\', fillOpacity: 0.2, stroke: \\'#f472b6\\', strokeWidth: 4 } });\n        var annotation = { id: \\'pagespec-r4-theme08-region\\', type: \\'Annotation\\', body: [{ type: \\'TextualBody\\', value: \\'陶艺重点纹样\\', purpose: \\'commenting\\' }], target: { selector: { type: \\'FragmentSelector\\', value: \\'xywh=pixel:40,35,120,90\\' } } };\n        await Promise.resolve(annotator.setAnnotations([annotation]));\n        var annotations = await Promise.resolve(annotator.getAnnotations());\n        theme08Cleanup = function theme08DestroyAnnotorious() { annotator.destroy(); };\n        return { method: \\'Annotorious.createImageAnnotator/setAnnotations/getAnnotations\\', annotations: annotations.length, body: annotations[0].body[0].value };\n      }\n      case \\'canvas-confetti\\': {\n        var confettiCanvas = document.createElement(\\'canvas\\');\n        confettiCanvas.width = 640;\n        confettiCanvas.height = 220;\n        confettiCanvas.style.cssText = \\'width:100%;max-width:640px;height:220px\\';\n        theme08Host.appendChild(confettiCanvas);\n        // The dedicated instance explicitly disables the library\\'s Blob Worker path.\n        var localConfetti = api.create(confettiCanvas, { resize: false, useWorker: false });\n        var star = api.shapeFromText({ text: \\'★\\', scalar: 1 });\n        await Promise.resolve(localConfetti({ particleCount: 8, spread: 36, startVelocity: 8, ticks: 25, scalar: 0.8, shapes: [star], disableForReducedMotion: false }));\n        return { method: \\'confetti.create(useWorker:false)/shapeFromText\\', shape: star.type || \\'path\\', particles: 8, worker: false };\n      }\n      case \\'colorthief\\': {\n        var colorCanvas = document.createElement(\\'canvas\\');\n        colorCanvas.width = 4;\n        colorCanvas.height = 2;\n        var colorContext = colorCanvas.getContext(\\'2d\\');\n        colorContext.fillStyle = \\'#db2777\\';\n        colorContext.fillRect(0, 0, 2, 2);\n        colorContext.fillStyle = \\'#5eead4\\';\n        colorContext.fillRect(2, 0, 2, 2);\n        theme08Host.appendChild(colorCanvas);\n        return { method: \\'ColorThiefSync.getColorSync/getPaletteSync\\', dominant: api.getColorSync(colorCanvas, 1), palette: api.getPaletteSync(colorCanvas, { colorCount: 2, quality: 1 }).map(function theme08PaletteHex(color) { return color.hex(); }) };\n      }\n      case \\'cropperjs\\': {\n        var cropImage = theme08CreateArtworkImage();\n        theme08Host.appendChild(cropImage);\n        await cropImage.decode();\n        var CropperConstructor = api.default || api;\n        var cropper = new CropperConstructor(cropImage, { container: theme08Host });\n        await new Promise(function theme08WaitCropper(resolve) { requestAnimationFrame(function theme08CropperFrameOne() { requestAnimationFrame(resolve); }); });\n        var selection = cropper.getCropperSelection();\n        if (!selection) throw new Error(\\'CropperSelection 未建立\\');\n        selection.$change(24, 20, 150, 100);\n        var croppedCanvas = await selection.$toCanvas({ width: 220 });\n        croppedCanvas.setAttribute(\\'aria-label\\', \\'陶艺纹样裁剪结果\\');\n        theme08Host.appendChild(croppedCanvas);\n        theme08Cleanup = function theme08DestroyCropper() { cropper.destroy(); };\n        return { method: \\'CropperSelection.$change/$toCanvas\\', width: croppedCanvas.width, height: croppedCanvas.height };\n      }\n      case \\'css-doodle\\': {\n        var doodle = document.createElement(\\'css-doodle\\');\n        doodle.textContent = \\'@grid: 4 / 220px; background: #db2777; border-radius: 50%; transform: scale(@r(.35, .9));\\';\n        theme08Host.appendChild(doodle);\n        if (typeof doodle.update === \\'function\\') doodle.update();\n        await new Promise(function theme08WaitDoodle(resolve) { requestAnimationFrame(resolve); });\n        return { method: \\'css-doodle custom element/update\\', registered: Boolean(api), shadowNodes: doodle.shadowRoot ? doodle.shadowRoot.querySelectorAll(\\'*\\').length : 0 };\n      }\n      case \\'driver.js\\': {\n        var guideTarget = document.createElement(\\'button\\');\n        guideTarget.textContent = \\'艺术节导览起点\\';\n        theme08Host.appendChild(guideTarget);\n        var guide = api({ showProgress: true, allowClose: true, steps: [{ element: guideTarget, popover: { title: \\'第一站\\', description: \\'陶艺作品导览\\' } }] });\n        guide.drive();\n        var active = typeof guide.isActive === \\'function\\' ? guide.isActive() : true;\n        guide.destroy();\n        return { method: \\'driver.drive/isActive/destroy\\', activeDuringTour: active };\n      }\n      case \\'exifr\\': {\n        var options = new api.Options({ pick: [\\'Orientation\\', \\'Make\\'], translateValues: true });\n        return { method: \\'exifr.Options\\', pick: options.pick, translateValues: options.translateValues };\n      }\n      case \\'fabric\\': {\n        var fabricCanvasElement = document.createElement(\\'canvas\\');\n        fabricCanvasElement.width = 320;\n        fabricCanvasElement.height = 180;\n        theme08Host.appendChild(fabricCanvasElement);\n        var fabricCanvas = new api.Canvas(fabricCanvasElement, { width: 320, height: 180, backgroundColor: \\'#0b1120\\' });\n        var fabricRect = new api.Rect({ left: 40, top: 32, width: 150, height: 86, fill: \\'rgba(219,39,119,.32)\\', stroke: \\'#db2777\\', strokeWidth: 4 });\n        var fabricLabel = new api.FabricText(\\'陶艺展签\\', { left: 62, top: 60, fill: \\'#fff\\', fontSize: 24 });\n        fabricCanvas.add(fabricRect, fabricLabel);\n        fabricCanvas.renderAll();\n        theme08Cleanup = function theme08DisposeFabric() { fabricCanvas.dispose(); };\n        return { method: \\'fabric.Canvas/add/renderAll\\', objects: fabricCanvas.getObjects().length, label: fabricLabel.text };\n      }\n      case \\'granim\\': {\n        var granimCanvas = document.createElement(\\'canvas\\');\n        granimCanvas.id = \\'pagespec-r4-theme08-granim\\';\n        granimCanvas.width = 320;\n        granimCanvas.height = 120;\n        theme08Host.appendChild(granimCanvas);\n        var granim = new api({ element: \\'#pagespec-r4-theme08-granim\\', direction: \\'left-right\\', isPausedWhenNotInView: false, states: { \\'default-state\\': { gradients: [[\\'#db2777\\', \\'#2563eb\\'], [\\'#16a34a\\', \\'#f59e0b\\']], transitionSpeed: 1 } } });\n        granim.pause();\n        theme08Cleanup = function theme08DestroyGranim() { granim.destroy(); };\n        return { method: \\'Granim constructor/pause\\', states: 1, canvasPixels: granimCanvas.width * granimCanvas.height };\n      }\n      case \\'gsap\\': {\n        var gsapTarget = document.createElement(\\'div\\');\n        gsapTarget.textContent = \\'GSAP 展签动效\\';\n        theme08Host.appendChild(gsapTarget);\n        api.gsap.set(gsapTarget, { x: 0, opacity: 0.4 });\n        api.gsap.to(gsapTarget, { x: 24, opacity: 1, duration: 0 });\n        return { method: \\'gsap.set/to\\', transform: getComputedStyle(gsapTarget).transform, opacity: getComputedStyle(gsapTarget).opacity };\n      }\n      case \\'jsbarcode\\': {\n        var barcode = document.createElementNS(\\'http://www.w3.org/2000/svg\\', \\'svg\\');\n        theme08Host.appendChild(barcode);\n        api(barcode, \\'ART-2026-0805\\', { format: \\'CODE128\\', displayValue: true, width: 1, height: 50 });\n        return { method: \\'JsBarcode(svg)\\', bars: barcode.querySelectorAll(\\'rect\\').length, text: barcode.querySelector(\\'text\\').textContent };\n      }\n      case \\'countup.js\\': {\n        var counter = document.createElement(\\'strong\\');\n        counter.textContent = \\'0\\';\n        theme08Host.appendChild(counter);\n        var count = new api(counter, 88, { duration: 0, suffix: \\' 件作品\\' });\n        count.start();\n        return { method: \\'CountUp.start\\', text: counter.textContent, error: count.error || null };\n      }\n      case \\'konva\\': {\n        var stageHost = document.createElement(\\'div\\');\n        theme08Host.appendChild(stageHost);\n        var stage = new api.Stage({ container: stageHost, width: 320, height: 180 });\n        var layer = new api.Layer();\n        var circle = new api.Circle({ x: 90, y: 90, radius: 46, fill: \\'#db2777\\', draggable: true });\n        var label = new api.Text({ x: 165, y: 74, text: \\'陶艺展位\\', fill: \\'#f8fafc\\', fontSize: 22 });\n        layer.add(circle, label);\n        stage.add(layer);\n        circle.x(120);\n        layer.draw();\n        theme08Cleanup = function theme08DestroyKonva() { stage.destroy(); };\n        return { method: \\'Konva.Stage/Layer/Circle/Text\\', nodes: layer.getChildren().length, movedX: circle.x(), canvases: stageHost.querySelectorAll(\\'canvas\\').length };\n      }\n      case \\'moveable\\': {\n        var moveTarget = document.createElement(\\'div\\');\n        moveTarget.textContent = \\'可移动作品卡\\';\n        moveTarget.style.cssText = \\'width:120px;height:70px;background:#db2777;color:#fff\\';\n        theme08Host.appendChild(moveTarget);\n        var moveable = new api(theme08Host, { target: moveTarget, draggable: true, renderDirections: false });\n        var moveRectangle = moveable.getRect();\n        moveable.request(\\'draggable\\', { deltaX: 18, deltaY: 10 }, true);\n        moveable.destroy();\n        return { method: \\'Moveable.getRect/request/destroy\\', width: moveRectangle.width, transform: moveTarget.style.transform };\n      }\n      case \\'paper\\': {\n        var paperCanvas = document.createElement(\\'canvas\\');\n        paperCanvas.width = 320;\n        paperCanvas.height = 160;\n        theme08Host.appendChild(paperCanvas);\n        api.setup(paperCanvas);\n        var paperCircle = new api.Path.Circle(new api.Point(80, 80), 36);\n        paperCircle.fillColor = \\'#db2777\\';\n        api.view.update();\n        return { method: \\'paper.setup/Path.Circle/view.update\\', area: Number(paperCircle.area.toFixed(2)) };\n      }\n      case \\'qr-code-styling\\': {\n        var qr = new api({ width: 180, height: 180, data: \\'PageSpec-R4-Craft-Festival\\', type: \\'svg\\', dotsOptions: { color: \\'#db2777\\' } });\n        qr.append(theme08Host);\n        return { method: \\'QRCodeStyling.append\\', svg: theme08Host.querySelectorAll(\\'svg\\').length };\n      }\n      case \\'quill\\': {\n        var editor = document.createElement(\\'div\\');\n        theme08Host.appendChild(editor);\n        var quill = new api(editor, { theme: null });\n        quill.setText(\\'PageSpec 手作艺术节\\');\n        quill.formatText(0, 8, \\'bold\\', true);\n        return { method: \\'Quill.setText/formatText\\', text: quill.getText().trim(), bold: quill.getFormat(0, 1).bold === true };\n      }\n      case \\'reveal.js\\': {\n        var revealRoot = document.createElement(\\'div\\');\n        revealRoot.className = \\'reveal\\';\n        revealRoot.innerHTML = \\'<div class=\"slides\"><section>陶艺作品</section><section>织物作品</section></div>\\';\n        theme08Host.appendChild(revealRoot);\n        var deck = new api(revealRoot, { embedded: true, hash: false, controls: true, progress: true, transition: \\'none\\' });\n        await deck.initialize();\n        deck.slide(1, 0, 0);\n        theme08Cleanup = function theme08DestroyReveal() { deck.destroy(); };\n        return { method: \\'Reveal.initialize/slide/getIndices\\', total: deck.getTotalSlides(), current: deck.getIndices().h };\n      }\n      case \\'rough-notation\\': {\n        var note = document.createElement(\\'strong\\');\n        note.textContent = \\'手作艺术节\\';\n        theme08Host.appendChild(note);\n        var annotationMark = api.annotate(note, { type: \\'underline\\', color: \\'#db2777\\', animationDuration: 0 });\n        annotationMark.show();\n        return { method: \\'RoughNotation.annotate/show\\', svg: theme08Host.querySelectorAll(\\'svg\\').length };\n      }\n      case \\'roughjs\\': {\n        var roughSvg = document.createElementNS(\\'http://www.w3.org/2000/svg\\', \\'svg\\');\n        roughSvg.setAttribute(\\'width\\', \\'320\\');\n        roughSvg.setAttribute(\\'height\\', \\'160\\');\n        theme08Host.appendChild(roughSvg);\n        var roughCanvas = api.svg(roughSvg);\n        roughSvg.appendChild(roughCanvas.rectangle(30, 25, 220, 90, { fill: \\'#db2777\\', fillStyle: \\'hachure\\' }));\n        return { method: \\'rough.svg.rectangle\\', paths: roughSvg.querySelectorAll(\\'path\\').length };\n      }\n      case \\'scrollama\\': {\n        var steps = [\\'陶艺\\', \\'织物\\', \\'木作\\'].map(function theme08MakeStep(label) { var step = document.createElement(\\'article\\'); step.className = \\'theme08-scroll-step\\'; step.textContent = label; theme08Host.appendChild(step); return step; });\n        var entered = 0;\n        var scroller = api().setup({ step: steps, container: theme08Host, root: theme08Host, offset: 0.5, progress: true, debug: false }).onStepEnter(function theme08StepEntered() { entered += 1; });\n        scroller.resize();\n        theme08Cleanup = function theme08DestroyScrollama() { scroller.destroy(); };\n        return { method: \\'scrollama.setup/onStepEnter/resize\\', steps: steps.length, enteredAtSetup: entered };\n      }\n      case \\'selecto\\': {\n        var selectable = document.createElement(\\'button\\');\n        selectable.className = \\'theme08-selectable\\';\n        selectable.textContent = \\'可框选作品\\';\n        theme08Host.appendChild(selectable);\n        var selecto = new api({ container: theme08Host, dragContainer: theme08Host, selectableTargets: [\\'.theme08-selectable\\'], selectByClick: true });\n        selecto.setSelectedTargets([selectable]);\n        var selected = selecto.getSelectedTargets();\n        selecto.destroy();\n        return { method: \\'Selecto.setSelectedTargets/getSelectedTargets\\', selected: selected.length, label: selected[0].textContent };\n      }\n      case \\'swiper\\': {\n        var swiperRoot = document.createElement(\\'div\\');\n        swiperRoot.className = \\'swiper\\';\n        swiperRoot.innerHTML = \\'<div class=\"swiper-wrapper\"><div class=\"swiper-slide\">陶艺</div><div class=\"swiper-slide\">织物</div><div class=\"swiper-slide\">木作</div></div>\\';\n        theme08Host.appendChild(swiperRoot);\n        var swiper = new api(swiperRoot, { initialSlide: 0, speed: 0 });\n        swiper.slideNext(0);\n        var activeIndex = swiper.activeIndex;\n        theme08Cleanup = function theme08DestroySwiper() { swiper.destroy(true, true); };\n        return { method: \\'Swiper.slideNext\\', activeIndex: activeIndex, slides: swiper.slides.length };\n      }\n      case \\'tippy.js\\': {\n        var tipButton = document.createElement(\\'button\\');\n        tipButton.textContent = \\'查看展品提示\\';\n        theme08Host.appendChild(tipButton);\n        var tip = api(tipButton, { content: \\'离线艺术提示\\', trigger: \\'manual\\', duration: 0 });\n        tip.show();\n        var mounted = tip.state.isMounted;\n        tip.hide();\n        theme08Cleanup = function theme08DestroyTippy() { tip.destroy(); };\n        return { method: \\'tippy.show/hide\\', mounted: mounted, content: tip.props.content };\n      }\n      case \\'viewerjs\\': {\n        var viewerImage = theme08CreateArtworkImage();\n        theme08Host.appendChild(viewerImage);\n        await viewerImage.decode();\n        var viewer = new api(viewerImage, { inline: false, navbar: false, toolbar: false, title: false, transition: false });\n        viewer.show();\n        var shown = document.body.classList.contains(\\'viewer-open\\') || Boolean(document.querySelector(\\'.viewer-container\\'));\n        viewer.hide();\n        theme08Cleanup = function theme08DestroyViewer() { viewer.destroy(); };\n        return { method: \\'Viewer.show/hide\\', overlayCreated: shown };\n      }\n      case \\'zxing\\': {\n        var writer = new api.BrowserQRCodeSvgWriter();\n        var qrSvg = writer.write(\\'PageSpec-R4\\', 180, 180);\n        theme08Host.appendChild(qrSvg);\n        return { method: \\'ZXing BrowserQRCodeSvgWriter.write\\', modules: qrSvg.querySelectorAll(\\'path,rect\\').length };\n      }\n      default:\n        throw new Error(\\'主题 08 未声明库适配器：\\' + library);\n    }\n  }\n\n  // Dispose the one previous library instance and clear only the existing demonstration region.\n  function theme08ResetPreviousDemo() {\n    if (theme08Cleanup) {\n      try { theme08Cleanup(); } catch (ignored) {}\n      theme08Cleanup = null;\n    }\n    theme08Host.replaceChildren();\n  }\n\n  // Run one selected adapter, record the exact API evidence, and make failures explicit rather than silent.\n  async function theme08RunCard(card) {\n    var library = card.dataset.library;\n    var binding = card.dataset.binding;\n    var output = card.querySelector(\\'.card-status\\');\n    theme08ResetPreviousDemo();\n    card.dataset.demoStatus = \\'running\\';\n    output.textContent = \\'运行中\\';\n    try {\n      var api = theme08ResolveBinding(library, binding);\n      if (api == null) throw new Error(\\'未找到公开绑定 \\' + binding);\n      var result = await theme08CallLibrary(library, api);\n      theme08RenderEvidence(library, result);\n      card.dataset.demoStatus = \\'passed\\';\n      output.textContent = \\'已运行 · \\' + result.method;\n      theme08State.executed += 1;\n      theme08State.passed += 1;\n      theme08State.lastLibrary = library;\n      theme08Host.dataset.demoLibrary = library;\n      theme08Host.dataset.demoApi = result.method;\n      theme08Status.textContent = library + \\' 已完成真实离线视觉演示\\';\n    } catch (error) {\n      card.dataset.demoStatus = \\'failed\\';\n      output.textContent = \\'失败 · \\' + error.message;\n      theme08State.executed += 1;\n      theme08State.failed += 1;\n      theme08State.lastLibrary = library;\n      theme08Status.textContent = library + \\' 演示失败：\\' + error.message;\n      throw error;\n    }\n  }\n\n  // Bind only the shell\\'s existing buttons and preserve all current layout, copy, and interaction placement.\n  document.querySelectorAll(\\'.card\\').forEach(function theme08BindCard(card) {\n    card.querySelector(\\'.probe\\').addEventListener(\\'click\\', function theme08HandleClick() {\n      theme08RunCard(card).catch(function theme08KeepVisibleFailure() {});\n    });\n  });\n\n  window.PageSpecR4Theme08 = theme08State;\n  var theme08FirstCard = document.querySelector(\\'.card\\');\n  if (theme08FirstCard) {\n    theme08RunCard(theme08FirstCard).catch(function theme08KeepInitialFailure() {});\n  }\n}());\n{% endraw %}"
+        title: 生成 艺术节展览 code1 R4 真调用
+        type: template-transform
+        variables: []
+      height: 140
+      id: '2000000102'
+      position:
+        x: 350
+        y: 390
+      positionAbsolute:
+        x: 350
+        y: 390
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 330
+    - data:
+        desc: 严格离线渲染；返回一个 HTML BLOB 和一条简短说明。
+        params: {}
+        provider_id: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_name: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_type: builtin
+        selected: false
+        title: 生成 艺术节展览 code1 离线 HTML R4
+        tool_configurations:
+          spec:
+            type: mixed
+            value: '{{#2000000101.output#}}'
+          code1:
+            type: mixed
+            value: '{{#2000000102.output#}}'
+          slot1:
+            type: constant
+            value: null
+          slot2:
+            type: constant
+            value: null
+          slot3:
+            type: constant
+            value: null
+          slot4:
+            type: constant
+            value: null
+          slot5:
+            type: constant
+            value: null
+          slot6:
+            type: constant
+            value: null
+          slot7:
+            type: constant
+            value: null
+          slot8:
+            type: constant
+            value: null
+          slot9:
+            type: constant
+            value: null
+          slot10:
+            type: constant
+            value: null
+          slot11:
+            type: constant
+            value: null
+          slot12:
+            type: constant
+            value: null
+          slot13:
+            type: constant
+            value: null
+          slot14:
+            type: constant
+            value: null
+          slot15:
+            type: constant
+            value: null
+          slot16:
+            type: constant
+            value: null
+          slot17:
+            type: constant
+            value: null
+          slot18:
+            type: constant
+            value: null
+          slot19:
+            type: constant
+            value: null
+          slot20:
+            type: constant
+            value: null
+          filename:
+            type: mixed
+            value: PageSpec_0.0.2_Teaching_08_craft_art_festival_code1_r4.html
+        tool_description: 将严格 PageSpec 或 project/files 项目渲染为自包含离线 HTML。
+        tool_label: 生成离线 HTML
+        tool_name: render_page
+        tool_node_version: '2'
+        tool_parameters: {}
+        type: tool
+      height: 112
+      id: '2000000201'
+      position:
+        x: 720
+        y: 240
+      positionAbsolute:
+        x: 720
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 260
+    - data:
+        answer: '已生成《手作艺术节数字展览与视觉叙事》离线 HTML。文件只在本地浏览器执行，共覆盖本主题分区的 35 个内置库。
+
+          {{#2000000201.files#}}'
+        desc: 仅返回最终 HTML BLOB；不会把 HTML 作为节点间长文本传输。
+        selected: false
+        title: 返回教学 HTML
+        type: answer
+        variables: []
+      height: 130
+      id: '2000000999'
+      position:
+        x: 1050
+        y: 240
+      positionAbsolute:
+        x: 1050
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 280
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.8

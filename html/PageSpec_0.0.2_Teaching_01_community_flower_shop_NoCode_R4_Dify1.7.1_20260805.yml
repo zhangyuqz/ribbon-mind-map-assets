@@ -1,0 +1,236 @@
+app:
+  description: 社区花店四季经营与订阅看板固定合成数据 PageSpec 教学页。显式 version=1，使用真实换行并清理跨主题敏感语汇；完全离线。
+  icon: 🌷
+  icon_background: '#F8FAFC'
+  mode: advanced-chat
+  name: PageSpec 0.0.2 教学示例：社区花店四季经营与订阅看板（无 code 版） · R4 NoCode 冻结版
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: package
+  value:
+    plugin_unique_identifier: zhangyu/html_offline_exporter:0.0.2@9df826a97ba346388ca0592c7e4178c6264ae35482c957739e730ad9c6c383d5
+kind: app
+version: 0.3.1
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      enabled: false
+    opening_statement: 发送任意消息，生成“社区花店四季经营与订阅看板”固定合成数据离线教学页。
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - 生成社区花店四季经营与订阅看板离线教学页
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 1000000001-source-1000000101-target
+      selected: false
+      source: '1000000001'
+      sourceHandle: source
+      target: '1000000101'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 1000000101-source-1000000201-target
+      selected: false
+      source: '1000000101'
+      sourceHandle: source
+      target: '1000000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1000000201-source-1000000999-target
+      selected: false
+      source: '1000000201'
+      sourceHandle: source
+      target: '1000000999'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: 发送任意消息即可生成 社区花店四季经营与订阅看板 固定合成数据离线教学页。
+        selected: false
+        title: 开始
+        type: start
+        variables: []
+      height: 110
+      id: '1000000001'
+      position:
+        x: 40
+        y: 240
+      positionAbsolute:
+        x: 40
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 250
+    - data:
+        desc: 模板节点输出严格、唯一键、有限数 PageSpec 项目；不使用代码或图片插槽。
+        selected: false
+        template: '{"build":"pagespec","files":{"report.pagespec.json":{"json":{"blocks":[{"type":"callout","style":"info","title":"社区花店四季经营与订阅看板 · 交互教学","text":"本页使用固定合成样本。请按页面下方的“交互”提示逐项操作，核对筛选、拖拽、缩放、布局、导出或叙事状态是否发生可见变化。"},{"level":1,"text":"合成社区花店四季经营与订阅看板总览","type":"heading"},{"text":["本报告展示一组固定合成、可重复生成的社区花店四季经营与订阅看板数据。所有编号、项目、物件、IP、站点、进度和金额仅为功能验收样本。","资源口径固定为：收录 126,800 元，正向分配 112,300 元，调整 8,000 元，项目 A 期末净留存 22,500 元。"],"type":"text"},{"columns":2,"items":[{"label":"合成任务编号","value":"DEMO-20260715-001"},{"label":"检索编号","value":"13800000000"},{"label":"协作编号","value":"13900000000"},{"label":"共用物件","value":"ITEM-ID-SYN-001"},{"label":"核心项目","value":"ACC-SYN-A100"},{"label":"记录时间窗","value":"2026-07-15 09:00—12:30"}],"type":"kv"},{"items":["虚构编号","合成互动","合成资源","合成物件","文档保留 IP","无效示例站点","合成进度"],"type":"tags"},{"display":true,"latex":"R = 0.35C + 0.30F + 0.20D + 0.15T = 82.5","type":"formula"},{"items":[{"delta":"+9 次","label":"合成互动","unit":"次","value":"23"},{"delta":"+2 笔","label":"合成收录","unit":"元","value":"126800"},{"delta":"含 8000 元调整","label":"合成净分配","unit":"元","value":"104300"},{"delta":"全部合成","label":"记录条目","unit":"项","value":"12"}],"type":"stat_row"},{"items":[{"label":"实体一致性","max":100,"value":100},{"label":"资源勾稽","max":100,"value":100},{"label":"进度时序","max":100,"value":100},{"label":"记录编号覆盖","max":100,"value":100}],"type":"progress"},{"columns":[{"key":"caller","label":"主叫"},{"key":"callee","label":"被叫"},{"align":"right","key":"count","label":"次数"},{"align":"right","key":"duration","label":"总时长(秒)"},{"key":"evidence","label":"记录"}],"features":["search","sort"],"rows":[{"callee":"13900000000","caller":"13800000000","count":14,"duration":2520,"evidence":"REC-INTERACTION-01"},{"callee":"13800000000","caller":"13900000000","count":6,"duration":1080,"evidence":"REC-INTERACTION-02"},{"callee":"13700000000","caller":"13800000000","count":3,"duration":540,"evidence":"REC-INTERACTION-03"}],"type":"table"},{"categories":["检索→协作","协作→检索","检索→关联"],"height":320,"kind":"bar","series":[{"data":[14,6,3],"name":"次数"}],"title":"合成互动次数分布","type":"chart","unit":"次"},{"items":[{"text":"互动","weight":18},{"text":"资源","weight":17},{"text":"物件","weight":14},{"text":"IP","weight":12},{"text":"站点","weight":10},{"text":"进度","weight":9}],"type":"wordcloud"},{"columns":[{"field":"id","title":"记录编号"},{"field":"category","title":"类别"},{"field":"fact","title":"事实"},{"field":"time","title":"时间"},{"field":"entities","title":"关联实体"}],"features":["indicator_analysis","integrity_analysis","pivot"],"height":520,"indicator_fields":{"chinese_text":"chinese_text","domain":"domain","email":"email","ip":"ip","json":"json","jwt":"jwt","password":"password","phone":"phone","url":"url","user_agent":"user_agent"},"page_size":20,"rows":[{"category":"互动","chinese_text":"社区花店四季经营与订阅看板记录","count":14,"domain":"sample-node.example.invalid","duration_seconds":2520,"email":"sample@example.com","entities":"ITEM-Q,ITEM-R","fact":"检索→协作 14 次/2520 秒","id":"REC-INTERACTION-01","ip":"198.51.100.23","json":"{\"risk\":82.5,\"synthetic\":true}","jwt":"eyJhbGciOiJub25lIn0.eyJzdWIiOiJTWU4tMDAxIiwiZXhwIjoyMDAwMDAwMDAwfQ.","password":"Demo-Strong!2026","phone":"13800000000","risk_score":82.5,"time":"2026-07-15 09:18—11:30","url":"sample-node.example.invalid/path","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/109.0.0.0 Safari/537.36"},{"category":"互动","count":6,"duration_seconds":1080,"entities":"ITEM-R,ITEM-Q","fact":"协作→检索 6 次/1080 秒","id":"REC-INTERACTION-02","time":"2026-07-15 09:26—11:46"},{"category":"互动","count":3,"duration_seconds":540,"entities":"ITEM-Q,ITEM-A","fact":"检索→关联 3 次/540 秒","id":"REC-INTERACTION-03","time":"2026-07-15 10:05—10:52"},{"category":"物件","device_count":1,"entities":"ITEM-Q,DEVICE-1","fact":"检索编号使用 ITEM-ID-SYN-001","id":"REC-OBJECT-01","time":"2026-07-15 09:05"},{"category":"连接","entities":"DEVICE-1,IP-1","fact":"物件从 198.51.100.23 进入 4 次","id":"REC-LINK-01","login_count":4,"time":"2026-07-15 10:02—10:39"},{"category":"连接","entities":"IP-1,DOMAIN-1","fact":"文档保留 IP 解析 sample-node.example.invalid 7 次","id":"REC-LINK-02","resolve_count":7,"time":"2026-07-15 10:03—10:40"},{"amount":68000,"category":"资源","entities":"SOURCE-X,PROJECT-A","fact":"合成来源 X 收录 68000 元","id":"REC-RESOURCE-01","time":"2026-07-15 10:16"},{"amount":58800,"category":"资源","entities":"SOURCE-Y,PROJECT-A","fact":"合成来源 Y 收录 58800 元","id":"REC-RESOURCE-02","time":"2026-07-15 10:19"},{"amount":74500,"category":"资源","entities":"PROJECT-A,PROJECT-B","fact":"项目 A 向项目 B 正向资源调配 74500 元","id":"REC-RESOURCE-03","time":"2026-07-15 10:41"},{"amount":37800,"category":"资源","entities":"PROJECT-A,STORAGE-C","fact":"项目 A 向储存项 C 分配 37800 元","id":"REC-RESOURCE-04","time":"2026-07-15 10:47"},{"amount":-8000,"category":"资源","entities":"PROJECT-A,PROJECT-B","fact":"项目 A→B 原路径调整 -8000 元","id":"REC-RESOURCE-05","time":"2026-07-15 11:08"},{"category":"进度","entities":"DEVICE-1","fact":"ITEM-ID-SYN-001 依次经过合成点 A—D","id":"REC-PROGRESS-01/02","point_count":4,"time":"2026-07-15 09:05—12:20"}],"search":true,"title":"图表、表格、BI、统计、金融和分布分析 · 合成记录分析","type":"analysis_grid"},{"type":"text","text":["OHLCV 语义边界：下图只使用明确标注的固定合成合成资产价格序列，每行依次为时间、开盘、最高、最低、收盘、成交量。","该序列不由互动次数、资源金额、物件/IP/站点数量或质量评分转换，不代表项目资源流水；仅用于断网验收 KlineCharts 的 K 线、十字线、价格轴、时间轴、缩放和平移。","同卷 uPlot 的 720 个点也以固定合成数组显式写入 time_series；插件不会从 KPI 补造时间戳、波动或趋势。"]},{"height":360,"kind":"financial","series":[{"data":[[1784073600000,10.2,11.4,9.8,11.0,1240],[1784160000000,11.0,12.1,10.6,11.7,1680],[1784246400000,11.7,12.0,10.9,11.2,1320],[1784332800000,11.2,12.8,11.0,12.5,2150],[1784419200000,12.5,13.2,12.1,12.9,1870],[1784505600000,12.9,13.0,11.8,12.2,1960]],"name":"合成资产价格 OHLC 与成交量"}],"title":"固定合成合成 OHLCV K 线（组件验收专用）","type":"chart"}],"doc":{"accent":"#d946ef","filename":"PageSpec_0.0.2_Teaching_01_community_flower_shop_r4.html","footer":"社区花店四季经营与订阅看板 · 固定合成数据 · PageSpec 0.0.2 教学示例 · 仅用于浏览器离线功能演示。","header":{"badges":["固定合成数据","教学示例 1/8","完全离线","本地交互"],"subtitle":"本页主题：社区花店四季经营与订阅看板。固定合成数据，仅用于离线教学；可见组件和交互均在浏览器本地完成，不请求网络。","title":"社区花店四季经营与订阅看板 · 离线教学示例 · 第 1/8 能力分区"},"lang":"zh-CN","theme":"dark","title":"社区花店四季经营与订阅看板 · 离线教学示例 · 第 1/8 能力分区","toc":true,"interaction_guide":"local","interaction_number_start":1},"version":1}}}}'
+        title: 生成 花店经营 PageSpec JSON R4
+        type: template-transform
+        variables: []
+      height: 140
+      id: '1000000101'
+      position:
+        x: 370
+        y: 240
+      positionAbsolute:
+        x: 370
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 330
+    - data:
+        desc: 严格离线渲染；返回一个 HTML BLOB 和一条简短说明。
+        params: {}
+        provider_id: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_name: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_type: builtin
+        selected: false
+        title: 生成 花店经营 离线 HTML R4
+        tool_configurations:
+          spec:
+            type: mixed
+            value: '{{#1000000101.output#}}'
+          slot1:
+            type: constant
+            value: null
+          slot2:
+            type: constant
+            value: null
+          slot3:
+            type: constant
+            value: null
+          slot4:
+            type: constant
+            value: null
+          slot5:
+            type: constant
+            value: null
+          slot6:
+            type: constant
+            value: null
+          slot7:
+            type: constant
+            value: null
+          slot8:
+            type: constant
+            value: null
+          slot9:
+            type: constant
+            value: null
+          slot10:
+            type: constant
+            value: null
+          slot11:
+            type: constant
+            value: null
+          slot12:
+            type: constant
+            value: null
+          slot13:
+            type: constant
+            value: null
+          slot14:
+            type: constant
+            value: null
+          slot15:
+            type: constant
+            value: null
+          slot16:
+            type: constant
+            value: null
+          slot17:
+            type: constant
+            value: null
+          slot18:
+            type: constant
+            value: null
+          slot19:
+            type: constant
+            value: null
+          slot20:
+            type: constant
+            value: null
+          filename:
+            type: mixed
+            value: PageSpec_0.0.2_Teaching_01_community_flower_shop_r4.html
+        tool_description: 将严格 PageSpec 或 project/files 项目渲染为自包含离线 HTML。
+        tool_label: 生成离线 HTML
+        tool_name: render_page
+        tool_node_version: '2'
+        tool_parameters: {}
+        type: tool
+      height: 112
+      id: '1000000201'
+      position:
+        x: 720
+        y: 240
+      positionAbsolute:
+        x: 720
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 260
+    - data:
+        answer: '已生成《社区花店四季经营与订阅看板》离线 HTML。文件只在本地浏览器执行，共覆盖本主题分区的 19 个内置库。
+
+          {{#1000000201.files#}}'
+        desc: 仅返回最终 HTML BLOB；不会把 HTML 作为节点间长文本传输。
+        selected: false
+        title: 返回教学 HTML
+        type: answer
+        variables: []
+      height: 130
+      id: '1000000999'
+      position:
+        x: 1050
+        y: 240
+      positionAbsolute:
+        x: 1050
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 280
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.8

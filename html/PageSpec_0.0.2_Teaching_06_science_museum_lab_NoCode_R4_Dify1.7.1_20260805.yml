@@ -1,0 +1,236 @@
+app:
+  description: 科学馆物理、材料与生命科学互动实验固定合成数据 PageSpec 教学页。显式 version=1，使用真实换行并清理跨主题敏感语汇；完全离线。
+  icon: 🔬
+  icon_background: '#F8FAFC'
+  mode: advanced-chat
+  name: PageSpec 0.0.2 教学示例：科学馆物理、材料与生命科学互动实验（无 code 版） · R4 NoCode 冻结版
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: package
+  value:
+    plugin_unique_identifier: zhangyu/html_offline_exporter:0.0.2@9df826a97ba346388ca0592c7e4178c6264ae35482c957739e730ad9c6c383d5
+kind: app
+version: 0.3.1
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      enabled: false
+    opening_statement: 发送任意消息，生成“科学馆物理、材料与生命科学互动实验”固定合成数据离线教学页。
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - 生成科学馆物理、材料与生命科学互动实验离线教学页
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: 1000000001-source-1000000101-target
+      selected: false
+      source: '1000000001'
+      sourceHandle: source
+      target: '1000000101'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: tool
+      id: 1000000101-source-1000000201-target
+      selected: false
+      source: '1000000101'
+      sourceHandle: source
+      target: '1000000201'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1000000201-source-1000000999-target
+      selected: false
+      source: '1000000201'
+      sourceHandle: source
+      target: '1000000999'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: 发送任意消息即可生成 科学馆物理、材料与生命科学互动实验 固定合成数据离线教学页。
+        selected: false
+        title: 开始
+        type: start
+        variables: []
+      height: 110
+      id: '1000000001'
+      position:
+        x: 40
+        y: 240
+      positionAbsolute:
+        x: 40
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 250
+    - data:
+        desc: 模板节点输出严格、唯一键、有限数 PageSpec 项目；不使用代码或图片插槽。
+        selected: false
+        template: '{"build":"pagespec","files":{"report.pagespec.json":{"json":{"blocks":[{"type":"callout","style":"info","title":"科学馆物理、材料与生命科学互动实验 · 交互教学","text":"本页使用固定合成样本。请按页面下方的“交互”提示逐项操作，核对筛选、拖拽、缩放、布局、导出或叙事状态是否发生可见变化。"},{"columns":[{"field":"id","title":"记录编号"},{"field":"category","title":"类别"},{"field":"fact","title":"事实"},{"field":"time","title":"时间"},{"field":"entities","title":"关联实体"}],"features":["chemistry","healthcare","scientific_computing","dicom_metadata"],"height":520,"indicator_fields":{"chinese_text":"chinese_text","domain":"domain","email":"email","ip":"ip","json":"json","jwt":"jwt","password":"password","phone":"phone","url":"url","user_agent":"user_agent"},"page_size":20,"rows":[{"category":"互动","chinese_text":"科学馆物理、材料与生命科学互动实验记录","count":14,"domain":"sample-node.example.invalid","duration_seconds":2520,"email":"sample@example.com","entities":"ITEM-Q,ITEM-R","fact":"检索→协作 14 次/2520 秒","id":"REC-INTERACTION-01","ip":"198.51.100.23","json":"{\"risk\":82.5,\"synthetic\":true}","jwt":"eyJhbGciOiJub25lIn0.eyJzdWIiOiJTWU4tMDAxIiwiZXhwIjoyMDAwMDAwMDAwfQ.","password":"Demo-Strong!2026","phone":"13800000000","risk_score":82.5,"time":"2026-07-15 09:18—11:30","url":"sample-node.example.invalid/path","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/109.0.0.0 Safari/537.36"},{"category":"互动","count":6,"duration_seconds":1080,"entities":"ITEM-R,ITEM-Q","fact":"协作→检索 6 次/1080 秒","id":"REC-INTERACTION-02","time":"2026-07-15 09:26—11:46"},{"category":"互动","count":3,"duration_seconds":540,"entities":"ITEM-Q,ITEM-A","fact":"检索→关联 3 次/540 秒","id":"REC-INTERACTION-03","time":"2026-07-15 10:05—10:52"},{"category":"物件","device_count":1,"entities":"ITEM-Q,DEVICE-1","fact":"检索编号使用 ITEM-ID-SYN-001","id":"REC-OBJECT-01","time":"2026-07-15 09:05"},{"category":"连接","entities":"DEVICE-1,IP-1","fact":"物件从 198.51.100.23 进入 4 次","id":"REC-LINK-01","login_count":4,"time":"2026-07-15 10:02—10:39"},{"category":"连接","entities":"IP-1,DOMAIN-1","fact":"文档保留 IP 解析 sample-node.example.invalid 7 次","id":"REC-LINK-02","resolve_count":7,"time":"2026-07-15 10:03—10:40"},{"amount":68000,"category":"资源","entities":"SOURCE-X,PROJECT-A","fact":"合成来源 X 收录 68000 元","id":"REC-RESOURCE-01","time":"2026-07-15 10:16"},{"amount":58800,"category":"资源","entities":"SOURCE-Y,PROJECT-A","fact":"合成来源 Y 收录 58800 元","id":"REC-RESOURCE-02","time":"2026-07-15 10:19"},{"amount":74500,"category":"资源","entities":"PROJECT-A,PROJECT-B","fact":"项目 A 向项目 B 正向资源调配 74500 元","id":"REC-RESOURCE-03","time":"2026-07-15 10:41"},{"amount":37800,"category":"资源","entities":"PROJECT-A,STORAGE-C","fact":"项目 A 向储存项 C 分配 37800 元","id":"REC-RESOURCE-04","time":"2026-07-15 10:47"},{"amount":-8000,"category":"资源","entities":"PROJECT-A,PROJECT-B","fact":"项目 A→B 原路径调整 -8000 元","id":"REC-RESOURCE-05","time":"2026-07-15 11:08"},{"category":"进度","entities":"DEVICE-1","fact":"ITEM-ID-SYN-001 依次经过合成点 A—D","id":"REC-PROGRESS-01/02","point_count":4,"time":"2026-07-15 09:05—12:20"}],"search":true,"title":"2D/3D、动画、物理、科研、医疗和化学可视化 · 合成记录分析","type":"analysis_grid"},{"height":360,"kind":"bar3d","series":[{"data":[[0,0,14],[0,1,3],[1,0,6],[1,1,2]],"name":"次数"}],"title":"合成科学馆物理、材料与生命科学互动实验三维互动矩阵","type":"chart"},{"height":360,"kind":"surface3d","series":[{"data":[[-2,-2,0.0],[-2,-1,1.5],[-2,0,2.0],[-2,1,1.5],[-2,2,0.0],[-1,-2,-1.5],[-1,-1,0.0],[-1,0,0.5],[-1,1,0.0],[-1,2,-1.5],[0,-2,-2.0],[0,-1,-0.5],[0,0,0.0],[0,1,-0.5],[0,2,-2.0],[1,-2,-1.5],[1,-1,0.0],[1,0,0.5],[1,1,0.0],[1,2,-1.5],[2,-2,0.0],[2,-1,1.5],[2,0,2.0],[2,1,1.5],[2,2,0.0]],"name":"曲面"}],"title":"合成科学馆物理、材料与生命科学互动实验质量曲面","type":"chart"},{"height":380,"kind":"volume3d","series":[{"data":[[-1,-1,-1,1.732051],[-1,-1,0,1.414214],[-1,-1,1,1.732051],[-1,0,-1,1.414214],[-1,0,0,1.0],[-1,0,1,1.414214],[-1,1,-1,1.732051],[-1,1,0,1.414214],[-1,1,1,1.732051],[0,-1,-1,1.414214],[0,-1,0,1.0],[0,-1,1,1.414214],[0,0,-1,1.0],[0,0,0,0.0],[0,0,1,1.0],[0,1,-1,1.414214],[0,1,0,1.0],[0,1,1,1.414214],[1,-1,-1,1.732051],[1,-1,0,1.414214],[1,-1,1,1.732051],[1,0,-1,1.414214],[1,0,0,1.0],[1,0,1,1.414214],[1,1,-1,1.732051],[1,1,0,1.414214],[1,1,1,1.732051]],"name":"密度"}],"title":"合成科学馆物理、材料与生命科学互动实验三维密度体","type":"chart"},{"height":380,"kind":"isosurface3d","series":[{"data":[[-1,-1,-1,1.732051],[-1,-1,0,1.414214],[-1,-1,1,1.732051],[-1,0,-1,1.414214],[-1,0,0,1.0],[-1,0,1,1.414214],[-1,1,-1,1.732051],[-1,1,0,1.414214],[-1,1,1,1.732051],[0,-1,-1,1.414214],[0,-1,0,1.0],[0,-1,1,1.414214],[0,0,-1,1.0],[0,0,0,0.0],[0,0,1,1.0],[0,1,-1,1.414214],[0,1,0,1.0],[0,1,1,1.414214],[1,-1,-1,1.732051],[1,-1,0,1.414214],[1,-1,1,1.732051],[1,0,-1,1.414214],[1,0,0,1.0],[1,0,1,1.414214],[1,1,-1,1.732051],[1,1,0,1.414214],[1,1,1,1.732051]],"name":"等值面"}],"title":"合成科学馆物理、材料与生命科学互动实验等值质量面","type":"chart"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":400,"mode":"three_scene","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成科学馆物理、材料与生命科学互动实验 Three.js 三维关系场景","type":"interactive_scene"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":400,"mode":"force_3d","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成科学馆物理、材料与生命科学互动实验三维力导向关系图","type":"interactive_scene"},{"height":360,"items":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"mode":"physics_2d","title":"合成科学馆物理、材料与生命科学互动实验二维碰撞与约束","type":"interactive_scene"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":400,"mode":"physics_3d","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成科学馆物理、材料与生命科学互动实验三维刚体模拟","type":"interactive_scene"},{"height":340,"items":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"mode":"particles","title":"合成科学馆物理、材料与生命科学互动实验通信粒子连接","type":"interactive_scene"},{"height":320,"items":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0}],"mode":"vector_animation","title":"合成科学馆物理、材料与生命科学互动实验矢量状态动画","type":"interactive_scene"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":400,"mode":"babylon_scene","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成科学馆物理、材料与生命科学互动实验 Babylon.js 三维演示场景","type":"interactive_scene"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":360,"mode":"pixi_animation","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成科学馆物理、材料与生命科学互动实验 PixiJS 二维动画画布","type":"interactive_scene"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":380,"mode":"molecule_3d","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成科学馆物理、材料与生命科学互动实验 3Dmol 分子结构","type":"interactive_scene"},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":380,"mode":"geometry_board","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成科学馆物理、材料与生命科学互动实验 JSXGraph 几何关系板","type":"interactive_scene"},{"type":"collapse","items":[{"label":"本卷内置库有意义覆盖台账（23 个）","open":false,"blocks":[{"type":"text","text":"本卷可见模块按需调用：3dmol、babylon、cannon-es、d3-force-3d、echarts-gl、fhirpath、jsxgraph、lil-gui、lottie-web、matter-js、openchemlib、pixi、plotly-gl3d、tabulator-tables、three、tsparticles、jstat、ml-matrix、fft.js、dicom-parser、pixi-filters、phaser、animejs"}]}]},{"edges":[{"label":"互动","source":"N1","target":"N2","value":14},{"label":"关联","source":"N2","target":"N3","value":6},{"label":"时序","source":"N3","target":"N4","value":3},{"label":"闭环","source":"N4","target":"N1","value":1}],"height":400,"mode":"pixi_filters","nodes":[{"color":"#5b8ff9","description":"合成观察记录入口","id":"N1","label":"科学观察记录","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"固定互动汇总","id":"N2","label":"通信聚合","x":0,"y":2,"z":-2},{"color":"#f6bd16","description":"固定资源勾稽","id":"N3","label":"资源复核","x":3,"y":0,"z":1},{"color":"#e8684a","description":"固定进度时序","id":"N4","label":"进度核对","x":0,"y":-2,"z":3}],"title":"合成科学馆物理、材料与生命科学互动实验 Pixi Filters 二维滤镜场景","type":"interactive_scene"},{"edges":[{"label":"14 次互动","source":"ITEM-Q","target":"ITEM-R","value":14},{"label":"共用物件","source":"ITEM-R","target":"DEVICE-1","value":1},{"label":"质量观察记录","source":"DEVICE-1","target":"PROJECT-A","value":4}],"height":440,"items":[{"color":"#e8684a","description":"固定合成评分，可通过沙盘交互复核","id":"risk","label":"质量能量","value":82.5},{"color":"#5ad8a6","description":"碰触记录点后累计的固定合成记录","id":"evidence","label":"记录收集","value":12},{"color":"#f6bd16","description":"方向键、WASD 或触控按钮均可操作","id":"controls","label":"交互控制","value":4}],"mode":"phaser_scene","nodes":[{"color":"#5b8ff9","description":"合成检索编号","id":"ITEM-Q","label":"13800000000","x":-3,"y":1,"z":0},{"color":"#5ad8a6","description":"合成协作编号","id":"ITEM-R","label":"13900000000","x":0,"y":2,"z":0},{"color":"#f6bd16","description":"固定共用物件","id":"DEVICE-1","label":"ITEM-ID-SYN-001","x":3,"y":0,"z":0},{"color":"#e8684a","description":"固定核心项目","id":"PROJECT-A","label":"ACC-SYN-A100","x":0,"y":-2,"z":0}],"slides":[{"duration":4,"text":"使用方向键、WASD 或触控按钮移动分析光标，碰触实体可查看固定合成记录。","title":"可操作质量沙盘"},{"duration":4,"text":"重置、暂停与继续按钮只改变演示状态，不改变固定记录事实。","title":"确定性交互控制"}],"title":"合成科学馆物理、材料与生命科学互动实验 Phaser 质量沙盘","type":"interactive_scene"},{"height":420,"items":[{"color":"#5b8ff9","description":"合成观察记录进入分析流程","id":"intake","label":"观察记录接入","value":1},{"color":"#f6bd16","description":"互动、资源、物件与进度正在复核","id":"review","label":"四域复核","value":4},{"color":"#5ad8a6","description":"固定记录链完整","id":"verified","label":"核验完成","value":12}],"mode":"anime_animation","slides":[{"duration":3,"text":"点击状态按钮在“观察记录接入—四域复核—核验完成”之间切换。","title":"状态机交互"},{"duration":3,"text":"播放、暂停和重新开始均在离线 Anime.js 画布内完成。","title":"离线矢量动画"}],"title":"合成科学馆物理、材料与生命科学互动实验 Anime.js 状态动画","type":"interactive_scene"}],"doc":{"accent":"#0891b2","filename":"PageSpec_0.0.2_Teaching_06_science_museum_lab_r4.html","footer":"科学馆物理、材料与生命科学互动实验 · 固定合成数据 · PageSpec 0.0.2 教学示例 · 仅用于浏览器离线功能演示。","header":{"badges":["固定合成数据","教学示例 6/8","完全离线","本地交互"],"subtitle":"本页主题：科学馆物理、材料与生命科学互动实验。固定合成数据，仅用于离线教学；可见组件和交互均在浏览器本地完成，不请求网络。","title":"科学馆物理、材料与生命科学互动实验 · 离线教学示例 · 第 6/8 能力分区"},"lang":"zh-CN","theme":"dark","title":"科学馆物理、材料与生命科学互动实验 · 离线教学示例 · 第 6/8 能力分区","toc":true,"interaction_guide":"local","interaction_number_start":59},"version":1}}}}'
+        title: 生成 科学馆实验 PageSpec JSON R4
+        type: template-transform
+        variables: []
+      height: 140
+      id: '1000000101'
+      position:
+        x: 370
+        y: 240
+      positionAbsolute:
+        x: 370
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 330
+    - data:
+        desc: 严格离线渲染；返回一个 HTML BLOB 和一条简短说明。
+        params: {}
+        provider_id: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_name: zhangyu/html_offline_exporter/html_offline_exporter
+        provider_type: builtin
+        selected: false
+        title: 生成 科学馆实验 离线 HTML R4
+        tool_configurations:
+          spec:
+            type: mixed
+            value: '{{#1000000101.output#}}'
+          slot1:
+            type: constant
+            value: null
+          slot2:
+            type: constant
+            value: null
+          slot3:
+            type: constant
+            value: null
+          slot4:
+            type: constant
+            value: null
+          slot5:
+            type: constant
+            value: null
+          slot6:
+            type: constant
+            value: null
+          slot7:
+            type: constant
+            value: null
+          slot8:
+            type: constant
+            value: null
+          slot9:
+            type: constant
+            value: null
+          slot10:
+            type: constant
+            value: null
+          slot11:
+            type: constant
+            value: null
+          slot12:
+            type: constant
+            value: null
+          slot13:
+            type: constant
+            value: null
+          slot14:
+            type: constant
+            value: null
+          slot15:
+            type: constant
+            value: null
+          slot16:
+            type: constant
+            value: null
+          slot17:
+            type: constant
+            value: null
+          slot18:
+            type: constant
+            value: null
+          slot19:
+            type: constant
+            value: null
+          slot20:
+            type: constant
+            value: null
+          filename:
+            type: mixed
+            value: PageSpec_0.0.2_Teaching_06_science_museum_lab_r4.html
+        tool_description: 将严格 PageSpec 或 project/files 项目渲染为自包含离线 HTML。
+        tool_label: 生成离线 HTML
+        tool_name: render_page
+        tool_node_version: '2'
+        tool_parameters: {}
+        type: tool
+      height: 112
+      id: '1000000201'
+      position:
+        x: 720
+        y: 240
+      positionAbsolute:
+        x: 720
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 260
+    - data:
+        answer: '已生成《科学馆物理、材料与生命科学互动实验》离线 HTML。文件只在本地浏览器执行，共覆盖本主题分区的 23 个内置库。
+
+          {{#1000000201.files#}}'
+        desc: 仅返回最终 HTML BLOB；不会把 HTML 作为节点间长文本传输。
+        selected: false
+        title: 返回教学 HTML
+        type: answer
+        variables: []
+      height: 130
+      id: '1000000999'
+      position:
+        x: 1050
+        y: 240
+      positionAbsolute:
+        x: 1050
+        y: 240
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 280
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.8

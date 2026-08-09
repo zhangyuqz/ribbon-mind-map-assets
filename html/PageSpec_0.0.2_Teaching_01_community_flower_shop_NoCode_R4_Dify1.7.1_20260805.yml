@@ -9,7 +9,7 @@ dependencies:
 - current_identifier: null
   type: package
   value:
-    plugin_unique_identifier: zhangyu/html_offline_exporter:0.0.2@9df826a97ba346388ca0592c7e4178c6264ae35482c957739e730ad9c6c383d5
+    plugin_unique_identifier: zhangyu/html_offline_exporter:0.0.2@25590fdbd5a91772a652a4e492619cb39cc3e67d9c1a37866e18b8063a9a71cf
 kind: app
 version: 0.3.1
 workflow:

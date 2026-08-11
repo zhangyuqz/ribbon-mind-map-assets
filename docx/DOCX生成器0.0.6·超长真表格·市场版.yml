@@ -1,15 +1,15 @@
 app:
-  description: 市场版专项工作流：使用DOCX生成器0.0.6生成一份含4097行×8列、共32776个物理单元格的超长真实Word表格。
+  description: 市场版教学工作流：使用DOCX生成器0.0.6生成一份完整通知，并在附件中加入4097行×8列、共32776个物理单元格的超长真实Word表格。
   icon: 📚
   icon_background: '#E8F5E9'
   mode: advanced-chat
-  name: DOCX生成器0.0.6·4097×8超长真实表格·市场版
+  name: DOCX生成器0.0.6·通知附4097×8超长真实表格·市场版
   use_icon_as_answer_icon: false
 dependencies:
 - current_identifier: null
   type: marketplace
   value:
-    marketplace_plugin_unique_identifier: zhangyu/docx_generator:0.0.6@c5ad30a256e63dcd3a9df5ea94ea903fcc78bf2ed921a1119e17aff861403718
+    marketplace_plugin_unique_identifier: zhangyu/docx_generator:0.0.6@0059065a9dd8b3a9b0d4f7d0d6e029797a2e9cbcba1dc6c8d56479f8bac9385d
 kind: app
 version: 0.3.1
 workflow:
@@ -41,7 +41,7 @@ workflow:
         - local_file
         - remote_url
       number_limits: 1
-    opening_statement: 本工作流生成一份含4097行×8列（含1行表头）、共32776个物理单元格的超长真实表格DOCX。请先安装市场版0.0.6，然后发送“生成4097×8超长真实表格”。
+    opening_statement: 本工作流生成一份完整的通用通知DOCX，并在附件中加入4097行×8列（含1行表头）、共32776个物理单元格的超长真实表格。请先安装市场版0.0.6，然后发送“生成通知及超长表格附件”。
     retriever_resource:
       enabled: false
     sensitive_word_avoidance:
@@ -49,7 +49,7 @@ workflow:
     speech_to_text:
       enabled: false
     suggested_questions:
-    - 生成4097×8超长真实表格
+    - 生成通知及超长表格附件
     suggested_questions_after_answer:
       enabled: false
     text_to_speech:
@@ -112,7 +112,7 @@ workflow:
       type: custom
       width: 243
       data:
-        desc: 无需填写输入；发送建议问题即可生成固定的4097×8超长真实表格示例。
+        desc: 无需填写输入；发送建议问题即可生成一份正文完整、附件含4097×8超长真实表格的通用通知示例。
         selected: false
         title: 开始
         type: start
@@ -150,10 +150,79 @@ workflow:
                       "",
                   ])
 
+              # Use only fields implemented by the plugin's Advanced JSON schema and shipped notice example.
               document = {
-                  "meta": {"title": "DOCX005_市场版_4097x8_真实表格", "author": "张宇"},
-                  "blocks": [{"type": "table", "header_rows": 1, "rows": rows}],
+                  "meta": {
+                      "title": "关于报送2026年度业务信息的通知",
+                      "author": "示范单位办公室",
+                  },
+                  "page": {
+                      "size": "A4",
+                      "margin_mm": [37, 26, 35, 28],
+                  },
+                  "default_style": {
+                      "font": "仿宋_GB2312",
+                      "font_ascii": "Times New Roman",
+                      "size": "三号",
+                      "line_spacing": 28,
+                      "line_spacing_rule": "exactly",
+                      "indent_first": 2,
+                      "align": "justify",
+                  },
+                  "heading_styles": {
+                      "title": {
+                          "font": "方正小标宋简体",
+                          "size": "二号",
+                          "align": "center",
+                          "line_spacing": 32,
+                          "line_spacing_rule": "exactly",
+                      },
+                  },
+                  "footer": {
+                      "style": {"font": "宋体", "size": "四号"},
+                      "page_number": {"format": "— {n} —"},
+                  },
+                  "blocks": [
+                      # First page: a complete notice with title, addressee, body, attachment note, and sign-off.
+                      {
+                          "type": "heading",
+                          "level": "title",
+                          "text": "关于报送2026年度业务信息的通知",
+                      },
+                      {
+                          "type": "paragraph",
+                          "style": {"indent_first": 0},
+                          "text": "各有关单位：",
+                      },
+                      {
+                          "type": "paragraph",
+                          "text": "为全面掌握2026年度业务开展情况，进一步做好资料汇总和后续工作安排，现就有关信息报送事项通知如下。",
+                      },
+                      {
+                          "type": "paragraph",
+                          "text": "请各单位按照附件表格所列项目逐项核对、如实填写，并于2026年8月20日前完成报送。填报过程中如需补充说明，可在备注栏中注明。",
+                      },
+                      {
+                          "type": "attachment_note",
+                          "items": ["2026年度业务信息汇总表"],
+                      },
+                      {
+                          "type": "signoff",
+                          "org": "示范单位办公室",
+                          "date": "2026年8月11日",
+                      },
+                      # The referenced attachment starts on a new page and contains the ultra-long real table.
+                      {"type": "page_break"},
+                      {"type": "attachment_label"},
+                      {
+                          "type": "heading",
+                          "level": "title",
+                          "text": "2026年度业务信息汇总表",
+                      },
+                      {"type": "table", "header_rows": 1, "rows": rows},
+                  ],
               }
+              # Compact serialization preserves all text while leaving the maximum possible space for table rows.
               serialized = json.dumps(document, ensure_ascii=False, separators=(",", ":"))
 
               # Keep every Code output below Dify 1.7.1's default 80,000-character limit.
@@ -163,7 +232,7 @@ workflow:
                   "json_part_3": serialized[120000:],
               }
         code_language: python3
-        desc: 确定性构造4097行×8列JSON，并拆成三个低于Dify 1.7.1单字符串上限的连续分片。
+        desc: 确定性构造一份完整通知及其4097行×8列超长表格附件，并将JSON拆成三个低于Dify 1.7.1单字符串上限的连续分片。
         outputs:
           json_part_1:
             children: null
@@ -175,11 +244,11 @@ workflow:
             children: null
             type: string
         selected: false
-        title: 构造超长真实表格 JSON
+        title: 构造通知及超长表格附件 JSON
         type: code
         variables: []
     - data:
-        desc: 仅接收Code节点按顺序拼接的4097×8表格JSON，并返回生成的DOCX文件。
+        desc: 仅接收Code节点按顺序拼接的完整通知JSON，并返回正文及4097×8超长表格附件组成的DOCX文件。
         is_team_authorization: true
         output_schema: null
         paramSchemas:
@@ -738,7 +807,7 @@ workflow:
         provider_name: zhangyu/docx_generator/docx_generator
         provider_type: builtin
         selected: false
-        title: 生成4097×8超长真实表格 DOCX
+        title: 生成通知及4097×8超长表格附件 DOCX
         tool_configurations:
           image_slots_help:
             type: mixed
@@ -840,9 +909,9 @@ workflow:
       width: 243
       data:
         answer: '{{#1960060001003.files#}}'
-        desc: 仅返回4097×8超长真实表格工具节点生成的DOCX文件。
+        desc: 仅返回工具节点生成的完整通知及4097×8超长表格附件DOCX文件。
         selected: false
-        title: 下载超长真实表格 DOCX
+        title: 下载通知及超长表格附件 DOCX
         type: answer
         variables: []
     viewport:

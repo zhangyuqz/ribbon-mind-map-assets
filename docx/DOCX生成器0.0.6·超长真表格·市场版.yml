@@ -9,7 +9,7 @@ dependencies:
 - current_identifier: null
   type: marketplace
   value:
-    marketplace_plugin_unique_identifier: zhangyu/docx_generator:0.0.6@0059065a9dd8b3a9b0d4f7d0d6e029797a2e9cbcba1dc6c8d56479f8bac9385d
+    marketplace_plugin_unique_identifier: zhangyu/docx_generator:0.0.6@bc01e81e44bef6926de8e2d84a8f189a2eaf2b1c4dcd8457635ebdb75dcda7ee
 kind: app
 version: 0.3.1
 workflow:
